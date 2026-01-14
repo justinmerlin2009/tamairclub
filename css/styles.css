@@ -191,6 +191,14 @@ p {
   font-weight: 700;
   font-size: 1.25rem;
   color: var(--text-primary);
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-logo:hover {
+  opacity: 0.8;
 }
 
 .nav-logo img {
