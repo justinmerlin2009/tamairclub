@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Useful resources and links for 3D printed UAVs, drone technology, and environmental conservation.">
+  <title>Links & Resources | TAM AIR Club</title>
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="TAM AIR Club Logo" onerror="this.style.display='none'">
+        TAM <span>AIR</span>
+      </a>
+
+      <ul class="nav-menu" role="menubar">
+        <li><a href="about.html" class="nav-link" role="menuitem">About Us</a></li>
+        <li><a href="projects.html" class="nav-link" role="menuitem">Projects</a></li>
+        <li><a href="conrad.html" class="nav-link" role="menuitem">Conrad Challenge</a></li>
+        <li><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
+        <li><a href="events.html" class="nav-link" role="menuitem">Events</a></li>
+        <li><a href="research.html" class="nav-link" role="menuitem">Research</a></li>
+        <li><a href="fundraising.html" class="nav-link" role="menuitem">Fundraising</a></li>
+        <li><a href="links.html" class="nav-link active" role="menuitem">Links</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </button>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-backdrop"></div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Links & Resources</h1>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Links</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 3D Printed UAV Resources -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2><i class="fas fa-plane text-primary"></i> 3D Printed UAV Resources</h2>
+        <p>Tools and resources for building your own 3D printed drones</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card" style="padding: 2rem;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 60px; height: 60px; background: var(--primary); border-radius: 1rem; display: flex; align-items: center; justify-content: center;">
+              <i class="fas fa-cubes" style="font-size: 1.5rem; color: white;"></i>
+            </div>
+            <div>
+              <h3 style="margin: 0;">Flightory</h3>
+              <p style="margin: 0; color: var(--text-secondary); font-size: 0.9rem;">3D Printed UAV Model Library</p>
+            </div>
+          </div>
+          <p class="card-text" style="margin-bottom: 1.5rem;">
+            Flightory offers a wide array of 3D printable plane models for purchase. Their library includes various aircraft designs optimized for 3D printing, from beginner-friendly trainers to advanced aerobatic models.
+          </p>
+          <a href="https://flightory.com" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fas fa-external-link-alt"></i> Visit Flightory
+          </a>
+        </div>
+
+        <div class="card" style="padding: 2rem;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+            <div style="width: 60px; height: 60px; background: #ef4444; border-radius: 1rem; display: flex; align-items: center; justify-content: center;">
+              <i class="fab fa-youtube" style="font-size: 1.5rem; color: white;"></i>
+            </div>
+            <div>
+              <h3 style="margin: 0;">Andrew Newton</h3>
+              <p style="margin: 0; color: var(--text-secondary); font-size: 0.9rem;">INAV & Flight Controller Tutorials</p>
+            </div>
+          </div>
+          <p class="card-text" style="margin-bottom: 1.5rem;">
+            Andrew Newton's YouTube channel provides excellent tutorials on INAV configuration, flight controller setup, and 3D printed aircraft. A valuable resource for anyone building custom drones.
+          </p>
+          <a href="https://www.youtube.com/@AndrewNewton" target="_blank" rel="noopener" class="btn btn-outline">
+            <i class="fab fa-youtube"></i> Watch Tutorials
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Organizations -->
+  <section class="section" style="background: var(--background-alt);">
+    <div class="container">
+      <div class="section-header">
+        <h2><i class="fas fa-handshake text-primary"></i> Partner Organizations</h2>
+        <p>Organizations we work with and support</p>
+      </div>
+
+      <div class="grid grid-3 features-grid">
+        <a href="https://conrad.spacecenter.org/" target="_blank" rel="noopener" class="card feature-card" style="text-decoration: none;">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Conrad Challenge</h3>
+          <p class="card-text">Annual innovation competition for students ages 13-18, focusing on solutions to global challenges.</p>
+        </a>
+
+        <a href="https://www.sylva-us.com" target="_blank" rel="noopener" class="card feature-card" style="text-decoration: none;">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
+            <i class="fas fa-tree"></i>
+          </div>
+          <h3>Sylva Project</h3>
+          <p class="card-text">Our environmental monitoring solution for the Conrad Challenge, focused on wildfire and pollution detection.</p>
+        </a>
+
+        <a href="https://www.gofundme.com/f/support-tam-air-protect-marin-from-wildfires" target="_blank" rel="noopener" class="card feature-card" style="text-decoration: none;">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <h3>GoFundMe Campaign</h3>
+          <p class="card-text">Support our mission to protect Marin County from wildfires through drone technology.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Social Media -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2><i class="fas fa-share-alt text-primary"></i> Connect With Us</h2>
+        <p>Follow our journey on social media</p>
+      </div>
+
+      <div class="grid grid-2">
+        <a href="https://instagram.com/tamairclub" target="_blank" rel="noopener" class="card" style="text-decoration: none; padding: 2rem; text-align: center;">
+          <i class="fab fa-instagram" style="font-size: 4rem; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem;"></i>
+          <h3>@tamairclub</h3>
+          <p class="card-text">Follow us on Instagram for updates, behind-the-scenes content, and event announcements.</p>
+        </a>
+
+        <a href="https://youtube.com/@TamAirNonProfit" target="_blank" rel="noopener" class="card" style="text-decoration: none; padding: 2rem; text-align: center;">
+          <i class="fab fa-youtube" style="font-size: 4rem; color: #ef4444; margin-bottom: 1rem;"></i>
+          <h3>@TamAirNonProfit</h3>
+          <p class="card-text">Subscribe to our YouTube channel for flight videos, tutorials, and documentary content.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Links CTA -->
+  <section class="donate-section">
+    <div class="container">
+      <h2>Explore TAM AIR</h2>
+      <p>
+        Learn more about our projects, research, and how you can get involved.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="projects.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-drone"></i> Our Projects
+        </a>
+        <a href="contact.html" class="btn btn-outline btn-lg">
+          <i class="fas fa-envelope"></i> Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="TAM AIR Club Logo" onerror="this.style.display='none'">
+          <p>
+            TAM AIR Non-Profit - Using innovative drone technology to conserve nature and protect Marin County's landscapes for future generations.
+          </p>
+          <div class="footer-social">
+            <a href="https://instagram.com/tamairclub" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/@TamAirNonProfit" target="_blank" rel="noopener" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.gofundme.com/f/support-tam-air-protect-marin-from-wildfires" target="_blank" rel="noopener" aria-label="GoFundMe">
+              <i class="fas fa-hand-holding-heart"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="projects.html">Projects</a>
+            <a href="services.html">Services</a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h4>More</h4>
+          <div class="footer-links">
+            <a href="events.html">Events</a>
+            <a href="conrad.html">Conrad Challenge</a>
+            <a href="research.html">Research</a>
+            <a href="about.html#contact">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Support</h4>
+          <div class="footer-links">
+            <a href="fundraising.html">Fundraising</a>
+            <a href="https://www.gofundme.com/f/support-tam-air-protect-marin-from-wildfires" target="_blank" rel="noopener">Donate</a>
+            <a href="links.html">Resources</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> TAM AIR Club. All rights reserved. | Marin County, California</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

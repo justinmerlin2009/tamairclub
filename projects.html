@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore TAM AIR Club's projects including 3D printed UAVs, FPV drones, learning initiatives, and beach cleanup programs.">
+  <title>Projects | TAM AIR Club</title>
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="TAM AIR Club Logo" onerror="this.style.display='none'">
+        TAM <span>AIR</span>
+      </a>
+
+      <ul class="nav-menu" role="menubar">
+        <li><a href="about.html" class="nav-link" role="menuitem">About Us</a></li>
+        <li><a href="projects.html" class="nav-link active" role="menuitem">Projects</a></li>
+        <li><a href="conrad.html" class="nav-link" role="menuitem">Conrad Challenge</a></li>
+        <li><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
+        <li><a href="events.html" class="nav-link" role="menuitem">Events</a></li>
+        <li><a href="research.html" class="nav-link" role="menuitem">Research</a></li>
+        <li><a href="fundraising.html" class="nav-link" role="menuitem">Fundraising</a></li>
+        <li><a href="links.html" class="nav-link" role="menuitem">Links</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </button>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-backdrop"></div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Our Projects</h1>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Projects</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Projects Overview -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Innovation in Action</h2>
+        <p>Discover how we're using technology to protect our environment</p>
+      </div>
+
+      <div class="grid grid-2">
+        <!-- 3D Printed UAV Project -->
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="images/projects/project1.jpg" alt="3D Printed UAV" class="card-image" style="height: 250px; margin: 0; border-radius: 1rem 1rem 0 0;">
+          <div style="padding: 1.5rem;">
+            <h3 class="card-title"><i class="fas fa-plane text-primary"></i> 3D Printed UAV</h3>
+            <p class="card-text">
+              Our flagship project involves designing and manufacturing affordable unmanned aerial vehicles using 3D printing technology. These drones are equipped with high-resolution cameras for environmental monitoring.
+            </p>
+            <ul style="padding-left: 1.25rem; list-style: disc; margin-top: 1rem;">
+              <li style="margin-bottom: 0.5rem; color: var(--text-secondary);">Custom-designed airframes for optimal flight performance</li>
+              <li style="margin-bottom: 0.5rem; color: var(--text-secondary);">Camera systems for aerial photography and mapping</li>
+              <li style="margin-bottom: 0.5rem; color: var(--text-secondary);">Extended flight time for comprehensive surveys</li>
+              <li style="color: var(--text-secondary);">Cost-effective manufacturing process</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- FPV Drone Project -->
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="images/projects/project2.jpg" alt="FPV Drone" class="card-image" style="height: 250px; margin: 0; border-radius: 1rem 1rem 0 0;">
+          <div style="padding: 1.5rem;">
+            <h3 class="card-title"><i class="fas fa-vr-cardboard text-primary"></i> FPV Drone Operations</h3>
+            <p class="card-text">
+              First-person view drones allow our pilots to navigate through challenging terrain with precision. These agile aircraft are perfect for detailed inspections and search operations.
+            </p>
+            <ul style="padding-left: 1.25rem; list-style: disc; margin-top: 1rem;">
+              <li style="margin-bottom: 0.5rem; color: var(--text-secondary);">Real-time video transmission</li>
+              <li style="margin-bottom: 0.5rem; color: var(--text-secondary);">Highly maneuverable for tight spaces</li>
+              <li style="margin-bottom: 0.5rem; color: var(--text-secondary);">HD recording capabilities</li>
+              <li style="color: var(--text-secondary);">VR headset integration for immersive control</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning Log Section -->
+  <section class="section" style="background: var(--background-alt);">
+    <div class="container">
+      <div class="section-header">
+        <h2><i class="fas fa-book-open text-primary"></i> Learning Log</h2>
+        <p>Documenting our flight tests, challenges, and breakthroughs</p>
+      </div>
+
+      <div class="grid grid-2">
+        <!-- Flight 1 -->
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <a href="https://youtu.be/Rhc1tHht2uM" target="_blank" rel="noopener" class="video-thumbnail" style="aspect-ratio: 16/9; border-radius: 1rem 1rem 0 0;">
+            <img src="images/learning-log/flight1.jpg" alt="Flight 1" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="video-overlay">
+              <div class="play-button"><i class="fab fa-youtube"></i></div>
+            </div>
+          </a>
+          <div style="padding: 1.5rem;">
+            <span style="display: inline-block; padding: 0.25rem 0.75rem; background: var(--primary); color: white; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.75rem;">May 4, 2025</span>
+            <h3 class="card-title">Flight 1: Foam Plane Practice</h3>
+            <p class="card-text"><strong>Team:</strong> Justin, Michel, Olivier<br><strong>Location:</strong> Near Petaluma</p>
+            <p class="card-text">Sunny conditions with strong westerly gusts (12-20 mph). Foam plane crashed into barbed wire. FPV electronics overheated. Learned valuable lessons about wind conditions and equipment preparation.</p>
+          </div>
+        </div>
+
+        <!-- Flight 2 -->
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <a href="https://youtu.be/XherKA5kSXw" target="_blank" rel="noopener" class="video-thumbnail" style="aspect-ratio: 16/9; border-radius: 1rem 1rem 0 0;">
+            <img src="images/learning-log/flight2.jpg" alt="Flight 2" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="video-overlay">
+              <div class="play-button"><i class="fab fa-youtube"></i></div>
+            </div>
+          </a>
+          <div style="padding: 1.5rem;">
+            <span style="display: inline-block; padding: 0.25rem 0.75rem; background: var(--primary); color: white; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.75rem;">May 31, 2025</span>
+            <h3 class="card-title">Flight 2: Lark Takeoff & Landing</h3>
+            <p class="card-text"><strong>Team:</strong> Justin, Gideon, Dante, Olivier<br><strong>Location:</strong> Open pasture, Petaluma</p>
+            <p class="card-text">Sunny, calm winds (~3 mph). Used ANGL mode (angle stabilization). Successful loop and landing with no damage! Initial oscillations noted for future calibration.</p>
+          </div>
+        </div>
+
+        <!-- Flight 3 -->
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <a href="https://youtu.be/SXyiF1K7Kt8" target="_blank" rel="noopener" class="video-thumbnail" style="aspect-ratio: 16/9; border-radius: 1rem 1rem 0 0;">
+            <img src="images/learning-log/flight3.jpg" alt="Flight 3" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="video-overlay">
+              <div class="play-button"><i class="fab fa-youtube"></i></div>
+            </div>
+          </a>
+          <div style="padding: 1.5rem;">
+            <span style="display: inline-block; padding: 0.25rem 0.75rem; background: var(--primary); color: white; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.75rem;">June 7, 2025</span>
+            <h3 class="card-title">Flight 3: Three Complete Flights!</h3>
+            <p class="card-text"><strong>Team:</strong> Justin, Olivier<br><strong>Location:</strong> Open pasture, Petaluma</p>
+            <p class="card-text">Overcast, light westerly wind 5-8 mph. Completed 3 flights (~5 min each) in ACRO mode with smooth ascents and landings. Learned FAA requires staying below 400 ft without special waiver.</p>
+          </div>
+        </div>
+
+        <!-- Flight 4 -->
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <a href="https://youtu.be/SXyiF1K7Kt8" target="_blank" rel="noopener" class="video-thumbnail" style="aspect-ratio: 16/9; border-radius: 1rem 1rem 0 0;">
+            <img src="images/learning-log/flight4.jpg" alt="Flight 4" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="video-overlay">
+              <div class="play-button"><i class="fab fa-youtube"></i></div>
+            </div>
+          </a>
+          <div style="padding: 1.5rem;">
+            <span style="display: inline-block; padding: 0.25rem 0.75rem; background: var(--primary); color: white; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.75rem;">July 6, 2025</span>
+            <h3 class="card-title">Flight 4: Hill Takeoffs</h3>
+            <p class="card-text"><strong>Team:</strong> Justin, Olivier<br><strong>Location:</strong> Open pasture, Petaluma</p>
+            <p class="card-text">Clear skies, small gusts (5-8 mph). ~6 minute flight. Discovered calibration issue affecting left turns. Planning second LARK backup, Stallion with gimbal camera, and Moose payload carrier.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beach Cleanup Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2><i class="fas fa-water text-primary"></i> Beach Cleanup Initiative</h2>
+        <p>Combining drone technology with hands-on environmental action</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3>Aerial Surveys</h3>
+          <p class="card-text">Using drones to identify pollution hotspots and debris accumulation along Marin's coastline.</p>
+        </div>
+
+        <div class="card feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h3>Mapping</h3>
+          <p class="card-text">Creating detailed maps of cleanup areas to organize volunteers and track progress over time.</p>
+        </div>
+
+        <div class="card feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Community Events</h3>
+          <p class="card-text">Organizing regular cleanup events with local schools and environmental organizations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Development -->
+  <section class="donate-section">
+    <div class="container">
+      <h2>Current Development</h2>
+      <p>
+        We're actively working on 3D mapping exercises and planning a US Coast Guard site visit.
+        Our team continues to expand our fleet and capabilities.
+      </p>
+      <a href="about.html#contact" class="btn btn-primary btn-lg">
+        <i class="fas fa-rocket"></i> Get Involved
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="TAM AIR Club Logo" onerror="this.style.display='none'">
+          <p>
+            TAM AIR Non-Profit - Using innovative drone technology to conserve nature and protect Marin County's landscapes for future generations.
+          </p>
+          <div class="footer-social">
+            <a href="https://instagram.com/tamairclub" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/@TamAirNonProfit" target="_blank" rel="noopener" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.gofundme.com/f/support-tam-air-protect-marin-from-wildfires" target="_blank" rel="noopener" aria-label="GoFundMe">
+              <i class="fas fa-hand-holding-heart"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="projects.html">Projects</a>
+            <a href="services.html">Services</a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h4>More</h4>
+          <div class="footer-links">
+            <a href="events.html">Events</a>
+            <a href="conrad.html">Conrad Challenge</a>
+            <a href="research.html">Research</a>
+            <a href="about.html#contact">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h4>Support</h4>
+          <div class="footer-links">
+            <a href="fundraising.html">Fundraising</a>
+            <a href="https://www.gofundme.com/f/support-tam-air-protect-marin-from-wildfires" target="_blank" rel="noopener">Donate</a>
+            <a href="links.html">Resources</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2025</span> TAM AIR Club. All rights reserved. | Marin County, California</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
