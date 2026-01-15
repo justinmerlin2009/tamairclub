@@ -67,8 +67,8 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
   - FAQ section
 
 ### Projects (projects.html)
-- 3D Printed UAV overview
-- FPV Drone Operations
+- 3D Printed UAV overview (image: `3d-printed-uav.png`)
+- FPV Drone Operations (image: `fpv-drone-operations.png`)
 - **Learning Log** - Full detailed entries with:
   - Flight title, Date, Present (attendees), Location, Weather
   - Detailed bullet-point notes
@@ -81,6 +81,7 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
 - Beach Cleanup Initiative
 
 ### Services (services.html)
+- **Page title: "Our Community Services"** (menu item remains "Services")
 - Photography & Video intro section with equipment list (DJI Mini 4 Pro, GoPro, Adobe Premiere Pro)
 - **Large playable YouTube videos** with descriptions:
   - PAASS Soccer Event (October 2025): https://youtube.com/embed/5k33WtXZ7eY
@@ -292,6 +293,8 @@ git lfs track "research/interactive/*.html"
 21. Revised Conrad Challenge page: Sylva is litter detection (not wildfire research)
 22. Added team photo to Homepage and About Us pages
 23. Removed "Current Development" section from Projects page
+24. Updated project images: 3D Printed UAV and FPV Drone Operations
+25. Changed Services page header to "Our Community Services"
 
 ## Known Issues / TODO
 - **Navbar vertical alignment**: FIXED (Jan 2026)
