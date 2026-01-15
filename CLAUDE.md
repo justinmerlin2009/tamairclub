@@ -4,30 +4,41 @@
 Modern, responsive website rebuild for TAM AIR Club (tamairclub.com) - a student-led non-profit organization using 3D printed drone technology to conserve nature and protect Marin County's landscapes from wildfires and pollution.
 
 **Original Site:** https://tamairclub.com (built with 101domain templates)
-**New Site:** Static HTML/CSS/JS with modern design, light/dark mode, responsive layout
+**New Site:** https://new.tamairclub.com (Static HTML/CSS/JS with modern design)
+**GitHub:** https://github.com/justinmerlin2009/tamairclub
+**Render:** https://tamairclub.onrender.com
+
+## Deployment Status: LIVE
+- Site deployed to Render (auto-deploys on git push)
+- Custom subdomain configured: new.tamairclub.com
+- SSL certificate active via Let's Encrypt
+- Formspree contact form integrated (ID: xeeonjnz)
 
 ## Technology Stack
 - HTML5, CSS3 (with CSS custom properties for theming)
 - Vanilla JavaScript
 - Font Awesome icons (CDN)
 - Google Fonts (Inter)
-- Formspree for contact form (needs user's form ID)
+- Formspree for contact form (ID: xeeonjnz)
 - Render for deployment (render.yaml included)
+- Git LFS for large files (35MB interactive map)
 
 ## Features Implemented
 - **Light/Dark Mode Toggle** - Sun/moon icon in navbar, saves preference to localStorage. **Default: Dark mode**
-- **Fully Responsive** - Mobile-first design for phones, tablets, laptops, desktops
-- **9 Complete Pages** - About (with Contact), Projects, Conrad Challenge, Services, Events, Research, Fundraising, Links
-- **Contact Form** - Integrated into About Us page, ready for Formspree
-- **YouTube Integration** - Video thumbnails with play button overlays
+- **Fully Responsive** - Optimized for desktop, laptop, iPad, iPhone with specific breakpoints
+- **9 Complete Pages** - About (with Contact), Projects, Services, Events, Conrad Challenge, Fundraising, Research, Links
+- **Contact Form** - Integrated into About Us page with Formspree
+- **YouTube Integration** - Playable embedded videos and thumbnails with play button overlays
 - **CAL FIRE Research Showcase** - Wildfire prediction research with interactive visualizations
+- **California Government Partners** - Logos and links for CAL FIRE, Caltrans, Keep California Beautiful, Clean California
 
 ## Navigation Structure (8 items)
 ```
-About Us | Projects | Conrad Challenge | Services | Events | Research | Fundraising | Links
+About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Research | Links
 ```
 - Home link removed (logo links to homepage)
 - Contact merged into About Us page
+- Navbar items all vertically aligned on same horizontal line
 
 ## Pages & Content
 
@@ -47,42 +58,51 @@ About Us | Projects | Conrad Challenge | Services | Events | Research | Fundrais
   - Gideon Palestrant - Founder, Chief of Technology
   - Vaughn Neumann - Founder, Chief of Media
 - **Contact section** (merged from contact.html):
-  - Contact form (Name, Email, Subject, Message)
+  - Contact form (Name, Email, Subject, Message) - Formspree ID: xeeonjnz
   - Social media links
   - FAQ section
 
 ### Projects (projects.html)
 - 3D Printed UAV overview
 - FPV Drone Operations
-- Learning Log with 4 flight entries (each with YouTube video):
-  - Flight 1 (May 4, 2025): Foam Plane Practice - https://youtu.be/Rhc1tHht2uM
-  - Flight 2 (May 31, 2025): Lark Takeoff & Landing - https://youtu.be/XherKA5kSXw
-  - Flight 3 (June 7, 2025): Three Complete Flights - https://youtu.be/SXyiF1K7Kt8
-  - Flight 4 (July 6, 2025): Hill Takeoffs - https://youtu.be/SXyiF1K7Kt8
+- **Learning Log** - Full detailed entries with:
+  - Flight title, Date, Present (attendees), Location, Weather
+  - Detailed bullet-point notes
+  - Video thumbnail on right side
+  - Flights documented:
+    - Flight 1 (May 4, 2025): Foam Plane Practice & Failed Lark Maiden Flight
+    - Flight 2 (May 31, 2025): Difficult Lark Takeoff & Landing
+    - Flight 3 (June 7, 2025): Successful Lark: 3 Complete Flights
+    - Flight 4 (July 6, 2025): Hill Takeoffs & Turn Issues
 - Beach Cleanup Initiative
+
+### Services (services.html)
+- Photography & Video intro section with equipment list (DJI Mini 4 Pro, GoPro)
+- **Large playable YouTube videos** with descriptions:
+  - PAASS Soccer Event (October 2025): https://youtube.com/embed/5k33WtXZ7eY
+  - Mill Valley Fall Art Festival (September 2025): https://youtube.com/embed/W44d068C-jI
+  - Bay Area Surf Soccer Training (September 2025): https://youtube.com/embed/nOzHA3pQB9k
+- Request Services CTA
+- Note: Geo-mapping section removed per user request
+
+### Events (events.html)
+- **STEM Education Programs** (moved from Services, at top of page):
+  - School Workshops
+  - Community Programs
+- UC Berkeley Engineering 2025 (Justin Merlin)
+- Toulouse Aeronautic 2025 (Justin Merlin) - includes rocket launch video
+- EAA AirVenture 2025 (David De Zafra) - Zipline & Wing connections
+- Timeline of achievements
 
 ### Conrad Challenge (conrad.html)
 - Competition overview and categories
 - Sylva project feature (environmental monitoring solution)
 - Link to sylva-us.com
-- Competition progress tracker
-
-### Services (services.html)
-- Photography & Video (DJI Mini 4 Pro, GoPro)
-- Sample work videos:
-  - PAASS Soccer Event: https://youtu.be/5k33WtXZ7eY
-  - Mill Valley Fall Art Festival: https://youtu.be/W44d068C-jI
-  - Bay Area Surf Soccer Training: https://youtu.be/nOzHA3pQB9k
-- Geo-mapping services
-
-### Events (events.html)
-- UC Berkeley Engineering 2025 (Justin Merlin)
-- Toulouse Aeronautic 2025 (Justin Merlin) - includes rocket launch video
-- EAA AirVenture 2025 (David De Zafra) - Zipline & Wing connections
-- Timeline of achievements
-- **STEM Education programs** (moved from Services):
-  - School Workshops
-  - Community Programs
+- **Competition progress tracker**:
+  - Registration: Completed
+  - Proposal: Completed
+  - Semifinals: Upcoming
+  - Innovation Summit: Goal
 
 ### Research (research.html)
 - CAL FIRE wildfire research collaboration showcase
@@ -93,21 +113,26 @@ About Us | Projects | Conrad Challenge | Services | Events | Research | Fundrais
   - Fire Clock (seasonal patterns)
   - Cumulative Risk Map (California heatmap)
   - Trend Analysis (acceleration evidence)
-- Interactive mega-fires map (35MB Folium map)
+- Interactive mega-fires map (35MB Folium map via Git LFS)
 - PDF research report download
 - Project roadmap (EDA complete, Grid Creation next)
-- Source: /Users/olivier/Documents/CLAUDE/wildfire_prediction_model_california/
 
 ### Fundraising (fundraising.html)
 - Dedicated GoFundMe campaign page
-- Progress indicator ($3,000+ raised)
+- Progress indicator ($3,000+ raised) with green gradient box
 - How donations help (equipment, materials, education)
 - Other ways to help (spread word, get involved)
 
 ### Links (links.html)
-- External resources (Flightory - 3D printed UAV models)
-- Andrew Newton YouTube (INAV tutorials)
-- Partner organizations (Conrad Challenge, Sylva)
+- **California Government Partners** (with official logos):
+  - CAL FIRE: https://www.fire.ca.gov/
+  - Caltrans: https://dot.ca.gov/
+  - Keep California Beautiful: https://keepcabeautiful.org/
+  - Clean California: https://cleancalifornia.dot.ca.gov/
+- 3D Printed UAV Resources:
+  - Flightory: https://flightory.com
+  - Andrew Newton YouTube (INAV tutorials)
+- Partner organizations (Conrad Challenge, Sylva, GoFundMe)
 - Social media links
 
 ## File Structure
@@ -115,46 +140,32 @@ About Us | Projects | Conrad Challenge | Services | Events | Research | Fundrais
 tamairclub/
 ├── index.html
 ├── about.html              # Includes Contact section
-├── projects.html
-├── conrad.html
-├── services.html           # Photography, Geo-mapping only
-├── events.html             # Includes STEM Education
+├── projects.html           # Detailed Learning Log
+├── conrad.html             # Competition progress tracker
+├── services.html           # Large playable YouTube videos
+├── events.html             # Includes STEM Education at top
 ├── research.html           # CAL FIRE research showcase
 ├── fundraising.html        # GoFundMe/donation page
-├── links.html              # External resources
+├── links.html              # CA Gov partners + resources
 ├── css/
 │   ├── styles.css          # Main styles + theme variables
-│   └── responsive.css      # Media queries
+│   └── responsive.css      # Media queries for all devices
 ├── js/
 │   ├── main.js             # Navigation, scroll effects
 │   ├── theme.js            # Light/dark mode toggle
 │   └── contact.js          # Form handling (Formspree)
 ├── images/
-│   ├── logo.png            # TAM AIR Club logo
-│   ├── video-thumbnail.jpg # YouTube video thumbnail
-│   ├── gofundme-logo.png
-│   ├── hero/
-│   │   └── hero-bg.jpg
+│   ├── logo.png
+│   ├── partners/           # CA Government partner logos
+│   │   ├── calfire-logo.png
+│   │   ├── caltrans-logo.png
+│   │   ├── clean-california-logo.png
+│   │   └── keep-ca-beautiful-logo.png
 │   ├── team/
-│   │   ├── justin-merlin.jpg
-│   │   ├── david-dezafra.jpg
-│   │   ├── gideon-palestrant.jpg
-│   │   └── vaughn-neumann.jpg
 │   ├── projects/
-│   │   ├── project1.jpg
-│   │   ├── project2.jpg
-│   │   └── project3.jpg
 │   ├── learning-log/
-│   │   ├── flight1.jpg
-│   │   ├── flight2.jpg
-│   │   ├── flight3.jpg
-│   │   └── flight4.jpg
 │   ├── events/
-│   │   ├── berkeley.jpg
-│   │   ├── toulouse.jpg
-│   │   └── airventure.jpg
 │   └── services/
-│       └── photography-video.png
 ├── research/               # Research assets
 │   ├── figures/
 │   │   ├── executive-dashboard.png
@@ -162,40 +173,58 @@ tamairclub/
 │   │   ├── risk-map.png
 │   │   └── trend-analysis.png
 │   ├── interactive/
-│   │   └── mega-fires-map.html  # 35MB interactive Folium map
+│   │   └── mega-fires-map.html  # 35MB (Git LFS)
 │   └── CALFIRE_Analysis_Report.pdf
 ├── render.yaml             # Render deployment config
+├── .gitattributes          # Git LFS config
 ├── .gitignore
-├── README.md
 └── CLAUDE.md               # This file
 ```
 
-## Next Steps to Deploy
+## Responsive Design
+Optimized breakpoints for all platforms:
+- **Desktop** (1280px+): Full layout, 4-column grids
+- **Laptop** (1024px+): Side-by-side layouts, full navigation
+- **iPad Landscape** (1024-1366px): Adjusted spacing, compact nav
+- **iPad Portrait** (768-1024px): Stacked layouts, 2-column grids
+- **Mobile** (below 768px): Single column, hamburger menu
+- **Small iPhone** (below 480px): Compact UI, larger touch targets
 
-1. **Set up Formspree:**
-   - Create account at formspree.io
-   - Create new form, get form ID
-   - Replace `YOUR_FORMSPREE_ID` in about.html and js/contact.js
+Features:
+- iOS safe area support (iPhone X+ notch/home indicator)
+- Touch-friendly minimum 44px tap targets
+- Video grids stack vertically on mobile
+- Partner logos: 4 cols → 2 cols → 1 col responsive
 
-2. **Initialize Git:**
-   ```bash
-   cd /Users/olivier/Documents/CLAUDE/tamairclub
-   git init
-   git add .
-   git commit -m "Initial TAM AIR Club website"
-   ```
+## Git & Deployment
 
-3. **Push to GitHub:**
-   - Create new repository on GitHub
-   - Follow GitHub's instructions to push existing repo
+### SSH Configuration
+Using SSH key for GitHub (configured in ~/.ssh/config):
+```
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/tamairclub_key
+  IdentitiesOnly yes
+```
 
-4. **Deploy to Render:**
-   - Connect GitHub repo to Render
-   - Render auto-detects render.yaml
-   - Site goes live!
+### Git LFS
+Large file storage enabled for interactive map:
+```
+research/interactive/mega-fires-map.html filter=lfs diff=lfs merge=lfs -text
+```
 
-5. **Configure subdomain:**
-   - Set up as new.tamairclub.com for comparison with original
+### Deploy Commands
+```bash
+# Push changes (auto-deploys to Render)
+git add .
+git commit -m "Your message"
+git push
+
+# If LFS issues
+git lfs install
+git lfs track "research/interactive/*.html"
+```
 
 ## Social Links
 - Instagram: https://instagram.com/tamairclub
@@ -206,10 +235,23 @@ tamairclub/
 
 ## Development Notes
 - All images extracted from original tamairclub.com CloudFront CDN
-- YouTube video embeds replaced with clickable thumbnails (original embed had Error 153)
-- Contact form uses Formspree (similar to sylva-us.com implementation)
+- YouTube videos use iframe embeds for playability
+- Contact form uses Formspree (ID: xeeonjnz)
 - CSS uses custom properties for easy theme switching
 - Mobile navigation uses hamburger menu below 1024px
-- **Default theme: Dark mode** - All HTML files have `data-theme="dark"` and theme.js defaults to dark when no user preference is saved
+- **Default theme: Dark mode** - All HTML files have `data-theme="dark"`
 - Logo in navbar links to homepage (no separate Home menu item)
 - Contact section accessible via about.html#contact
+- Navbar elements fixed at 60px height with consistent vertical alignment
+
+## Recent Changes (January 2026)
+1. Deployed to new.tamairclub.com via Render
+2. Integrated Formspree contact form (ID: xeeonjnz)
+3. Added California Government Partners to Links page
+4. Redesigned Services page with large playable YouTube videos
+5. Redesigned Learning Log with full flight details
+6. Reordered navigation menu
+7. Fixed navbar vertical alignment
+8. Added comprehensive responsive design for all devices
+9. Marked Conrad Challenge Proposal as completed
+10. Set up Git LFS for 35MB interactive map
