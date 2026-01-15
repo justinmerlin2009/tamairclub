@@ -28,7 +28,7 @@ Modern, responsive website rebuild for TAM AIR Club (tamairclub.com) - a student
 - **Fully Responsive** - Optimized for desktop, laptop, iPad, iPhone with specific breakpoints
 - **9 Complete Pages** - About (with Contact), Projects, Services, Events, Conrad Challenge, Fundraising, Research, Links
 - **Contact Form** - Integrated into About Us page with Formspree
-- **YouTube Integration** - Playable embedded videos and thumbnails with play button overlays
+- **YouTube Integration** - All videos embedded as iframes for direct playback on site
 - **CAL FIRE Research Showcase** - Wildfire prediction research with interactive visualizations
 - **California Government Partners** - Logos and links for CAL FIRE, Caltrans, Keep California Beautiful, Clean California
 
@@ -44,7 +44,9 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
 
 ### Homepage (index.html)
 - Hero section with logo and mission tagline
+- Embedded YouTube introduction video
 - Social media links (Instagram, YouTube)
+- **News banner**: Mill Valley school visits February 2026
 - News & Updates (September 2025, Summer 2025)
 - Explore TAM AIR section (Projects, Services, Research cards)
 - Donate section with GoFundMe link
@@ -68,16 +70,16 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
 - **Learning Log** - Full detailed entries with:
   - Flight title, Date, Present (attendees), Location, Weather
   - Detailed bullet-point notes
-  - Video thumbnail on right side
+  - Embedded YouTube video for each flight
   - Flights documented:
-    - Flight 1 (May 4, 2025): Foam Plane Practice & Failed Lark Maiden Flight
-    - Flight 2 (May 31, 2025): Difficult Lark Takeoff & Landing
-    - Flight 3 (June 7, 2025): Successful Lark: 3 Complete Flights
-    - Flight 4 (July 6, 2025): Hill Takeoffs & Turn Issues
+    - Flight 1 (May 4, 2025): Foam Plane Practice & Failed Lark Maiden Flight - `Rhc1tHht2uM`
+    - Flight 2 (May 31, 2025): Difficult Lark Takeoff & Landing - `uXwLnZlOcjo`
+    - Flight 3 (June 7, 2025): Successful Lark: 3 Complete Flights - `XherKA5kSXw`
+    - Flight 4 (July 6, 2025): Hill Takeoffs & Turn Issues - `SXyiF1K7Kt8`
 - Beach Cleanup Initiative
 
 ### Services (services.html)
-- Photography & Video intro section with equipment list (DJI Mini 4 Pro, GoPro)
+- Photography & Video intro section with equipment list (DJI Mini 4 Pro, GoPro, Adobe Premiere Pro)
 - **Large playable YouTube videos** with descriptions:
   - PAASS Soccer Event (October 2025): https://youtube.com/embed/5k33WtXZ7eY
   - Mill Valley Fall Art Festival (September 2025): https://youtube.com/embed/W44d068C-jI
@@ -89,8 +91,9 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
 - **STEM Education Programs** (moved from Services, at top of page):
   - School Workshops
   - Community Programs
+  - **News banner**: Mill Valley school visits February 2026
 - UC Berkeley Engineering 2025 (Justin Merlin)
-- Toulouse Aeronautic 2025 (Justin Merlin) - includes rocket launch video
+- Toulouse Aeronautic 2025 (Justin Merlin) - embedded rocket launch video (YouTube Short)
 - EAA AirVenture 2025 (David De Zafra) - Zipline & Wing connections
 - Timeline of achievements
 
@@ -107,7 +110,7 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
 
 ### Research (research.html)
 - CAL FIRE wildfire research collaboration showcase
-- TAM AIR Club × CAL FIRE × UCSF × UCI partnership
+- TAM AIR Club × CAL FIRE × UCSF × Sylva partnership
 - Key findings: 4.2M acres burned in 2020, 84% damage June-Sept, etc.
 - Featured visualizations:
   - Executive Dashboard (10-panel overview)
@@ -116,7 +119,22 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
   - Trend Analysis (acceleration evidence)
 - Interactive mega-fires map (35MB Folium map via Git LFS)
 - PDF research report download
-- Project roadmap (EDA complete, Grid Creation next)
+- GitHub: https://github.com/justinmerlin2009/wildfire_prediction_model_california
+- **Project Roadmap (9 phases)**:
+  1. CAL FIRE Historical Perimeters (Completed)
+  2. Fire Ignition Points (In Progress)
+  3. Vegetation Data
+  4. Topography & Lakes
+  5. PRISM Weather Data
+  6. Census, Roads & Power Lines
+  7. Hypothesis & Methodology
+  8. Statistical Analyses
+  9. Web Application for CAL FIRE
+- **Research Partners**:
+  - TAM AIR Club (Tamalpais High School)
+  - David Passovoy (CAL FIRE)
+  - Shu Li (UC Irvine - Environmental Science)
+  - Evan Porter, Dante Capaldi, Hui Lin (UCSF)
 
 ### Fundraising (fundraising.html)
 - Dedicated GoFundMe campaign page
@@ -256,6 +274,15 @@ git lfs track "research/interactive/*.html"
 8. Marked Conrad Challenge Proposal as completed
 9. Set up Git LFS for 35MB interactive map
 10. Added Sylva video to Conrad Challenge page
+11. Embedded all YouTube videos as iframes (homepage, projects, events) - removed thumbnail links
+12. Added news banner for Mill Valley school visits (February 2026) on homepage and events
+13. Fixed typos: 760p → 720p, consistent "TAM AIR" capitalization
+14. Corrected YouTube video links for Learning Log flights
+15. Updated Research page with 9-phase roadmap (weekly dataset analysis)
+16. Added research collaborators: David Passovoy (CAL FIRE), Shu Li (UCI), UCSF team
+17. Updated GitHub link to wildfire_prediction_model_california repository
+18. Added Adobe Premiere Pro to services equipment list
+19. Updated footer copyright year to 2026 across all pages
 
 ## Known Issues / TODO
 - **Navbar vertical alignment**: FIXED (Jan 2026)
