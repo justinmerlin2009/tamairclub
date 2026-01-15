@@ -38,7 +38,7 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
 ```
 - Home link removed (logo links to homepage)
 - Contact merged into About Us page
-- Navbar items all vertically aligned on same horizontal line
+- **TODO: Navbar vertical alignment still needs fixing** - Menu items appear higher than logo and theme toggle button
 
 ## Pages & Content
 
@@ -97,6 +97,7 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
 ### Conrad Challenge (conrad.html)
 - Competition overview and categories
 - Sylva project feature (environmental monitoring solution)
+- **Sylva video**: https://youtu.be/mdnOKHkWWx4 (embedded player)
 - Link to sylva-us.com
 - **Competition progress tracker**:
   - Registration: Completed
@@ -251,7 +252,10 @@ git lfs track "research/interactive/*.html"
 4. Redesigned Services page with large playable YouTube videos
 5. Redesigned Learning Log with full flight details
 6. Reordered navigation menu
-7. Fixed navbar vertical alignment
-8. Added comprehensive responsive design for all devices
-9. Marked Conrad Challenge Proposal as completed
-10. Set up Git LFS for 35MB interactive map
+7. Added comprehensive responsive design for all devices
+8. Marked Conrad Challenge Proposal as completed
+9. Set up Git LFS for 35MB interactive map
+10. Added Sylva video to Conrad Challenge page
+
+## Known Issues / TODO
+- **Navbar vertical alignment**: Menu items (About Us, Projects, etc.) appear slightly higher than the logo and light/dark toggle button. Needs CSS adjustment to align all elements on the same horizontal baseline.
