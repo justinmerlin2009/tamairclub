@@ -258,5 +258,6 @@ git lfs track "research/interactive/*.html"
 10. Added Sylva video to Conrad Challenge page
 
 ## Known Issues / TODO
-- **Navbar vertical alignment**: Menu items (About Us, Projects, etc.) appear slightly higher than the logo and light/dark toggle button. Needs CSS adjustment to align all elements on the same horizontal baseline.
-- **Navbar menu items too small**: The font size of menu items (currently 0.85rem) is a bit small and could be increased for better readability.
+- ~~**Navbar vertical alignment**: Fixed - removed fixed heights, using flexbox align-items: center~~
+- ~~**Navbar menu items too small**: Fixed - increased font-size from 0.85rem to 0.95rem~~
+- Check if navbar alignment is now correct on all devices
