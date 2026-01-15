@@ -179,9 +179,10 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
-  max-width: 1200px;
+  padding: 0.75rem 2rem;
+  max-width: 1400px;
   margin: 0 auto;
+  gap: 1rem;
 }
 
 .nav-logo {
@@ -195,6 +196,8 @@ p {
   cursor: pointer;
   position: relative;
   z-index: 10;
+  flex-shrink: 0;
+  height: 40px;
 }
 
 .nav-logo:hover {
@@ -214,14 +217,15 @@ p {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
+  flex-wrap: nowrap;
 }
 
 .nav-link {
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.65rem;
   color: var(--text-secondary);
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   border-radius: 0.5rem;
   transition: all 0.2s ease;
   white-space: nowrap;
@@ -237,6 +241,8 @@ p {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-shrink: 0;
+  height: 40px;
 }
 
 /* Theme Toggle Button */
