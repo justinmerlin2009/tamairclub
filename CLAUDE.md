@@ -38,7 +38,7 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
 ```
 - Home link removed (logo links to homepage)
 - Contact merged into About Us page
-- **TODO: Navbar vertical alignment still needs fixing** - Menu items appear higher than logo and theme toggle button
+- Navbar vertically aligned using flexbox with `display: contents` on li elements
 
 ## Pages & Content
 
@@ -243,7 +243,7 @@ git lfs track "research/interactive/*.html"
 - **Default theme: Dark mode** - All HTML files have `data-theme="dark"`
 - Logo in navbar links to homepage (no separate Home menu item)
 - Contact section accessible via about.html#contact
-- Navbar elements fixed at 60px height with consistent vertical alignment
+- Navbar uses flexbox centering with min-height: 64px
 
 ## Recent Changes (January 2026)
 1. Deployed to new.tamairclub.com via Render
@@ -258,6 +258,13 @@ git lfs track "research/interactive/*.html"
 10. Added Sylva video to Conrad Challenge page
 
 ## Known Issues / TODO
-- ~~**Navbar vertical alignment**: Fixed - removed fixed heights, using flexbox align-items: center~~
-- ~~**Navbar menu items too small**: Fixed - increased font-size from 0.85rem to 0.95rem~~
-- Check if navbar alignment is now correct on all devices
+- **Navbar vertical alignment**: FIXED (Jan 2026)
+  - Root cause: Fixed `height: 40px` on all nav elements was fighting against flexbox centering
+  - Also: Text had `line-height: 1.6` from body, creating extra vertical space
+  - Solution implemented:
+    1. Removed all fixed heights from nav-menu, nav-menu li, nav-link, nav-actions
+    2. Added `line-height: 1` to nav-logo and nav-link
+    3. Changed `.nav-menu li` to `display: contents` (removes li from layout, nav-links align directly)
+    4. Changed nav-link from fixed height to padding-based sizing (`padding: 0.625rem 0.85rem`)
+    5. Added `min-height: 64px` to nav-container for consistent navbar height
+- Font size: 1rem for nav-link (readable and proportionate)
