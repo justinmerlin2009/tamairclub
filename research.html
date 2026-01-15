@@ -69,7 +69,7 @@
         <div class="mission-text">
           <h2><i class="fas fa-fire text-primary"></i> California Wildfire Prediction</h2>
           <p style="font-size: 1.1rem; margin-bottom: 1rem;">
-            <strong>TAM AIR Club &times; CAL FIRE &times; UCSF &times; UCI</strong>
+            <strong>TAM AIR Club &times; CAL FIRE &times; UCSF &times; Sylva</strong>
           </p>
           <p>
             Our research initiative aims to build a pixel-wise wildfire risk prediction system for California at 800m &times; 800m resolution using machine learning. By analyzing over 147 years of fire perimeter data, we're developing tools to help predict and prevent catastrophic wildfires.
@@ -251,7 +251,7 @@
             <i class="fas fa-check"></i>
           </div>
           <div class="timeline-content">
-            <h3>Phase 1.5: Exploratory Data Analysis</h3>
+            <h3>Phase 1: CAL FIRE Historical Perimeters</h3>
             <span class="badge" style="background: var(--primary); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">COMPLETED</span>
             <p>Comprehensive analysis of 22,000+ fire perimeters. Created 19 publication-quality visualizations. Identified key patterns and data quality thresholds.</p>
           </div>
@@ -262,31 +262,86 @@
             <i class="fas fa-spinner fa-spin"></i>
           </div>
           <div class="timeline-content">
-            <h3>Phase 2: Grid Creation</h3>
+            <h3>Phase 2: Fire Ignition Points</h3>
             <span class="badge" style="background: var(--text-secondary); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">IN PROGRESS</span>
-            <p>Generate 800m &times; 800m pixel grid covering California. Rasterize fire perimeters to binary grid cells. Create temporal aggregation (monthly/seasonal).</p>
+            <p>Analyze fire ignition point dataset to understand fire origin patterns, causes, and spatial distribution across California.</p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-marker">
-            <i class="fas fa-database"></i>
+            <i class="fas fa-tree"></i>
           </div>
           <div class="timeline-content">
-            <h3>Phase 3: Data Integration</h3>
+            <h3>Phase 3: Vegetation Data</h3>
             <span class="badge" style="background: transparent; color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--border);">PLANNED</span>
-            <p>Integrate PRISM climate data (temperature, precipitation, VPD), DEM for topography features, and vegetation/fuel data. Align all datasets to common grid.</p>
+            <p>Analyze vegetation and fuel load data to understand how different land cover types influence fire behavior and spread.</p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="timeline-marker">
-            <i class="fas fa-brain"></i>
+            <i class="fas fa-mountain"></i>
           </div>
           <div class="timeline-content">
-            <h3>Phase 4: ML Model Development</h3>
+            <h3>Phase 4: Topography &amp; Lakes</h3>
+            <span class="badge" style="background: transparent; color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--border);">PLANNED</span>
+            <p>Incorporate elevation, slope, aspect, and water body data to understand terrain influences on fire risk and natural fire breaks.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>Phase 5: PRISM Weather Data</h3>
+            <span class="badge" style="background: transparent; color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--border);">PLANNED</span>
+            <p>Integrate PRISM climate data including temperature, precipitation, and vapor pressure deficit to model weather-driven fire risk.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <i class="fas fa-road"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>Phase 6: Census, Roads &amp; Power Lines</h3>
+            <span class="badge" style="background: transparent; color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--border);">PLANNED</span>
+            <p>Analyze human infrastructure data including population density, road networks, and electrical lines as ignition risk factors.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>Phase 7: Hypothesis &amp; Methodology</h3>
+            <span class="badge" style="background: transparent; color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--border);">PLANNED</span>
+            <p>Synthesize findings from all datasets to form research hypotheses and develop methodology for statistical analyses.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>Phase 8: Statistical Analyses</h3>
+            <span class="badge" style="background: transparent; color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--border);">PLANNED</span>
+            <p>Conduct multiple statistical analyses to identify significant predictors and build predictive models for wildfire risk.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>Phase 9: Web Application for CAL FIRE</h3>
             <span class="badge" style="background: transparent; color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--border);">FUTURE</span>
-            <p>Develop CNN/LSTM architecture for temporal prediction. Train on high-quality post-1993 data. Address class imbalance challenge (99% of pixels never burn).</p>
+            <p>Develop backend and frontend web application to deliver research results and predictive tools to CAL FIRE personnel.</p>
           </div>
         </div>
       </div>
@@ -319,19 +374,43 @@
         </div>
 
         <div class="card feature-card">
-          <div class="feature-icon" style="background: linear-gradient(135deg, #003262 0%, #002147 100%);">
-            <i class="fas fa-university"></i>
+          <div class="feature-icon" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);">
+            <i class="fas fa-user-tie"></i>
           </div>
-          <h3>UCSF</h3>
-          <p class="card-text">University of California, San Francisco - Academic Partner</p>
+          <h3>David Passovoy</h3>
+          <p class="card-text">Research Mentor &amp; Advisor - Sylva Project</p>
         </div>
 
         <div class="card feature-card">
-          <div class="feature-icon" style="background: linear-gradient(135deg, #0064a4 0%, #004b87 100%);">
-            <i class="fas fa-flask"></i>
+          <div class="feature-icon" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);">
+            <i class="fas fa-user-graduate"></i>
           </div>
-          <h3>UCI</h3>
-          <p class="card-text">University of California, Irvine - Research Collaboration</p>
+          <h3>Shu Li</h3>
+          <p class="card-text">Research Collaborator - Sylva Project</p>
+        </div>
+
+        <div class="card feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #003262 0%, #002147 100%);">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <h3>Evan Porter</h3>
+          <p class="card-text">Research Collaborator - UCSF</p>
+        </div>
+
+        <div class="card feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #003262 0%, #002147 100%);">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <h3>Dante Capaldi</h3>
+          <p class="card-text">Research Collaborator - UCSF</p>
+        </div>
+
+        <div class="card feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #003262 0%, #002147 100%);">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <h3>Hui Lin</h3>
+          <p class="card-text">Research Collaborator - UCSF</p>
         </div>
       </div>
     </div>
