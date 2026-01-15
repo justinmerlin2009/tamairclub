@@ -227,7 +227,7 @@ p {
   list-style: none;
   margin: 0;
   padding: 0;
-  transform: translateY(8px);
+  transform: translateY(16px);
 }
 
 .nav-menu li {
