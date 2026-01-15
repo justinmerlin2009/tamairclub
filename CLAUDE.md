@@ -259,12 +259,7 @@ git lfs track "research/interactive/*.html"
 
 ## Known Issues / TODO
 - **Navbar vertical alignment**: FIXED (Jan 2026)
-  - Root cause: Fixed `height: 40px` on all nav elements was fighting against flexbox centering
-  - Also: Text had `line-height: 1.6` from body, creating extra vertical space
-  - Solution implemented:
-    1. Removed all fixed heights from nav-menu, nav-menu li, nav-link, nav-actions
-    2. Added `line-height: 1` to nav-logo and nav-link
-    3. Changed `.nav-menu li` to `display: contents` (removes li from layout, nav-links align directly)
-    4. Changed nav-link from fixed height to padding-based sizing (`padding: 0.625rem 0.85rem`)
-    5. Added `min-height: 64px` to nav-container for consistent navbar height
+  - Root cause: Menu items appeared higher than logo and theme toggle due to font/element baseline differences
+  - Solution: Applied `transform: translateY(16px)` to `.nav-menu` for optical vertical alignment
+  - Also added `align-self: center` to nav-logo, nav-menu, and nav-actions
 - Font size: 1rem for nav-link (readable and proportionate)
