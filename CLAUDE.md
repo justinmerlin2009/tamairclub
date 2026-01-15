@@ -48,13 +48,15 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
 - Social media links (Instagram, YouTube)
 - **News banner**: Mill Valley school visits February 2026
 - News & Updates (September 2025, Summer 2025)
+- **Team photo section** with link to About page
 - Explore TAM AIR section (Projects, Services, Research cards)
 - Donate section with GoFundMe link
 
 ### About Us (about.html)
 - Mission statement and goals
 - Values section (Conservation, Innovation, Education, Community)
-- Team members with real photos:
+- **Team group photo** (from Sylva/Conrad submission)
+- Team members with individual photos:
   - Justin Merlin - Founder & Leader
   - David De Zafra - Founder, Chief of Aviation
   - Gideon Palestrant - Founder, Chief of Technology
@@ -99,7 +101,10 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
 
 ### Conrad Challenge (conrad.html)
 - Competition overview and categories
-- Sylva project feature (environmental monitoring solution)
+- **Sylva project** - Litter detection solution (distinct from wildfire research):
+  - Problem: Millions of pounds of litter on CA highways/coastlines
+  - Solution: AI-powered dashboard using drone imagery to map litter hotspots
+  - Partners: Caltrans, Keep California Beautiful, Clean California
 - **Sylva video**: https://youtu.be/mdnOKHkWWx4 (embedded player)
 - Link to sylva-us.com
 - **Competition progress tracker**:
@@ -283,6 +288,10 @@ git lfs track "research/interactive/*.html"
 17. Updated GitHub link to wildfire_prediction_model_california repository
 18. Added Adobe Premiere Pro to services equipment list
 19. Updated footer copyright year to 2026 across all pages
+20. Moved Project Roadmap to top of Research page (before Key Findings)
+21. Revised Conrad Challenge page: Sylva is litter detection (not wildfire research)
+22. Added team photo to Homepage and About Us pages
+23. Removed "Current Development" section from Projects page
 
 ## Known Issues / TODO
 - **Navbar vertical alignment**: FIXED (Jan 2026)
