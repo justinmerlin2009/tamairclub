@@ -3,14 +3,15 @@
 ## Project Overview
 Modern, responsive website rebuild for TAM AIR Club (tamairclub.com) - a student-led non-profit organization using 3D printed drone technology to conserve nature and protect Marin County's landscapes from wildfires and pollution.
 
-**Original Site:** https://tamairclub.com (built with 101domain templates)
-**New Site:** https://new.tamairclub.com (Static HTML/CSS/JS with modern design)
+**Live Site:** https://tamairclub.com (Static HTML/CSS/JS with modern design)
+**Backup:** https://new.tamairclub.com (same site, subdomain still active)
 **GitHub:** https://github.com/justinmerlin2009/tamairclub
 **Render:** https://tamairclub.onrender.com
 
 ## Deployment Status: LIVE
 - Site deployed to Render (auto-deploys on git push)
-- Custom subdomain configured: new.tamairclub.com
+- **Primary domain: tamairclub.com** (DNS migrated from 101domain)
+- Backup subdomain: new.tamairclub.com
 - SSL certificate active via Let's Encrypt
 - Formspree contact form integrated (ID: xeeonjnz)
 
@@ -91,14 +92,25 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
 - Note: Geo-mapping section removed per user request
 
 ### Events (events.html)
-- **STEM Education Programs** (moved from Services, at top of page):
+- **STEM Education Programs** (at top of page):
   - School Workshops
   - Community Programs
   - **News banner**: Mill Valley school visits February 2026
-- UC Berkeley Engineering 2025 (Justin Merlin)
-- Toulouse Aeronautic 2025 (Justin Merlin) - embedded rocket launch video (YouTube Short)
-- EAA AirVenture 2025 (David De Zafra) - Zipline & Wing connections
-- Timeline of achievements
+- **Timeline - Our Journey**:
+  - May 2025: First Drone Prototype
+  - Summer 2025: Major Program Attendance
+  - Summer 2025: Prototype Success
+  - September 2025: Conrad Challenge Entry
+  - 2025: Fundraising Milestone ($3,000+)
+  - February-March 2026: STEM Outreach (Mill Valley Middle, Park Elementary, Strawberry Elementary)
+  - Ongoing: Community Engagement
+- **Detailed Event Narratives with Photo Galleries**:
+  - UC Berkeley Engineering 2025 (by Justin Merlin) - 6 photos from gallery
+  - Toulouse Aeronautic 2025 (by Justin Merlin) - 6 photos + rocket launch video
+  - EAA AirVenture 2025 (by David de Zafra) - Zipline & Wing connections
+- Event photos saved from old site:
+  - `images/events/berkeley-engineering-2025/` (23 photos)
+  - `images/events/toulouse-2025/` (13 photos)
 
 ### Conrad Challenge (conrad.html)
 - Competition overview and categories
@@ -190,6 +202,8 @@ tamairclub/
 │   ├── projects/
 │   ├── learning-log/
 │   ├── events/
+│   │   ├── berkeley-engineering-2025/  # 23 photos
+│   │   └── toulouse-2025/              # 13 photos
 │   └── services/
 ├── research/               # Research assets
 │   ├── figures/
@@ -295,6 +309,13 @@ git lfs track "research/interactive/*.html"
 23. Removed "Current Development" section from Projects page
 24. Updated project images: 3D Printed UAV and FPV Drone Operations
 25. Changed Services page header to "Our Community Services"
+26. **Domain migration**: tamairclub.com now points to Render (DNS A record: 216.24.57.1)
+27. Added detailed event narratives with full blog-style content for Berkeley, Toulouse, AirVenture
+28. Added event photo galleries (6 photos each for Berkeley and Toulouse sections)
+29. Saved 36 event photos from old site (23 Berkeley + 13 Toulouse)
+30. Removed "Where We've Been" section (redundant with detailed sections)
+31. Removed "Upcoming Events" section from events page
+32. Updated timeline with chronological milestones including STEM Outreach schools
 
 ## Known Issues / TODO
 - **Navbar vertical alignment**: FIXED (Jan 2026)
