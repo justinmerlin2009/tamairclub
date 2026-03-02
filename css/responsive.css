@@ -337,6 +337,22 @@
   .card:active {
     transform: scale(0.98);
   }
+
+  /* Stats grid - remove borders when stacked */
+  .stats-bar-grid > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+  }
+
+  .stats-bar-grid > div:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
 }
 
 /* ==================== Small Mobile (below 480px) ==================== */
