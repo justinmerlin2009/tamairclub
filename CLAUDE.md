@@ -27,18 +27,21 @@ Modern, responsive website rebuild for TAM AIR Club (tamairclub.com) - a student
 ## Features Implemented
 - **Light/Dark Mode Toggle** - Sun/moon icon in navbar, saves preference to localStorage. **Default: Dark mode**
 - **Fully Responsive** - Optimized for desktop, laptop, iPad, iPhone with specific breakpoints
-- **9 Complete Pages** - About (with Contact), Projects, Services, Events, Conrad Challenge, Fundraising, Research, Links
+- **10 Complete Pages** - About (with Contact), Projects, Services, Events, Conrad Challenge, Clean CA, Fundraising, Research, Links
 - **Contact Form** - Integrated into About Us page with Formspree
 - **YouTube Integration** - All videos embedded as iframes for direct playback on site
 - **CAL FIRE Research Showcase** - Wildfire prediction research with interactive visualizations
 - **California Government Partners** - Logos and links for CAL FIRE, Caltrans, Keep California Beautiful, Clean California
+- **Wildfire Explorer Dashboard** - Static React app at `/wildfire-explorer/` with 12 datasets, 293 figures, 13 notebooks
+- **Clean California Initiative** - Designation checklist (15 criteria), roadmap timeline, progress tracking
 
-## Navigation Structure (8 items)
+## Navigation Structure (9 items)
 ```
-About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Research | Links
+About Us | Projects | Services | Events | Conrad Challenge | Clean CA | Fundraising | Research | Links
 ```
 - Home link removed (logo links to homepage)
 - Contact merged into About Us page
+- Clean CA nav item styled with orange (#f7931e) highlight
 - Navbar vertically aligned using flexbox with `display: contents` on li elements
 
 ## Pages & Content
@@ -47,10 +50,11 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
 - Hero section with logo and mission tagline
 - Embedded YouTube introduction video
 - Social media links (Instagram, YouTube)
-- **News banner**: Mill Valley school visits February 2026
+- **News banners**: Clean CA initiative, Conrad Challenge Alternate Finalist, Mill Valley school visits
 - News & Updates (September 2025, Summer 2025)
 - **Team photo section** with link to About page
-- Explore TAM AIR section (Projects, Services, Research cards)
+- **Clean California section** with progress stats (6 met / 5 in progress / 10 required / June '26 target) and roadmap CTA
+- Explore TAM AIR section (Projects, Services, Events, Research cards)
 - Donate section with GoFundMe link
 
 ### About Us (about.html)
@@ -154,6 +158,33 @@ About Us | Projects | Services | Events | Conrad Challenge | Fundraising | Resea
   - Shu Li (UC Irvine - Environmental Science)
   - Evan Porter, Dante Capaldi, Hui Lin (UCSF)
 
+### Clean California (cleanca.html)
+- **Hero**: Stats (15 criteria, 10 required, 6 already met, June '26 target)
+- **Partners bar**: Caltrans, Clean California, Keep California Beautiful logos
+- **Overview**: What is the designation + Initiative leadership (TAM AIR, Mr. Brow, Mae Nisbet, Mr. Pasarow)
+- **Benefits**: Official signage, state recognition, grant access
+- **Checklist** (15 criteria with progress ring):
+  - 6 Complete: Advisory body, community cleanups, community education, youth education (K-12), anti-litter infrastructure, local partnerships
+  - 5 In Progress: Sign the pledge, community input, litter assessment, measure progress, greening & beautification
+  - 4 Not Planned: Enforcement/deterrence, long-term plan, collection drives, cigarette litter receptacles
+- **Roadmap to Designation** (8-phase timeline):
+  - 3 Done: Advisory body & partnerships, education & outreach, cleanups & infrastructure (with links to relevant site pages)
+  - 1 Active: Foundation — sign pledge & community input (March 2026)
+  - 4 Upcoming: Assessment, beautification, submission, celebration
+- **Goal section**: Sign unveiling by June 2026
+- **CTA**: Contact us + follow updates
+
+### Wildfire Explorer (/wildfire-explorer/)
+- **Static React dashboard** served from `wildfire-explorer/` directory
+- Built from wildfire_prediction_model_california project, Maps tab excluded (requires 25GB backend)
+- **4 tabs**: Overview, Figures, Dataset detail, Timeline
+- **Data**: 12 datasets, 293 figures, 13 executed notebook HTMLs, 4 pre-baked JSON files
+- **SPA routing**: `_redirects` file rewrites to index.html for React Router
+- **Dark mode by default**, toggle available
+- **Git LFS**: 13 notebook HTMLs tracked via LFS (~142 MB)
+- **Build**: `dashboard/scripts/build_static_export.py` in wildfire project generates the static export
+- **Caching headers** in render.yaml for assets (1yr), figures/notebooks (30d), data JSON (1d)
+
 ### Fundraising (fundraising.html)
 - Dedicated GoFundMe campaign page
 - Progress indicator ($3,000+ raised) with green gradient box
@@ -181,9 +212,11 @@ tamairclub/
 ├── conrad.html             # Competition progress tracker
 ├── services.html           # Large playable YouTube videos
 ├── events.html             # Includes STEM Education at top
+├── cleanca.html            # Clean California designation initiative
 ├── research.html           # CAL FIRE research showcase
 ├── fundraising.html        # GoFundMe/donation page
 ├── links.html              # CA Gov partners + resources
+├── _redirects              # SPA rewrite for wildfire-explorer
 ├── css/
 │   ├── styles.css          # Main styles + theme variables
 │   └── responsive.css      # Media queries for all devices
@@ -214,6 +247,12 @@ tamairclub/
 │   ├── interactive/
 │   │   └── mega-fires-map.html  # 35MB (Git LFS)
 │   └── CALFIRE_Analysis_Report.pdf
+├── wildfire-explorer/      # Static React dashboard (~440 MB)
+│   ├── index.html          # Vite SPA entry
+│   ├── assets/             # JS/CSS bundles
+│   ├── data/               # Pre-baked JSON (datasets, figures, highlights, timeline)
+│   ├── figures/             # 293 PNGs across 12 dataset subdirs (~300 MB)
+│   └── notebooks/          # 13 executed notebook HTMLs (~142 MB, Git LFS)
 ├── render.yaml             # Render deployment config
 ├── .gitattributes          # Git LFS config
 ├── .gitignore
@@ -248,9 +287,10 @@ Host github.com
 ```
 
 ### Git LFS
-Large file storage enabled for interactive map:
+Large file storage enabled for interactive map and wildfire notebook HTMLs:
 ```
 research/interactive/mega-fires-map.html filter=lfs diff=lfs merge=lfs -text
+wildfire-explorer/notebooks/*.html filter=lfs diff=lfs merge=lfs -text
 ```
 
 ### Deploy Commands
@@ -316,6 +356,16 @@ git lfs track "research/interactive/*.html"
 30. Removed "Where We've Been" section (redundant with detailed sections)
 31. Removed "Upcoming Events" section from events page
 32. Updated timeline with chronological milestones including STEM Outreach schools
+
+## Recent Changes (March 2026)
+33. Added Clean California (cleanca.html) page: designation checklist, 8-phase roadmap, initiative leadership, benefits
+34. Added Clean CA section to homepage with progress stats and roadmap CTA
+35. Added Clean CA to navigation bar with orange highlight
+36. Added Wildfire Explorer static dashboard at `/wildfire-explorer/` (React SPA, 12 datasets, 293 figures, 13 notebooks)
+37. Added `_redirects` for wildfire-explorer SPA routing on Render
+38. Added Git LFS tracking for wildfire notebook HTMLs (~142 MB)
+39. Added caching headers in render.yaml for wildfire-explorer assets
+40. Updated Clean CA roadmap: 3 completed phases reference existing site content (Projects, Events, Services, Links pages)
 
 ## Known Issues / TODO
 - **Navbar vertical alignment**: FIXED (Jan 2026)
