@@ -1,0 +1,2049 @@
+{
+  "census": [
+    {
+      "filename": "01_data_availability_matrix.png",
+      "title": "Data Availability Matrix",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/01_data_availability_matrix.png",
+      "size": 280022
+    },
+    {
+      "filename": "02_data_quality_summary.png",
+      "title": "Data Quality Summary",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/02_data_quality_summary.png",
+      "size": 233376
+    },
+    {
+      "filename": "02_globpop_validation.png",
+      "title": "Globpop Validation",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/02_globpop_validation.png",
+      "size": 378943
+    },
+    {
+      "filename": "03_statewide_population_trajectory.png",
+      "title": "Statewide Population Trajectory",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/03_statewide_population_trajectory.png",
+      "size": 293580
+    },
+    {
+      "filename": "04_population_by_region.png",
+      "title": "Population By Region",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/04_population_by_region.png",
+      "size": 422298
+    },
+    {
+      "filename": "05_decennial_density_comparison.png",
+      "title": "Decennial Density Comparison",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/05_decennial_density_comparison.png",
+      "size": 724722
+    },
+    {
+      "filename": "06_all_counties_2020_population.png",
+      "title": "All Counties 2020 Population",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/06_all_counties_2020_population.png",
+      "size": 531979
+    },
+    {
+      "filename": "07_county_growth_heatmap.png",
+      "title": "County Growth Heatmap",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/07_county_growth_heatmap.png",
+      "size": 390736
+    },
+    {
+      "filename": "08_top_bottom_growth_counties.png",
+      "title": "Top Bottom Growth Counties",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/08_top_bottom_growth_counties.png",
+      "size": 1144645
+    },
+    {
+      "filename": "09_county_rank_changes.png",
+      "title": "County Rank Changes",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/09_county_rank_changes.png",
+      "size": 689621
+    },
+    {
+      "filename": "10_regional_growth_comparison.png",
+      "title": "Regional Growth Comparison",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/10_regional_growth_comparison.png",
+      "size": 419277
+    },
+    {
+      "filename": "11_tract_density_choropleth_2020.png",
+      "title": "Tract Density Choropleth 2020",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/11_tract_density_choropleth_2020.png",
+      "size": 928977
+    },
+    {
+      "filename": "12_regional_density_zoom.png",
+      "title": "Regional Density Zoom",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/12_regional_density_zoom.png",
+      "size": 2714724
+    },
+    {
+      "filename": "13_density_distribution_comparison.png",
+      "title": "Density Distribution Comparison",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/13_density_distribution_comparison.png",
+      "size": 237479
+    },
+    {
+      "filename": "14_density_classification_map.png",
+      "title": "Density Classification Map",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/14_density_classification_map.png",
+      "size": 1239836
+    },
+    {
+      "filename": "15_decade_county_growth_maps.png",
+      "title": "Decade County Growth Maps",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/15_decade_county_growth_maps.png",
+      "size": 563151
+    },
+    {
+      "filename": "15_raster_density_change_2000_2020.png",
+      "title": "Raster Density Change 2000 2020",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/15_raster_density_change_2000_2020.png",
+      "size": 2328228
+    },
+    {
+      "filename": "16_pixel_change_metro_insets.png",
+      "title": "Pixel Change Metro Insets",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/16_pixel_change_metro_insets.png",
+      "size": 1372309
+    },
+    {
+      "filename": "16_tract_population_change_2010_2020.png",
+      "title": "Tract Population Change 2010 2020",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/16_tract_population_change_2010_2020.png",
+      "size": 766975
+    },
+    {
+      "filename": "17_growth_frontier_map.png",
+      "title": "Growth Frontier Map",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/17_growth_frontier_map.png",
+      "size": 800878
+    },
+    {
+      "filename": "17_wui_growth_frontier_raster.png",
+      "title": "Wui Growth Frontier Raster",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/17_wui_growth_frontier_raster.png",
+      "size": 672407
+    },
+    {
+      "filename": "18B_density_snapshots_small_multiples.png",
+      "title": "18B Density Snapshots Small Multiples",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/18B_density_snapshots_small_multiples.png",
+      "size": 5128840
+    },
+    {
+      "filename": "18C_pixel_timeseries_notable_locations.png",
+      "title": "18C Pixel Timeseries Notable Locations",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/18C_pixel_timeseries_notable_locations.png",
+      "size": 317881
+    },
+    {
+      "filename": "18_population_decline_fire_overlay.png",
+      "title": "Population Decline Fire Overlay",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/18_population_decline_fire_overlay.png",
+      "size": 2453228
+    },
+    {
+      "filename": "18_population_loss_zones.png",
+      "title": "Population Loss Zones",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/18_population_loss_zones.png",
+      "size": 614502
+    },
+    {
+      "filename": "19_housing_vs_population_growth.png",
+      "title": "Housing Vs Population Growth",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/19_housing_vs_population_growth.png",
+      "size": 632922
+    },
+    {
+      "filename": "20_housing_density_map.png",
+      "title": "Housing Density Map",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/20_housing_density_map.png",
+      "size": 852921
+    },
+    {
+      "filename": "21_vacancy_rates.png",
+      "title": "Vacancy Rates",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/21_vacancy_rates.png",
+      "size": 807820
+    },
+    {
+      "filename": "22_housing_type_by_region.png",
+      "title": "Housing Type By Region",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/22_housing_type_by_region.png",
+      "size": 260934
+    },
+    {
+      "filename": "23_median_age_map.png",
+      "title": "Median Age Map",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/23_median_age_map.png",
+      "size": 982335
+    },
+    {
+      "filename": "24_racial_ethnic_composition.png",
+      "title": "Racial Ethnic Composition",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/24_racial_ethnic_composition.png",
+      "size": 232387
+    },
+    {
+      "filename": "25_median_income_map.png",
+      "title": "Median Income Map",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/25_median_income_map.png",
+      "size": 1066537
+    },
+    {
+      "filename": "26_income_vs_poverty_scatter.png",
+      "title": "Income Vs Poverty Scatter",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/26_income_vs_poverty_scatter.png",
+      "size": 295032
+    },
+    {
+      "filename": "27_density_fire_overlay.png",
+      "title": "Density Fire Overlay",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/27_density_fire_overlay.png",
+      "size": 1820165
+    },
+    {
+      "filename": "27_raster_density_fire_overlay.png",
+      "title": "Raster Density Fire Overlay",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/27_raster_density_fire_overlay.png",
+      "size": 1980765
+    },
+    {
+      "filename": "28_pixel_fire_exposure.png",
+      "title": "Pixel Fire Exposure",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/28_pixel_fire_exposure.png",
+      "size": 425415
+    },
+    {
+      "filename": "28_tracts_fire_intersection.png",
+      "title": "Tracts Fire Intersection",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/28_tracts_fire_intersection.png",
+      "size": 760450
+    },
+    {
+      "filename": "29_county_fire_risk_matrix.png",
+      "title": "County Fire Risk Matrix",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/29_county_fire_risk_matrix.png",
+      "size": 363394
+    },
+    {
+      "filename": "30B_population_at_risk_timeseries.png",
+      "title": "30B Population At Risk Timeseries",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/30B_population_at_risk_timeseries.png",
+      "size": 276789
+    },
+    {
+      "filename": "30C_fire_probability_vs_density.png",
+      "title": "30C Fire Probability Vs Density",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/30C_fire_probability_vs_density.png",
+      "size": 214930
+    },
+    {
+      "filename": "30D_composite_risk_map.png",
+      "title": "30D Composite Risk Map",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/30D_composite_risk_map.png",
+      "size": 383327
+    },
+    {
+      "filename": "30E_post_fire_population_change.png",
+      "title": "30E Post Fire Population Change",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/30E_post_fire_population_change.png",
+      "size": 605299
+    },
+    {
+      "filename": "30_wui_expansion_analysis.png",
+      "title": "Wui Expansion Analysis",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/30_wui_expansion_analysis.png",
+      "size": 717256
+    },
+    {
+      "filename": "31_summary_dashboard.png",
+      "title": "Summary Dashboard",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/31_summary_dashboard.png",
+      "size": 696986
+    },
+    {
+      "filename": "32B_grid_feature_preview.png",
+      "title": "32B Grid Feature Preview",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/32B_grid_feature_preview.png",
+      "size": 221511
+    },
+    {
+      "filename": "32_feature_correlation_matrix.png",
+      "title": "Feature Correlation Matrix",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/32_feature_correlation_matrix.png",
+      "size": 248862
+    },
+    {
+      "filename": "33_resolution_comparison.png",
+      "title": "Resolution Comparison",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/33_resolution_comparison.png",
+      "size": 209492
+    },
+    {
+      "filename": "34_density_distribution_ridge.png",
+      "title": "Density Distribution Ridge",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/34_density_distribution_ridge.png",
+      "size": 438733
+    },
+    {
+      "filename": "35_urbanization_metrics.png",
+      "title": "Urbanization Metrics",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/35_urbanization_metrics.png",
+      "size": 476081
+    },
+    {
+      "filename": "36_growth_rate_map_raster.png",
+      "title": "Growth Rate Map Raster",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/36_growth_rate_map_raster.png",
+      "size": 1168018
+    },
+    {
+      "filename": "37_census_tracts_2025_change.png",
+      "title": "Census Tracts 2025 Change",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/37_census_tracts_2025_change.png",
+      "size": 732538
+    },
+    {
+      "filename": "38_tracts_2025_fire_zones.png",
+      "title": "Tracts 2025 Fire Zones",
+      "dataset": "census",
+      "url": "/wildfire-explorer/figures/census/38_tracts_2025_fire_zones.png",
+      "size": 798320
+    }
+  ],
+  "comprehensive": [
+    {
+      "filename": "01_data_completeness_comparison.png",
+      "title": "Data Completeness Comparison",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/01_data_completeness_comparison.png",
+      "size": 288474
+    },
+    {
+      "filename": "01_data_quality_overview.png",
+      "title": "Data Quality Overview",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/01_data_quality_overview.png",
+      "size": 466908
+    },
+    {
+      "filename": "02_collection_method_evolution.png",
+      "title": "Collection Method Evolution",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/02_collection_method_evolution.png",
+      "size": 234279
+    },
+    {
+      "filename": "02_fire_timeline_147_years.png",
+      "title": "Fire Timeline 147 Years",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/02_fire_timeline_147_years.png",
+      "size": 631406
+    },
+    {
+      "filename": "03_temporal_timeline_dual.png",
+      "title": "Temporal Timeline Dual",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/03_temporal_timeline_dual.png",
+      "size": 440746
+    },
+    {
+      "filename": "03_trend_analysis_regression.png",
+      "title": "Trend Analysis Regression",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/03_trend_analysis_regression.png",
+      "size": 358385
+    },
+    {
+      "filename": "03b_era_comparison.png",
+      "title": "03B Era Comparison",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/03b_era_comparison.png",
+      "size": 648232
+    },
+    {
+      "filename": "03c_yearly_analysis.png",
+      "title": "03C Yearly Analysis",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/03c_yearly_analysis.png",
+      "size": 578776
+    },
+    {
+      "filename": "03d_era_percent_change.png",
+      "title": "03D Era Percent Change",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/03d_era_percent_change.png",
+      "size": 182600
+    },
+    {
+      "filename": "04_decade_analysis.png",
+      "title": "Decade Analysis",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/04_decade_analysis.png",
+      "size": 403223
+    },
+    {
+      "filename": "04_temporal_trend_analysis.png",
+      "title": "Temporal Trend Analysis",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/04_temporal_trend_analysis.png",
+      "size": 563958
+    },
+    {
+      "filename": "05_2020_comparison.png",
+      "title": "2020 Comparison",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/05_2020_comparison.png",
+      "size": 176508
+    },
+    {
+      "filename": "05_decade_comparison.png",
+      "title": "Decade Comparison",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/05_decade_comparison.png",
+      "size": 379402
+    },
+    {
+      "filename": "06_monthly_patterns.png",
+      "title": "Monthly Patterns",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/06_monthly_patterns.png",
+      "size": 603297
+    },
+    {
+      "filename": "06_seasonal_monthly_distribution.png",
+      "title": "Seasonal Monthly Distribution",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/06_seasonal_monthly_distribution.png",
+      "size": 292463
+    },
+    {
+      "filename": "07_fire_clock_polar.png",
+      "title": "Fire Clock Polar",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/07_fire_clock_polar.png",
+      "size": 1389290
+    },
+    {
+      "filename": "08_seasonal_heatmap.png",
+      "title": "Seasonal Heatmap",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/08_seasonal_heatmap.png",
+      "size": 425399
+    },
+    {
+      "filename": "08_seasonal_heatmaps.png",
+      "title": "Seasonal Heatmaps",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/08_seasonal_heatmaps.png",
+      "size": 349975
+    },
+    {
+      "filename": "09_fire_seasons.png",
+      "title": "Fire Seasons",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/09_fire_seasons.png",
+      "size": 272804
+    },
+    {
+      "filename": "09_season_comparison.png",
+      "title": "Season Comparison",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/09_season_comparison.png",
+      "size": 288110
+    },
+    {
+      "filename": "10_fire_size_distribution.png",
+      "title": "Fire Size Distribution",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/10_fire_size_distribution.png",
+      "size": 304218
+    },
+    {
+      "filename": "11_mega_fire_trends.png",
+      "title": "Mega Fire Trends",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/11_mega_fire_trends.png",
+      "size": 133546
+    },
+    {
+      "filename": "11_pareto_analysis.png",
+      "title": "Pareto Analysis",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/11_pareto_analysis.png",
+      "size": 485238
+    },
+    {
+      "filename": "12_fire_size_categories.png",
+      "title": "Fire Size Categories",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/12_fire_size_categories.png",
+      "size": 372619
+    },
+    {
+      "filename": "12_fire_size_violin.png",
+      "title": "Fire Size Violin",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/12_fire_size_violin.png",
+      "size": 302468
+    },
+    {
+      "filename": "13_california_fire_map.png",
+      "title": "California Fire Map",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/13_california_fire_map.png",
+      "size": 2441696
+    },
+    {
+      "filename": "13_spatial_overview.png",
+      "title": "Spatial Overview",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/13_spatial_overview.png",
+      "size": 1728042
+    },
+    {
+      "filename": "14_cumulative_fire_risk.png",
+      "title": "Cumulative Fire Risk",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/14_cumulative_fire_risk.png",
+      "size": 2360148
+    },
+    {
+      "filename": "14_fires_by_decade_maps.png",
+      "title": "Fires By Decade Maps",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/14_fires_by_decade_maps.png",
+      "size": 3693817
+    },
+    {
+      "filename": "15_fire_causes.png",
+      "title": "Fire Causes",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/15_fire_causes.png",
+      "size": 402269
+    },
+    {
+      "filename": "15_mega_fire_map.png",
+      "title": "Mega Fire Map",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/15_mega_fire_map.png",
+      "size": 1839722
+    },
+    {
+      "filename": "16_agency_response.png",
+      "title": "Agency Response",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/16_agency_response.png",
+      "size": 466321
+    },
+    {
+      "filename": "16_fire_causes.png",
+      "title": "Fire Causes",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/16_fire_causes.png",
+      "size": 321247
+    },
+    {
+      "filename": "17_agency_trends_over_time.png",
+      "title": "Agency Trends Over Time",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/17_agency_trends_over_time.png",
+      "size": 1132807
+    },
+    {
+      "filename": "17_human_vs_natural.png",
+      "title": "Human Vs Natural",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/17_human_vs_natural.png",
+      "size": 272458
+    },
+    {
+      "filename": "18_agency_analysis.png",
+      "title": "Agency Analysis",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/18_agency_analysis.png",
+      "size": 638927
+    },
+    {
+      "filename": "18_unit_fire_activity.png",
+      "title": "Unit Fire Activity",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/18_unit_fire_activity.png",
+      "size": 454087
+    },
+    {
+      "filename": "19_agency_evolution.png",
+      "title": "Agency Evolution",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/19_agency_evolution.png",
+      "size": 484371
+    },
+    {
+      "filename": "19_unit_trends_over_time.png",
+      "title": "Unit Trends Over Time",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/19_unit_trends_over_time.png",
+      "size": 997339
+    },
+    {
+      "filename": "20_distribution_fitting.png",
+      "title": "Distribution Fitting",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/20_distribution_fitting.png",
+      "size": 314604
+    },
+    {
+      "filename": "21_correlation_matrix.png",
+      "title": "Correlation Matrix",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/21_correlation_matrix.png",
+      "size": 154649
+    },
+    {
+      "filename": "22_fire_behavior_triangle.png",
+      "title": "Fire Behavior Triangle",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/22_fire_behavior_triangle.png",
+      "size": 245407
+    },
+    {
+      "filename": "23_executive_dashboard.png",
+      "title": "Executive Dashboard",
+      "dataset": "comprehensive",
+      "url": "/wildfire-explorer/figures/comprehensive/23_executive_dashboard.png",
+      "size": 1037123
+    }
+  ],
+  "fpa": [
+    {
+      "filename": "01_data_quality_completeness.png",
+      "title": "Data Quality Completeness",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/01_data_quality_completeness.png",
+      "size": 341931
+    },
+    {
+      "filename": "02_state_comparison.png",
+      "title": "State Comparison",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/02_state_comparison.png",
+      "size": 286578
+    },
+    {
+      "filename": "03_size_class_comparison.png",
+      "title": "Size Class Comparison",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/03_size_class_comparison.png",
+      "size": 255519
+    },
+    {
+      "filename": "04_temporal_timeline.png",
+      "title": "Temporal Timeline",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/04_temporal_timeline.png",
+      "size": 500500
+    },
+    {
+      "filename": "05_decade_comparison.png",
+      "title": "Decade Comparison",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/05_decade_comparison.png",
+      "size": 345001
+    },
+    {
+      "filename": "06_monthly_distribution.png",
+      "title": "Monthly Distribution",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/06_monthly_distribution.png",
+      "size": 215492
+    },
+    {
+      "filename": "07_fire_duration.png",
+      "title": "Fire Duration",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/07_fire_duration.png",
+      "size": 329244
+    },
+    {
+      "filename": "08_discovery_time_of_day.png",
+      "title": "Discovery Time Of Day",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/08_discovery_time_of_day.png",
+      "size": 371319
+    },
+    {
+      "filename": "09_fire_size_spectrum.png",
+      "title": "Fire Size Spectrum",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/09_fire_size_spectrum.png",
+      "size": 522014
+    },
+    {
+      "filename": "10_small_fire_dominance.png",
+      "title": "Small Fire Dominance",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/10_small_fire_dominance.png",
+      "size": 315265
+    },
+    {
+      "filename": "11_cause_classification.png",
+      "title": "Cause Classification",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/11_cause_classification.png",
+      "size": 280043
+    },
+    {
+      "filename": "12_general_cause_deep_dive.png",
+      "title": "General Cause Deep Dive",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/12_general_cause_deep_dive.png",
+      "size": 406945
+    },
+    {
+      "filename": "13_cause_trends.png",
+      "title": "Cause Trends",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/13_cause_trends.png",
+      "size": 557190
+    },
+    {
+      "filename": "14_land_ownership.png",
+      "title": "Land Ownership",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/14_land_ownership.png",
+      "size": 330972
+    },
+    {
+      "filename": "15_county_geography.png",
+      "title": "County Geography",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/15_county_geography.png",
+      "size": 396760
+    },
+    {
+      "filename": "16_spatial_overview.png",
+      "title": "Spatial Overview",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/16_spatial_overview.png",
+      "size": 3727185
+    },
+    {
+      "filename": "17_cross_reference.png",
+      "title": "Cross Reference",
+      "dataset": "fpa",
+      "url": "/wildfire-explorer/figures/fpa/17_cross_reference.png",
+      "size": 470034
+    }
+  ],
+  "infra": [
+    {
+      "filename": "01_data_availability.png",
+      "title": "Data Availability",
+      "dataset": "infra",
+      "url": "/wildfire-explorer/figures/infra/01_data_availability.png",
+      "size": 215431
+    },
+    {
+      "filename": "02_data_quality.png",
+      "title": "Data Quality",
+      "dataset": "infra",
+      "url": "/wildfire-explorer/figures/infra/02_data_quality.png",
+      "size": 330743
+    },
+    {
+      "filename": "03_road_network_map.png",
+      "title": "Road Network Map",
+      "dataset": "infra",
+      "url": "/wildfire-explorer/figures/infra/03_road_network_map.png",
+      "size": 5950959
+    },
+    {
+      "filename": "04_road_composition.png",
+      "title": "Road Composition",
+      "dataset": "infra",
+      "url": "/wildfire-explorer/figures/infra/04_road_composition.png",
+      "size": 302331
+    },
+    {
+      "filename": "05_road_growth_temporal.png",
+      "title": "Road Growth Temporal",
+      "dataset": "infra",
+      "url": "/wildfire-explorer/figures/infra/05_road_growth_temporal.png",
+      "size": 298363
+    },
+    {
+      "filename": "06_road_growth_county.png",
+      "title": "Road Growth County",
+      "dataset": "infra",
+      "url": "/wildfire-explorer/figures/infra/06_road_growth_county.png",
+      "size": 562949
+    },
+    {
+      "filename": "07_road_density_county.png",
+      "title": "Road Density County",
+      "dataset": "infra",
+      "url": "/wildfire-explorer/figures/infra/07_road_density_county.png",
+      "size": 614553
+    },
+    {
+      "filename": "08_road_density_region.png",
+      "title": "Road Density Region",
+      "dataset": "infra",
+      "url": "/wildfire-explorer/figures/infra/08_road_density_region.png",
+      "size": 295326
+    },
+    {
+      "filename": "09_transmission_grid_map.png",
+      "title": "Transmission Grid Map",
+      "dataset": "infra",
+      "url": "/wildfire-explorer/figures/infra/09_transmission_grid_map.png",
+      "size": 1618893
+    },
+    {
+      "filename": "10_transmission_composition.png",
+      "title": "Transmission Composition",
+      "dataset": "infra",
+      "url": "/wildfire-explorer/figures/infra/10_transmission_composition.png",
+      "size": 262108
+    },
+    {
+      "filename": "11_grid_expansion_decade.png",
+      "title": "Grid Expansion Decade",
+      "dataset": "infra",
+      "url": "/wildfire-explorer/figures/infra/11_grid_expansion_decade.png",
+      "size": 186908
+    },
+    {
+      "filename": "12_roads_fire_overlay.png",
+      "title": "Roads Fire Overlay",
+      "dataset": "infra",
+      "url": "/wildfire-explorer/figures/infra/12_roads_fire_overlay.png",
+      "size": 1693944
+    },
+    {
+      "filename": "13_transmission_fire_overlay.png",
+      "title": "Transmission Fire Overlay",
+      "dataset": "infra",
+      "url": "/wildfire-explorer/figures/infra/13_transmission_fire_overlay.png",
+      "size": 1328360
+    },
+    {
+      "filename": "14_combined_risk_score.png",
+      "title": "Combined Risk Score",
+      "dataset": "infra",
+      "url": "/wildfire-explorer/figures/infra/14_combined_risk_score.png",
+      "size": 626922
+    }
+  ],
+  "landfire_cc": [
+    {
+      "filename": "01_data_quality_class_distribution.png",
+      "title": "Data Quality Class Distribution",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/01_data_quality_class_distribution.png",
+      "size": 317636
+    },
+    {
+      "filename": "02_canopy_cover_distribution.png",
+      "title": "Canopy Cover Distribution",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/02_canopy_cover_distribution.png",
+      "size": 199699
+    },
+    {
+      "filename": "03_statewide_canopy_cover_map.png",
+      "title": "Statewide Canopy Cover Map",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/03_statewide_canopy_cover_map.png",
+      "size": 1117816
+    },
+    {
+      "filename": "04_canopy_cover_by_elevation.png",
+      "title": "Canopy Cover By Elevation",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/04_canopy_cover_by_elevation.png",
+      "size": 336051
+    },
+    {
+      "filename": "05_regional_canopy_cover_comparison.png",
+      "title": "Regional Canopy Cover Comparison",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/05_regional_canopy_cover_comparison.png",
+      "size": 231730
+    },
+    {
+      "filename": "06_north_south_gradient.png",
+      "title": "North South Gradient",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/06_north_south_gradient.png",
+      "size": 375413
+    },
+    {
+      "filename": "07_east_west_canopy_profiles.png",
+      "title": "East West Canopy Profiles",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/07_east_west_canopy_profiles.png",
+      "size": 924753
+    },
+    {
+      "filename": "08_burned_vs_unburned_cc.png",
+      "title": "Burned Vs Unburned Cc",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/08_burned_vs_unburned_cc.png",
+      "size": 368345
+    },
+    {
+      "filename": "09_cc_by_fire_size_category.png",
+      "title": "Cc By Fire Size Category",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/09_cc_by_fire_size_category.png",
+      "size": 203313
+    },
+    {
+      "filename": "10_cc_fire_perimeters_temporal.png",
+      "title": "Cc Fire Perimeters Temporal",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/10_cc_fire_perimeters_temporal.png",
+      "size": 360517
+    },
+    {
+      "filename": "11_severity_vs_canopy_cover.png",
+      "title": "Severity Vs Canopy Cover",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/11_severity_vs_canopy_cover.png",
+      "size": 437727
+    },
+    {
+      "filename": "12_cc_by_fire_season.png",
+      "title": "Cc By Fire Season",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/12_cc_by_fire_season.png",
+      "size": 269080
+    },
+    {
+      "filename": "13_cc_severity_by_decade.png",
+      "title": "Cc Severity By Decade",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/13_cc_severity_by_decade.png",
+      "size": 408940
+    },
+    {
+      "filename": "14_fire_frequency_by_cc_class.png",
+      "title": "Fire Frequency By Cc Class",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/14_fire_frequency_by_cc_class.png",
+      "size": 227374
+    },
+    {
+      "filename": "15_fire_size_by_canopy_cover.png",
+      "title": "Fire Size By Canopy Cover",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/15_fire_size_by_canopy_cover.png",
+      "size": 267599
+    },
+    {
+      "filename": "16_regional_detail_map.png",
+      "title": "Regional Detail Map",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/16_regional_detail_map.png",
+      "size": 3025721
+    },
+    {
+      "filename": "17_cc_fire_overlay_map.png",
+      "title": "Cc Fire Overlay Map",
+      "dataset": "landfire_cc",
+      "url": "/wildfire-explorer/figures/landfire_cc/17_cc_fire_overlay_map.png",
+      "size": 2582775
+    }
+  ],
+  "mtbs": [
+    {
+      "filename": "01_data_quality_completeness.png",
+      "title": "Data Quality Completeness",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/01_data_quality_completeness.png",
+      "size": 310517
+    },
+    {
+      "filename": "02_state_comparison.png",
+      "title": "State Comparison",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/02_state_comparison.png",
+      "size": 374960
+    },
+    {
+      "filename": "03_western_us_trends.png",
+      "title": "Western Us Trends",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/03_western_us_trends.png",
+      "size": 1140415
+    },
+    {
+      "filename": "04_temporal_timeline.png",
+      "title": "Temporal Timeline",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/04_temporal_timeline.png",
+      "size": 275125
+    },
+    {
+      "filename": "05_decade_comparison.png",
+      "title": "Decade Comparison",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/05_decade_comparison.png",
+      "size": 271129
+    },
+    {
+      "filename": "06_monthly_distribution.png",
+      "title": "Monthly Distribution",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/06_monthly_distribution.png",
+      "size": 230158
+    },
+    {
+      "filename": "07_month_vs_fire_size.png",
+      "title": "Month Vs Fire Size",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/07_month_vs_fire_size.png",
+      "size": 788387
+    },
+    {
+      "filename": "08_fire_size_distribution.png",
+      "title": "Fire Size Distribution",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/08_fire_size_distribution.png",
+      "size": 395004
+    },
+    {
+      "filename": "09_incident_type_analysis.png",
+      "title": "Incident Type Analysis",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/09_incident_type_analysis.png",
+      "size": 308448
+    },
+    {
+      "filename": "10_severity_threshold_distributions.png",
+      "title": "Severity Threshold Distributions",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/10_severity_threshold_distributions.png",
+      "size": 618440
+    },
+    {
+      "filename": "11_severity_vs_fire_size.png",
+      "title": "Severity Vs Fire Size",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/11_severity_vs_fire_size.png",
+      "size": 587424
+    },
+    {
+      "filename": "12_severity_trends_over_time.png",
+      "title": "Severity Trends Over Time",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/12_severity_trends_over_time.png",
+      "size": 480261
+    },
+    {
+      "filename": "13_severity_by_season_assessment.png",
+      "title": "Severity By Season Assessment",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/13_severity_by_season_assessment.png",
+      "size": 255505
+    },
+    {
+      "filename": "14_spatial_overview_map.png",
+      "title": "Spatial Overview Map",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/14_spatial_overview_map.png",
+      "size": 2007812
+    },
+    {
+      "filename": "15_severity_spatial_patterns.png",
+      "title": "Severity Spatial Patterns",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/15_severity_spatial_patterns.png",
+      "size": 1762135
+    },
+    {
+      "filename": "16_calfire_crossref_comparison.png",
+      "title": "Calfire Crossref Comparison",
+      "dataset": "mtbs",
+      "url": "/wildfire-explorer/figures/mtbs/16_calfire_crossref_comparison.png",
+      "size": 544589
+    }
+  ],
+  "prism_california": [
+    {
+      "filename": "01_ca_climate_overview.png",
+      "title": "Ca Climate Overview",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/01_ca_climate_overview.png",
+      "size": 8925650
+    },
+    {
+      "filename": "02_ca_data_quality.png",
+      "title": "Ca Data Quality",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/02_ca_data_quality.png",
+      "size": 1547484
+    },
+    {
+      "filename": "03_ca_temperature_timeline.png",
+      "title": "Ca Temperature Timeline",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/03_ca_temperature_timeline.png",
+      "size": 1211357
+    },
+    {
+      "filename": "04_ca_temperature_anomaly.png",
+      "title": "Ca Temperature Anomaly",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/04_ca_temperature_anomaly.png",
+      "size": 292558
+    },
+    {
+      "filename": "05_ca_temperature_spatial_trends.png",
+      "title": "Ca Temperature Spatial Trends",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/05_ca_temperature_spatial_trends.png",
+      "size": 9172387
+    },
+    {
+      "filename": "06_ca_temperature_extremes.png",
+      "title": "Ca Temperature Extremes",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/06_ca_temperature_extremes.png",
+      "size": 844195
+    },
+    {
+      "filename": "07_ca_precipitation_timeline.png",
+      "title": "Ca Precipitation Timeline",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/07_ca_precipitation_timeline.png",
+      "size": 370888
+    },
+    {
+      "filename": "08_ca_precipitation_spatial.png",
+      "title": "Ca Precipitation Spatial",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/08_ca_precipitation_spatial.png",
+      "size": 3256460
+    },
+    {
+      "filename": "09_ca_precipitation_anomaly.png",
+      "title": "Ca Precipitation Anomaly",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/09_ca_precipitation_anomaly.png",
+      "size": 200623
+    },
+    {
+      "filename": "10_ca_drought_analysis.png",
+      "title": "Ca Drought Analysis",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/10_ca_drought_analysis.png",
+      "size": 973528
+    },
+    {
+      "filename": "11_ca_vpd_timeline.png",
+      "title": "Ca Vpd Timeline",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/11_ca_vpd_timeline.png",
+      "size": 1306937
+    },
+    {
+      "filename": "12_ca_vpd_spatial.png",
+      "title": "Ca Vpd Spatial",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/12_ca_vpd_spatial.png",
+      "size": 9659619
+    },
+    {
+      "filename": "13_ca_vpd_risk_classification.png",
+      "title": "Ca Vpd Risk Classification",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/13_ca_vpd_risk_classification.png",
+      "size": 2372890
+    },
+    {
+      "filename": "14_ca_vpd_seasonal_trends.png",
+      "title": "Ca Vpd Seasonal Trends",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/14_ca_vpd_seasonal_trends.png",
+      "size": 1336559
+    },
+    {
+      "filename": "15_ca_vpd_extremes.png",
+      "title": "Ca Vpd Extremes",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/15_ca_vpd_extremes.png",
+      "size": 862814
+    },
+    {
+      "filename": "16_ca_relative_humidity.png",
+      "title": "Ca Relative Humidity",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/16_ca_relative_humidity.png",
+      "size": 4384176
+    },
+    {
+      "filename": "17_ca_climate_correlations.png",
+      "title": "Ca Climate Correlations",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/17_ca_climate_correlations.png",
+      "size": 1255579
+    },
+    {
+      "filename": "18_ca_climate_region_profiles.png",
+      "title": "Ca Climate Region Profiles",
+      "dataset": "prism_california",
+      "url": "/wildfire-explorer/figures/prism_california/18_ca_climate_region_profiles.png",
+      "size": 1233476
+    }
+  ],
+  "prism_conus": [
+    {
+      "filename": "01_data_quality_coverage.png",
+      "title": "Data Quality Coverage",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/01_data_quality_coverage.png",
+      "size": 1069487
+    },
+    {
+      "filename": "02_conus_temperature_maps.png",
+      "title": "Conus Temperature Maps",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/02_conus_temperature_maps.png",
+      "size": 6946954
+    },
+    {
+      "filename": "03_conus_moisture_maps.png",
+      "title": "Conus Moisture Maps",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/03_conus_moisture_maps.png",
+      "size": 6218389
+    },
+    {
+      "filename": "04_conus_seasonal_contrast.png",
+      "title": "Conus Seasonal Contrast",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/04_conus_seasonal_contrast.png",
+      "size": 7228610
+    },
+    {
+      "filename": "05_conus_solar_normals.png",
+      "title": "Conus Solar Normals",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/05_conus_solar_normals.png",
+      "size": 239642
+    },
+    {
+      "filename": "06_all_state_rankings_temperature.png",
+      "title": "All State Rankings Temperature",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/06_all_state_rankings_temperature.png",
+      "size": 564092
+    },
+    {
+      "filename": "07_all_state_rankings_moisture.png",
+      "title": "All State Rankings Moisture",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/07_all_state_rankings_moisture.png",
+      "size": 554246
+    },
+    {
+      "filename": "08_state_climate_diversity.png",
+      "title": "State Climate Diversity",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/08_state_climate_diversity.png",
+      "size": 501744
+    },
+    {
+      "filename": "09_all_state_fire_climate_index.png",
+      "title": "All State Fire Climate Index",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/09_all_state_fire_climate_index.png",
+      "size": 413241
+    },
+    {
+      "filename": "10_all_state_climate_profiles.png",
+      "title": "All State Climate Profiles",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/10_all_state_climate_profiles.png",
+      "size": 1620802
+    },
+    {
+      "filename": "11_state_climate_summary_cards.png",
+      "title": "State Climate Summary Cards",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/11_state_climate_summary_cards.png",
+      "size": 913480
+    },
+    {
+      "filename": "12_national_climate_trends.png",
+      "title": "National Climate Trends",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/12_national_climate_trends.png",
+      "size": 2114904
+    },
+    {
+      "filename": "13_all_western_state_trends.png",
+      "title": "All Western State Trends",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/13_all_western_state_trends.png",
+      "size": 2692609
+    },
+    {
+      "filename": "14_decadal_climate_shifts.png",
+      "title": "Decadal Climate Shifts",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/14_decadal_climate_shifts.png",
+      "size": 513243
+    },
+    {
+      "filename": "15_state_warming_rates.png",
+      "title": "State Warming Rates",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/15_state_warming_rates.png",
+      "size": 703255
+    },
+    {
+      "filename": "16_all_state_seasonal_heatmap.png",
+      "title": "All State Seasonal Heatmap",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/16_all_state_seasonal_heatmap.png",
+      "size": 470468
+    },
+    {
+      "filename": "17_fire_season_climate_all_states.png",
+      "title": "Fire Season Climate All States",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/17_fire_season_climate_all_states.png",
+      "size": 589070
+    },
+    {
+      "filename": "18_precipitation_seasonality.png",
+      "title": "Precipitation Seasonality",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/18_precipitation_seasonality.png",
+      "size": 753586
+    },
+    {
+      "filename": "19_state_seasonal_diversity.png",
+      "title": "State Seasonal Diversity",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/19_state_seasonal_diversity.png",
+      "size": 371310
+    },
+    {
+      "filename": "20_conus_climate_regions.png",
+      "title": "Conus Climate Regions",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/20_conus_climate_regions.png",
+      "size": 1237059
+    },
+    {
+      "filename": "21_all_state_summary_table.png",
+      "title": "All State Summary Table",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/21_all_state_summary_table.png",
+      "size": 788508
+    },
+    {
+      "filename": "22_state_comparison_radar.png",
+      "title": "State Comparison Radar",
+      "dataset": "prism_conus",
+      "url": "/wildfire-explorer/figures/prism_conus/22_state_comparison_radar.png",
+      "size": 1793685
+    }
+  ],
+  "prism_fire": [
+    {
+      "filename": "01_temporal_alignment.png",
+      "title": "Temporal Alignment",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/01_temporal_alignment.png",
+      "size": 425736
+    },
+    {
+      "filename": "02_climate_at_fire_locations.png",
+      "title": "Climate At Fire Locations",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/02_climate_at_fire_locations.png",
+      "size": 565160
+    },
+    {
+      "filename": "03_burned_vs_unburned_climate.png",
+      "title": "Burned Vs Unburned Climate",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/03_burned_vs_unburned_climate.png",
+      "size": 531476
+    },
+    {
+      "filename": "04_fire_location_climate_map.png",
+      "title": "Fire Location Climate Map",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/04_fire_location_climate_map.png",
+      "size": 1906093
+    },
+    {
+      "filename": "05_fire_year_climate.png",
+      "title": "Fire Year Climate",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/05_fire_year_climate.png",
+      "size": 767959
+    },
+    {
+      "filename": "06_annual_fire_climate_correlation.png",
+      "title": "Annual Fire Climate Correlation",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/06_annual_fire_climate_correlation.png",
+      "size": 605129
+    },
+    {
+      "filename": "07_worst_year_climate_anatomy.png",
+      "title": "Worst Year Climate Anatomy",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/07_worst_year_climate_anatomy.png",
+      "size": 1030444
+    },
+    {
+      "filename": "08_monthly_fire_climate_coupling.png",
+      "title": "Monthly Fire Climate Coupling",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/08_monthly_fire_climate_coupling.png",
+      "size": 592454
+    },
+    {
+      "filename": "09_fire_season_climate_trends.png",
+      "title": "Fire Season Climate Trends",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/09_fire_season_climate_trends.png",
+      "size": 1165558
+    },
+    {
+      "filename": "10_fire_season_vpd_vs_acres.png",
+      "title": "Fire Season Vpd Vs Acres",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/10_fire_season_vpd_vs_acres.png",
+      "size": 292604
+    },
+    {
+      "filename": "11_antecedent_climate_signals.png",
+      "title": "Antecedent Climate Signals",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/11_antecedent_climate_signals.png",
+      "size": 798070
+    },
+    {
+      "filename": "12_spring_drought_summer_fire.png",
+      "title": "Spring Drought Summer Fire",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/12_spring_drought_summer_fire.png",
+      "size": 628193
+    },
+    {
+      "filename": "13_cumulative_vpd_fire_risk.png",
+      "title": "Cumulative Vpd Fire Risk",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/13_cumulative_vpd_fire_risk.png",
+      "size": 407894
+    },
+    {
+      "filename": "14_severity_vs_climate.png",
+      "title": "Severity Vs Climate",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/14_severity_vs_climate.png",
+      "size": 1449677
+    },
+    {
+      "filename": "15_severity_climate_trends.png",
+      "title": "Severity Climate Trends",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/15_severity_climate_trends.png",
+      "size": 475369
+    },
+    {
+      "filename": "16_climate_fire_spatial_patterns.png",
+      "title": "Climate Fire Spatial Patterns",
+      "dataset": "prism_fire",
+      "url": "/wildfire-explorer/figures/prism_fire/16_climate_fire_spatial_patterns.png",
+      "size": 1690927
+    }
+  ],
+  "topography": [
+    {
+      "filename": "01_data_quality_overview.png",
+      "title": "Data Quality Overview",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/01_data_quality_overview.png",
+      "size": 496976
+    },
+    {
+      "filename": "02_elevation_map.png",
+      "title": "Elevation Map",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/02_elevation_map.png",
+      "size": 3930534
+    },
+    {
+      "filename": "03_elevation_distribution.png",
+      "title": "Elevation Distribution",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/03_elevation_distribution.png",
+      "size": 300388
+    },
+    {
+      "filename": "04_elevation_zones_map.png",
+      "title": "Elevation Zones Map",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/04_elevation_zones_map.png",
+      "size": 4428336
+    },
+    {
+      "filename": "05_slope_map.png",
+      "title": "Slope Map",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/05_slope_map.png",
+      "size": 4388599
+    },
+    {
+      "filename": "06_slope_distribution.png",
+      "title": "Slope Distribution",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/06_slope_distribution.png",
+      "size": 2072979
+    },
+    {
+      "filename": "07_aspect_map.png",
+      "title": "Aspect Map",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/07_aspect_map.png",
+      "size": 7524737
+    },
+    {
+      "filename": "08_aspect_analysis.png",
+      "title": "Aspect Analysis",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/08_aspect_analysis.png",
+      "size": 1481207
+    },
+    {
+      "filename": "09_tpi_analysis.png",
+      "title": "Tpi Analysis",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/09_tpi_analysis.png",
+      "size": 4123824
+    },
+    {
+      "filename": "10_twi_map.png",
+      "title": "Twi Map",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/10_twi_map.png",
+      "size": 6378035
+    },
+    {
+      "filename": "11_terrain_correlation_matrix.png",
+      "title": "Terrain Correlation Matrix",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/11_terrain_correlation_matrix.png",
+      "size": 161470
+    },
+    {
+      "filename": "12_fire_elevation_analysis.png",
+      "title": "Fire Elevation Analysis",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/12_fire_elevation_analysis.png",
+      "size": 1478435
+    },
+    {
+      "filename": "13_burned_vs_unburned_terrain.png",
+      "title": "Burned Vs Unburned Terrain",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/13_burned_vs_unburned_terrain.png",
+      "size": 390775
+    },
+    {
+      "filename": "14_fire_terrain_by_severity.png",
+      "title": "Fire Terrain By Severity",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/14_fire_terrain_by_severity.png",
+      "size": 574149
+    },
+    {
+      "filename": "15_regional_terrain_profiles.png",
+      "title": "Regional Terrain Profiles",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/15_regional_terrain_profiles.png",
+      "size": 658536
+    },
+    {
+      "filename": "16_terrain_risk_composite.png",
+      "title": "Terrain Risk Composite",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/16_terrain_risk_composite.png",
+      "size": 5393248
+    },
+    {
+      "filename": "17_800m_grid_preview.png",
+      "title": "800M Grid Preview",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/17_800m_grid_preview.png",
+      "size": 11436058
+    },
+    {
+      "filename": "18_ml_feature_summary.png",
+      "title": "Ml Feature Summary",
+      "dataset": "topography",
+      "url": "/wildfire-explorer/figures/topography/18_ml_feature_summary.png",
+      "size": 426179
+    }
+  ],
+  "vegetation": [
+    {
+      "filename": "01_data_quality_overview.png",
+      "title": "Data Quality Overview",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/01_data_quality_overview.png",
+      "size": 651415
+    },
+    {
+      "filename": "02_value_distribution.png",
+      "title": "Value Distribution",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/02_value_distribution.png",
+      "size": 277411
+    },
+    {
+      "filename": "03_whrtype_classification.png",
+      "title": "Whrtype Classification",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/03_whrtype_classification.png",
+      "size": 403511
+    },
+    {
+      "filename": "04_lifeform_composition.png",
+      "title": "Lifeform Composition",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/04_lifeform_composition.png",
+      "size": 339056
+    },
+    {
+      "filename": "05_whr13_classification.png",
+      "title": "Whr13 Classification",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/05_whr13_classification.png",
+      "size": 221772
+    },
+    {
+      "filename": "06_california_vegetation_map.png",
+      "title": "California Vegetation Map",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/06_california_vegetation_map.png",
+      "size": 518790
+    },
+    {
+      "filename": "07_regional_vegetation_composition.png",
+      "title": "Regional Vegetation Composition",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/07_regional_vegetation_composition.png",
+      "size": 447008
+    },
+    {
+      "filename": "08_spatial_coverage_map.png",
+      "title": "Spatial Coverage Map",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/08_spatial_coverage_map.png",
+      "size": 129065
+    },
+    {
+      "filename": "09_fire_prone_vegetation.png",
+      "title": "Fire Prone Vegetation",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/09_fire_prone_vegetation.png",
+      "size": 382683
+    },
+    {
+      "filename": "10_fire_prone_map.png",
+      "title": "Fire Prone Map",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/10_fire_prone_map.png",
+      "size": 396779
+    },
+    {
+      "filename": "11_fuel_type_classification.png",
+      "title": "Fuel Type Classification",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/11_fuel_type_classification.png",
+      "size": 397087
+    },
+    {
+      "filename": "12_size_structure_analysis.png",
+      "title": "Size Structure Analysis",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/12_size_structure_analysis.png",
+      "size": 368732
+    },
+    {
+      "filename": "13_density_structure_analysis.png",
+      "title": "Density Structure Analysis",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/13_density_structure_analysis.png",
+      "size": 238679
+    },
+    {
+      "filename": "14_vegetation_burned_areas.png",
+      "title": "Vegetation Burned Areas",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/14_vegetation_burned_areas.png",
+      "size": 353424
+    },
+    {
+      "filename": "15_vegetation_fire_crosstab.png",
+      "title": "Vegetation Fire Crosstab",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/15_vegetation_fire_crosstab.png",
+      "size": 278355
+    },
+    {
+      "filename": "16_800m_grid_preview.png",
+      "title": "800M Grid Preview",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/16_800m_grid_preview.png",
+      "size": 1216874
+    },
+    {
+      "filename": "17_unit_vegetation_heatmap.png",
+      "title": "Unit Vegetation Heatmap",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/17_unit_vegetation_heatmap.png",
+      "size": 1114017
+    },
+    {
+      "filename": "18_unit_stacked_bar.png",
+      "title": "Unit Stacked Bar",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/18_unit_stacked_bar.png",
+      "size": 270048
+    },
+    {
+      "filename": "19_unit_dominant_veg_map.png",
+      "title": "Unit Dominant Veg Map",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/19_unit_dominant_veg_map.png",
+      "size": 623239
+    },
+    {
+      "filename": "20_unit_fireprone_vs_burned.png",
+      "title": "Unit Fireprone Vs Burned",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/20_unit_fireprone_vs_burned.png",
+      "size": 234631
+    },
+    {
+      "filename": "21_unit_mini_maps.png",
+      "title": "Unit Mini Maps",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/21_unit_mini_maps.png",
+      "size": 967154
+    },
+    {
+      "filename": "22_fire_return_interval.png",
+      "title": "Fire Return Interval",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/22_fire_return_interval.png",
+      "size": 275410
+    },
+    {
+      "filename": "23_burn_rate_trends.png",
+      "title": "Burn Rate Trends",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/23_burn_rate_trends.png",
+      "size": 585894
+    },
+    {
+      "filename": "24_fire_size_by_veg.png",
+      "title": "Fire Size By Veg",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/24_fire_size_by_veg.png",
+      "size": 345278
+    },
+    {
+      "filename": "25_seasonal_fire_pattern.png",
+      "title": "Seasonal Fire Pattern",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/25_seasonal_fire_pattern.png",
+      "size": 287224
+    },
+    {
+      "filename": "26_fire_cause_by_veg.png",
+      "title": "Fire Cause By Veg",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/26_fire_cause_by_veg.png",
+      "size": 160513
+    },
+    {
+      "filename": "27_fuel_index_map.png",
+      "title": "Fuel Index Map",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/27_fuel_index_map.png",
+      "size": 2434230
+    },
+    {
+      "filename": "28_fuel_continuity.png",
+      "title": "Fuel Continuity",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/28_fuel_continuity.png",
+      "size": 820867
+    },
+    {
+      "filename": "29_fuel_metrics_by_whr13.png",
+      "title": "Fuel Metrics By Whr13",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/29_fuel_metrics_by_whr13.png",
+      "size": 271368
+    },
+    {
+      "filename": "30_wui_fuel_exposure.png",
+      "title": "Wui Fuel Exposure",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/30_wui_fuel_exposure.png",
+      "size": 1176946
+    },
+    {
+      "filename": "31_reburn_vegetation.png",
+      "title": "Reburn Vegetation",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/31_reburn_vegetation.png",
+      "size": 178124
+    },
+    {
+      "filename": "32_type_conversion.png",
+      "title": "Type Conversion",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/32_type_conversion.png",
+      "size": 311329
+    },
+    {
+      "filename": "33_canopy_cover_recovery.png",
+      "title": "Canopy Cover Recovery",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/33_canopy_cover_recovery.png",
+      "size": 227510
+    },
+    {
+      "filename": "34_recovery_curve_by_veg.png",
+      "title": "Recovery Curve By Veg",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/34_recovery_curve_by_veg.png",
+      "size": 509853
+    },
+    {
+      "filename": "35_climate_mediated_recovery.png",
+      "title": "Climate Mediated Recovery",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/35_climate_mediated_recovery.png",
+      "size": 415372
+    },
+    {
+      "filename": "36_integrated_dashboard.png",
+      "title": "Integrated Dashboard",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/36_integrated_dashboard.png",
+      "size": 7913161
+    },
+    {
+      "filename": "37_unit_summary_table.png",
+      "title": "Unit Summary Table",
+      "dataset": "vegetation",
+      "url": "/wildfire-explorer/figures/vegetation/37_unit_summary_table.png",
+      "size": 585724
+    }
+  ],
+  "wind": [
+    {
+      "filename": "fig01_data_availability.png",
+      "title": "Data Availability",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig01_data_availability.png",
+      "size": 221812
+    },
+    {
+      "filename": "fig02_data_quality.png",
+      "title": "Data Quality",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig02_data_quality.png",
+      "size": 255113
+    },
+    {
+      "filename": "fig03_mean_wind_speed_map.png",
+      "title": "Mean Wind Speed Map",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig03_mean_wind_speed_map.png",
+      "size": 294994
+    },
+    {
+      "filename": "fig04_seasonal_wind_speed.png",
+      "title": "Seasonal Wind Speed",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig04_seasonal_wind_speed.png",
+      "size": 740576
+    },
+    {
+      "filename": "fig05_wind_p90_fires.png",
+      "title": "Wind P90 Fires",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig05_wind_p90_fires.png",
+      "size": 855102
+    },
+    {
+      "filename": "fig06_seasonal_wind_roses.png",
+      "title": "Seasonal Wind Roses",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig06_seasonal_wind_roses.png",
+      "size": 1590600
+    },
+    {
+      "filename": "fig07_regional_wind_roses.png",
+      "title": "Regional Wind Roses",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig07_regional_wind_roses.png",
+      "size": 1984159
+    },
+    {
+      "filename": "fig08_annual_wind_trend.png",
+      "title": "Annual Wind Trend",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig08_annual_wind_trend.png",
+      "size": 286280
+    },
+    {
+      "filename": "fig09_decadal_change.png",
+      "title": "Decadal Change",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig09_decadal_change.png",
+      "size": 578182
+    },
+    {
+      "filename": "fig10_erc_trend.png",
+      "title": "Erc Trend",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig10_erc_trend.png",
+      "size": 313021
+    },
+    {
+      "filename": "fig11_monthly_wind_climatology.png",
+      "title": "Monthly Wind Climatology",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig11_monthly_wind_climatology.png",
+      "size": 305431
+    },
+    {
+      "filename": "fig12_monthly_erc_bi.png",
+      "title": "Monthly Erc Bi",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig12_monthly_erc_bi.png",
+      "size": 183597
+    },
+    {
+      "filename": "fig13_fire_season_erc_map.png",
+      "title": "Fire Season Erc Map",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig13_fire_season_erc_map.png",
+      "size": 254763
+    },
+    {
+      "filename": "fig14_bi_exceedance_map.png",
+      "title": "Bi Exceedance Map",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig14_bi_exceedance_map.png",
+      "size": 213512
+    },
+    {
+      "filename": "fig15_santa_ana_frequency_map.png",
+      "title": "Santa Ana Frequency Map",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig15_santa_ana_frequency_map.png",
+      "size": 230377
+    },
+    {
+      "filename": "fig16_santa_ana_timeseries.png",
+      "title": "Santa Ana Timeseries",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig16_santa_ana_timeseries.png",
+      "size": 258916
+    },
+    {
+      "filename": "fig17_wind_during_fires.png",
+      "title": "Wind During Fires",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig17_wind_during_fires.png",
+      "size": 412277
+    },
+    {
+      "filename": "fig18_fire_vs_all_wind.png",
+      "title": "Fire Vs All Wind",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig18_fire_vs_all_wind.png",
+      "size": 180399
+    },
+    {
+      "filename": "fig19_regional_wind_stats.png",
+      "title": "Regional Wind Stats",
+      "dataset": "wind",
+      "url": "/wildfire-explorer/figures/wind/fig19_regional_wind_stats.png",
+      "size": 191089
+    }
+  ]
+}

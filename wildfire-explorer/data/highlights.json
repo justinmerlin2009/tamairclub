@@ -1,0 +1,42 @@
+{
+  "stats": [
+    {
+      "label": "Datasets Analyzed",
+      "value": 12,
+      "suffix": ""
+    },
+    {
+      "label": "Figures Generated",
+      "value": 243,
+      "suffix": "+"
+    },
+    {
+      "label": "Fire Records",
+      "value": 2300000,
+      "suffix": "+",
+      "format": "compact"
+    },
+    {
+      "label": "Years of Data",
+      "value": 130,
+      "suffix": "+"
+    },
+    {
+      "label": "Grid Resolution",
+      "value": 800,
+      "suffix": "m"
+    },
+    {
+      "label": "Data Volume",
+      "value": 5.2,
+      "suffix": " TB"
+    }
+  ],
+  "summary": "A comprehensive geospatial analysis of California wildfire risk, integrating fire history, climate, topography, vegetation, population, infrastructure, and wind data into a unified 800-meter grid for deep learning prediction.",
+  "collaborators": [
+    "Tam Air Club",
+    "UCI",
+    "CAL FIRE",
+    "UCSF"
+  ]
+}

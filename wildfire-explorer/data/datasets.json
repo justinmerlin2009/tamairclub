@@ -1,0 +1,1438 @@
+[
+  {
+    "id": "comprehensive",
+    "name": "CAL FIRE Comprehensive",
+    "shortName": "CAL FIRE",
+    "color": "#DC2626",
+    "icon": "flame",
+    "description": "California Department of Forestry and Fire Protection perimeter data \u2014 the primary state fire record covering 1878\u20132024 with detailed acreage, cause, and perimeter geometry.",
+    "yearRange": [
+      1878,
+      2024
+    ],
+    "figureCount": 23,
+    "metadata": {
+      "source": "CAL FIRE / FRAP",
+      "format": "GeoPackage (vector polygons)",
+      "resolution": "Individual fire perimeters",
+      "crs": "EPSG:3310 \u2014 California Albers Equal Area",
+      "coverage": "California statewide",
+      "records": "~22,000 fire perimeters",
+      "quality": "High \u2014 official state records with periodic boundary revision"
+    },
+    "timeSeries": {
+      "label": "Annual Acres Burned",
+      "xLabel": "Year",
+      "yLabel": "Acres (millions)",
+      "data": [
+        {
+          "year": 1950,
+          "value": 0.15
+        },
+        {
+          "year": 1955,
+          "value": 0.18
+        },
+        {
+          "year": 1960,
+          "value": 0.22
+        },
+        {
+          "year": 1965,
+          "value": 0.14
+        },
+        {
+          "year": 1970,
+          "value": 0.58
+        },
+        {
+          "year": 1975,
+          "value": 0.19
+        },
+        {
+          "year": 1980,
+          "value": 0.3
+        },
+        {
+          "year": 1985,
+          "value": 0.27
+        },
+        {
+          "year": 1987,
+          "value": 0.73
+        },
+        {
+          "year": 1990,
+          "value": 0.25
+        },
+        {
+          "year": 1993,
+          "value": 0.23
+        },
+        {
+          "year": 1996,
+          "value": 0.62
+        },
+        {
+          "year": 1999,
+          "value": 0.27
+        },
+        {
+          "year": 2000,
+          "value": 0.3
+        },
+        {
+          "year": 2002,
+          "value": 0.51
+        },
+        {
+          "year": 2003,
+          "value": 0.93
+        },
+        {
+          "year": 2004,
+          "value": 0.26
+        },
+        {
+          "year": 2005,
+          "value": 0.22
+        },
+        {
+          "year": 2006,
+          "value": 0.73
+        },
+        {
+          "year": 2007,
+          "value": 1.09
+        },
+        {
+          "year": 2008,
+          "value": 1.36
+        },
+        {
+          "year": 2009,
+          "value": 0.42
+        },
+        {
+          "year": 2010,
+          "value": 0.11
+        },
+        {
+          "year": 2011,
+          "value": 0.17
+        },
+        {
+          "year": 2012,
+          "value": 0.87
+        },
+        {
+          "year": 2013,
+          "value": 0.6
+        },
+        {
+          "year": 2014,
+          "value": 0.63
+        },
+        {
+          "year": 2015,
+          "value": 0.88
+        },
+        {
+          "year": 2016,
+          "value": 0.56
+        },
+        {
+          "year": 2017,
+          "value": 1.25
+        },
+        {
+          "year": 2018,
+          "value": 1.89
+        },
+        {
+          "year": 2019,
+          "value": 0.25
+        },
+        {
+          "year": 2020,
+          "value": 4.26
+        },
+        {
+          "year": 2021,
+          "value": 2.57
+        },
+        {
+          "year": 2022,
+          "value": 0.36
+        },
+        {
+          "year": 2023,
+          "value": 0.56
+        },
+        {
+          "year": 2024,
+          "value": 0.88
+        }
+      ]
+    },
+    "findings": [
+      "Pre-1993 data may not be as reliable for statistical learning \u2014 hand-drawn perimeters and incomplete records. GPS adoption in 1993 dramatically improved data quality, which is why CAL FIRE uses 1993+ data for fire hazard severity zone (FHSZ) mapping. Post-1993: >90% completeness for cause, agency, dates, and size.",
+      "~30% of fires have unknown/unidentified causes \u2014 fire investigation in post-burn terrain is extremely difficult. Among known causes, lightning accounts for 20% of fires but 39% of burned area (avg 4,800 acres each), while human-caused fires are 80% of ignitions but 61% of acreage (smaller on average). Top human causes: equipment use, debris burning, arson, and campfires.",
+      "Seasonality is stark: High Risk Season (Jun-Sep) produces 73% of fires and 84% of burned area. Transition Season (Oct-Jan) is only 12% of fires but 13% of acreage \u2014 Santa Ana/Diablo wind events drive disproportionately large fires. Low Risk Season (Feb-May) accounts for just 3% of burned area.",
+      "CAL FIRE (State) responds to the most fires (4,194) but USDA Forest Service fires are 2.7\u00d7 larger on average (5,232 vs 1,921 acres) and account for more total acreage (13.0M vs 8.1M acres). Contract counties handle 1,572 fires; BLM manages 638 fires averaging 1,630 acres each.",
+      "Mega-fires (>100K acres) are accelerating: 2 in the 1990s, 9 in the 2000s, 9 in the 2010s, and 18 in the 2020s alone. Mean fire size doubled from 1,766 acres (1990s) to 4,134 acres (2020s). Post-2000 annual burn rate is 3\u00d7 higher (0.84M vs 0.28M acres/year).",
+      "Damage is extremely concentrated \u2014 top 1% of fires cause 58% of all burned area, and top 10% cause 93%. The 2020 fire season (4.18M acres) was the worst on record, driven by an unprecedented August lightning siege that ignited fires across all of Northern California simultaneously."
+    ],
+    "notebookUrl": "/wildfire-explorer/notebooks/CALFIRE_Comprehensive_Analysis_v2_executed.html"
+  },
+  {
+    "id": "mtbs",
+    "name": "MTBS Burn Severity",
+    "shortName": "MTBS",
+    "color": "#B91C1C",
+    "icon": "fire",
+    "description": "Monitoring Trends in Burn Severity \u2014 satellite-derived burn severity mapping for fires \u22651,000 acres (West) and \u2265500 acres (East), 1984\u20132024.",
+    "yearRange": [
+      1984,
+      2024
+    ],
+    "figureCount": 16,
+    "metadata": {
+      "source": "USGS / USFS MTBS Program",
+      "format": "GeoTIFF rasters + vector perimeters",
+      "resolution": "30m Landsat-derived",
+      "crs": "EPSG:3310 \u2014 California Albers Equal Area",
+      "coverage": "All US states \u2014 California subset",
+      "records": "~2,500 California fires with severity classification",
+      "quality": "High \u2014 Landsat dNBR validated with field data"
+    },
+    "timeSeries": {
+      "label": "Annual Fire Count (California)",
+      "xLabel": "Year",
+      "yLabel": "Number of Fires",
+      "data": [
+        {
+          "year": 1984,
+          "value": 28
+        },
+        {
+          "year": 1986,
+          "value": 35
+        },
+        {
+          "year": 1988,
+          "value": 42
+        },
+        {
+          "year": 1990,
+          "value": 31
+        },
+        {
+          "year": 1992,
+          "value": 38
+        },
+        {
+          "year": 1994,
+          "value": 44
+        },
+        {
+          "year": 1996,
+          "value": 52
+        },
+        {
+          "year": 1998,
+          "value": 34
+        },
+        {
+          "year": 2000,
+          "value": 47
+        },
+        {
+          "year": 2002,
+          "value": 55
+        },
+        {
+          "year": 2003,
+          "value": 68
+        },
+        {
+          "year": 2004,
+          "value": 43
+        },
+        {
+          "year": 2005,
+          "value": 39
+        },
+        {
+          "year": 2006,
+          "value": 64
+        },
+        {
+          "year": 2007,
+          "value": 78
+        },
+        {
+          "year": 2008,
+          "value": 85
+        },
+        {
+          "year": 2009,
+          "value": 42
+        },
+        {
+          "year": 2010,
+          "value": 29
+        },
+        {
+          "year": 2011,
+          "value": 33
+        },
+        {
+          "year": 2012,
+          "value": 67
+        },
+        {
+          "year": 2013,
+          "value": 58
+        },
+        {
+          "year": 2014,
+          "value": 61
+        },
+        {
+          "year": 2015,
+          "value": 72
+        },
+        {
+          "year": 2016,
+          "value": 56
+        },
+        {
+          "year": 2017,
+          "value": 91
+        },
+        {
+          "year": 2018,
+          "value": 102
+        },
+        {
+          "year": 2019,
+          "value": 38
+        },
+        {
+          "year": 2020,
+          "value": 118
+        },
+        {
+          "year": 2021,
+          "value": 95
+        },
+        {
+          "year": 2022,
+          "value": 48
+        },
+        {
+          "year": 2023,
+          "value": 52
+        }
+      ]
+    },
+    "findings": [
+      "2,051 large fires (>=1,000 acres) in California from 1984-2024, totaling 25.6M acres burned. 77% of records include satellite-derived burn severity data (dNBR thresholds: Low/Moderate/High) \u2014 the key differentiator vs CAL FIRE, which has no severity classification.",
+      "88% of records are wildfires, 7% prescribed fire, 4% unknown, 1% wildland fire use. Prescribed fires are a small minority, confirming that uncontrolled wildfire overwhelmingly dominates the large-fire landscape in California.",
+      "Independently confirms CAL FIRE's acceleration trend via satellite remote sensing \u2014 dramatic increases in large fire count, total acreage, and mega-fire (>100K acres) frequency post-2000. The 2020s already show the highest burned area and mega-fire count of any decade despite being incomplete.",
+      "High Risk Season (Jun-Sep) fires show different severity profiles than Transition Season (Oct-Jan) fires. Forested areas (Sierra Nevada, Northern CA mountains) tend to show higher severity thresholds, while Southern CA chaparral fires burn intensely but recover faster.",
+      "Damage concentration mirrors CAL FIRE \u2014 the top 1% of large fires account for a massive share of total burned area. Fire size follows a heavy-tailed log-normal distribution, meaning rare mega-fires determine the character of each fire season.",
+      "California consistently ranks among the top US states for both large fire count and total burned area. Western US states collectively show clear post-2000 acceleration, suggesting California's worsening fire regime is part of a broader regional climate-driven trend."
+    ],
+    "notebookUrl": "/wildfire-explorer/notebooks/MTBS_FOD_Comprehensive_Analysis_executed.html"
+  },
+  {
+    "id": "fpa",
+    "name": "FPA Fire Occurrence",
+    "shortName": "FPA FOD",
+    "color": "#EA580C",
+    "icon": "target",
+    "description": "Fire Program Analysis Fire-Occurrence Database \u2014 2.3 million US wildfire records (1992\u20132020) with ignition points, cause codes, and discovery/containment dates.",
+    "yearRange": [
+      1992,
+      2020
+    ],
+    "figureCount": 17,
+    "metadata": {
+      "source": "USFS Research Data Archive (RDS-2013-0009.6)",
+      "format": "SQLite / GeoPackage",
+      "resolution": "Point locations (ignition points)",
+      "crs": "EPSG:4326 \u2192 reprojected to EPSG:3310",
+      "coverage": "All 50 US states \u2014 California subset ~300K fires",
+      "records": "2.3 million fires nationally, ~300K in California",
+      "quality": "Moderate \u2014 known reporting gaps for small fires pre-2000"
+    },
+    "timeSeries": {
+      "label": "Annual Fire Count by Cause (California)",
+      "xLabel": "Year",
+      "yLabel": "Number of Fires",
+      "data": [
+        {
+          "year": 1992,
+          "value": 9200
+        },
+        {
+          "year": 1994,
+          "value": 8800
+        },
+        {
+          "year": 1996,
+          "value": 10500
+        },
+        {
+          "year": 1998,
+          "value": 9100
+        },
+        {
+          "year": 2000,
+          "value": 10800
+        },
+        {
+          "year": 2002,
+          "value": 11200
+        },
+        {
+          "year": 2004,
+          "value": 10600
+        },
+        {
+          "year": 2006,
+          "value": 12400
+        },
+        {
+          "year": 2007,
+          "value": 13800
+        },
+        {
+          "year": 2008,
+          "value": 11600
+        },
+        {
+          "year": 2010,
+          "value": 8900
+        },
+        {
+          "year": 2012,
+          "value": 11300
+        },
+        {
+          "year": 2014,
+          "value": 10200
+        },
+        {
+          "year": 2016,
+          "value": 11800
+        },
+        {
+          "year": 2017,
+          "value": 14200
+        },
+        {
+          "year": 2018,
+          "value": 12100
+        },
+        {
+          "year": 2019,
+          "value": 9800
+        },
+        {
+          "year": 2020,
+          "value": 13500
+        }
+      ]
+    },
+    "findings": [
+      "251,881 California fire records (1992-2020) with 20.9M total acres burned. Unlike CAL FIRE (perimeters) or MTBS (centroids), FPA FOD provides precise ignition point locations \u2014 critical for understanding where fires start vs where they spread.",
+      "93% of fires are under 10 acres, but just 0.6% of fires (those >=1,000 acres) account for 92% of all burned area. This extreme Pareto concentration means the vast majority of ignitions are quickly contained \u2014 the rare ones that escape initial attack determine fire season outcomes.",
+      "100% cause attribution using NWCG's standardized 13-category taxonomy \u2014 far more consistent than CAL FIRE's numeric codes. Human-caused fires vastly outnumber natural fires in count, but lightning fires burn significantly more acreage per event due to remote ignition locations with delayed detection and response.",
+      "FPA FOD uniquely provides discovery time-of-day (82% of records) and containment date (53%). Human fires peak in afternoon hours tied to human activity; natural (lightning) fires show a distinct late-afternoon/evening peak matching thunderstorm timing. Median fire duration is under 1 day \u2014 most fires are contained within hours of discovery.",
+      "The top general causes are debris burning, equipment use, arson, lightning, and campfires. Debris burning and equipment use dominate human ignitions by count, while lightning dominates by acreage. Cause trends over the 29-year record show relatively stable human ignition rates but increasing variability in lightning-driven years.",
+      "1,447 records (0.6%) have direct MTBS linkage, with linked fires averaging 13,039 acres \u2014 confirming that FPA FOD's small-fire detail complements MTBS's large-fire severity data. Cross-referencing annual burned area between FPA FOD and MTBS-linked subsets shows strong correlation (r > 0.9), validating consistency across independent federal databases."
+    ],
+    "notebookUrl": "/wildfire-explorer/notebooks/FPA_FOD_Comprehensive_Analysis_executed.html"
+  },
+  {
+    "id": "topography",
+    "name": "Topography & Terrain",
+    "shortName": "Topography",
+    "color": "#65A30D",
+    "icon": "mountain",
+    "description": "USGS 3DEP elevation data processed into slope, aspect, TPI, TRI, and curvature grids at 800m resolution for all of California.",
+    "yearRange": [
+      2020,
+      2024
+    ],
+    "figureCount": 18,
+    "metadata": {
+      "source": "USGS 3D Elevation Program (3DEP)",
+      "format": "GeoTIFF raster",
+      "resolution": "800m grid (resampled from 10m DEM)",
+      "crs": "EPSG:3310 \u2014 California Albers Equal Area",
+      "coverage": "California statewide bounding box",
+      "records": "6 derived layers: elevation, slope, aspect, TPI, TRI, curvature",
+      "quality": "High \u2014 lidar-derived source DEM with <1m vertical accuracy"
+    },
+    "timeSeries": {
+      "label": "Fire Count by Elevation Band",
+      "xLabel": "Elevation (m)",
+      "yLabel": "Fire Count",
+      "data": [
+        {
+          "year": 0,
+          "value": 2800
+        },
+        {
+          "year": 200,
+          "value": 5100
+        },
+        {
+          "year": 400,
+          "value": 7200
+        },
+        {
+          "year": 600,
+          "value": 8400
+        },
+        {
+          "year": 800,
+          "value": 6800
+        },
+        {
+          "year": 1000,
+          "value": 5900
+        },
+        {
+          "year": 1200,
+          "value": 4600
+        },
+        {
+          "year": 1400,
+          "value": 3200
+        },
+        {
+          "year": 1600,
+          "value": 2100
+        },
+        {
+          "year": 1800,
+          "value": 1400
+        },
+        {
+          "year": 2000,
+          "value": 850
+        },
+        {
+          "year": 2500,
+          "value": 320
+        },
+        {
+          "year": 3000,
+          "value": 90
+        }
+      ]
+    },
+    "findings": [
+      "Peak fire occurrence at 400-800m elevation \u2014 the chaparral-woodland transition zone.",
+      "South- and southwest-facing slopes have 2.3\u00d7 higher fire density than north-facing slopes.",
+      "Terrain ruggedness (TRI) is inversely correlated with fire size \u2014 rough terrain limits spread.",
+      "Valley bottoms (negative TPI) show higher fire occurrence due to human activity and fuel accumulation."
+    ],
+    "notebookUrl": "/wildfire-explorer/notebooks/Topography_Comprehensive_Analysis_executed.html"
+  },
+  {
+    "id": "landfire_cc",
+    "name": "LANDFIRE Canopy Cover",
+    "shortName": "Canopy Cover",
+    "color": "#15803D",
+    "icon": "trees",
+    "description": "LANDFIRE canopy cover percentage at 30m resolution \u2014 a key fuel loading proxy showing forest density across California.",
+    "yearRange": [
+      2001,
+      2023
+    ],
+    "figureCount": 17,
+    "metadata": {
+      "source": "USDA / DOI LANDFIRE Program",
+      "format": "GeoTIFF raster",
+      "resolution": "30m native, resampled to 800m grid",
+      "crs": "EPSG:3310 \u2014 California Albers Equal Area",
+      "coverage": "California statewide",
+      "records": "Continuous canopy cover percentage (0-100%)",
+      "quality": "Moderate-High \u2014 satellite-derived with ground validation"
+    },
+    "timeSeries": {
+      "label": "Mean Canopy Cover (%) by Year",
+      "xLabel": "Year",
+      "yLabel": "Mean Canopy Cover (%)",
+      "data": [
+        {
+          "year": 2001,
+          "value": 34.2
+        },
+        {
+          "year": 2003,
+          "value": 33.8
+        },
+        {
+          "year": 2005,
+          "value": 33.5
+        },
+        {
+          "year": 2008,
+          "value": 32.1
+        },
+        {
+          "year": 2010,
+          "value": 31.8
+        },
+        {
+          "year": 2012,
+          "value": 30.9
+        },
+        {
+          "year": 2014,
+          "value": 30.2
+        },
+        {
+          "year": 2016,
+          "value": 29.5
+        },
+        {
+          "year": 2018,
+          "value": 27.8
+        },
+        {
+          "year": 2020,
+          "value": 26.1
+        },
+        {
+          "year": 2022,
+          "value": 26.8
+        },
+        {
+          "year": 2023,
+          "value": 27.2
+        }
+      ]
+    },
+    "findings": [
+      "Statewide mean canopy cover declined ~8 percentage points from 2001 to 2020, driven by fire and drought mortality.",
+      "Dense canopy (>60%) zones show highest fire intensity but lower ignition probability.",
+      "Post-2020 recovery signal visible \u2014 canopy cover stabilizing after catastrophic 2020 fire season.",
+      "Sierra Nevada east-slope canopy loss is the most pronounced regional trend."
+    ],
+    "notebookUrl": "/wildfire-explorer/notebooks/LANDFIRE_CC_Comprehensive_Analysis_executed.html"
+  },
+  {
+    "id": "vegetation",
+    "name": "FVEG Vegetation Classification",
+    "shortName": "Vegetation",
+    "color": "#16A34A",
+    "icon": "leaf",
+    "description": "FRAP Fuel/Vegetation (FVEG) classification data \u2014 68 vegetation types mapped across California, critical for fuel modeling and fire behavior prediction. Includes per-unit vegetation breakdown, fire-vegetation correlation, fuel potential quantification, and post-fire recovery analysis.",
+    "yearRange": [
+      2015,
+      2022
+    ],
+    "figureCount": 37,
+    "metadata": {
+      "source": "CAL FIRE / FRAP FVEG22 + LANDFIRE CC 2024",
+      "format": "GeoTIFF raster (30m native, 1200m visualization)",
+      "resolution": "30m \u00d7 30m native, downsampled 40\u00d7 for analysis",
+      "crs": "EPSG:3310 \u2014 California Albers Equal Area",
+      "coverage": "California statewide, all 25 CAL FIRE units",
+      "records": "68 vegetation/fuel classes, 13 WHR13 groups, 8 lifeform categories",
+      "quality": "High \u2014 photo-interpreted with field verification"
+    },
+    "timeSeries": {
+      "label": "Fire Density by Vegetation Type (WHR13)",
+      "xLabel": "Vegetation Type",
+      "yLabel": "Fires per 1000 km\u00b2",
+      "data": [
+        {
+          "year": 1,
+          "value": 21.0,
+          "label": "Shrub"
+        },
+        {
+          "year": 2,
+          "value": 19.7,
+          "label": "Herbaceous"
+        },
+        {
+          "year": 3,
+          "value": 10.8,
+          "label": "Hardwood Woodland"
+        },
+        {
+          "year": 4,
+          "value": 8.5,
+          "label": "Hardwood Forest"
+        },
+        {
+          "year": 5,
+          "value": 6.0,
+          "label": "Conifer Forest"
+        },
+        {
+          "year": 6,
+          "value": 5.3,
+          "label": "Conifer Woodland"
+        },
+        {
+          "year": 7,
+          "value": 3.4,
+          "label": "Urban"
+        },
+        {
+          "year": 8,
+          "value": 3.4,
+          "label": "Agriculture"
+        },
+        {
+          "year": 9,
+          "value": 3.2,
+          "label": "Desert Woodland"
+        },
+        {
+          "year": 10,
+          "value": 3.0,
+          "label": "Wetland"
+        },
+        {
+          "year": 11,
+          "value": 1.5,
+          "label": "Barren/Other"
+        },
+        {
+          "year": 12,
+          "value": 1.5,
+          "label": "Desert Shrub"
+        },
+        {
+          "year": 13,
+          "value": 1.4,
+          "label": "Water"
+        }
+      ]
+    },
+    "findings": [
+      "Nearly half (49.6%) of California's vegetation is rated High or Moderate fire risk. Brush/shrub is the dominant fuel type at 40.2% of the state, followed by timber (22.0%) and grass (9.0%). Desert Shrub alone covers 22.5% of the state (~87,651 km\u00b2) but rarely burns (1.4% burn rate).",
+      "Hardwood Forest has the highest burn rate at 57.3% (area burned since 1993), followed by non-desert Shrub at 46.5% and Conifer Forest at 26.3%. Hardwood is 2.6\u00d7 overrepresented in burned areas relative to its statewide coverage \u2014 the most disproportionately fire-affected lifeform.",
+      "Shrub has the highest fire density (21.0 fires/1000 km\u00b2) followed by herbaceous/grassland (19.7). Fire return intervals are shortest in shrub/chaparral (~8\u201312 years) and longest in conifer forest (~20\u201330 years), consistent with fire ecology literature.",
+      "Regional vegetation drives fire behavior: Northern CA is 42.5% conifer (forested), Central CA is the most diverse (21.3% shrub, 19.2% agriculture), and Southern CA is 60% shrub/desert-dominated \u2014 each region requires distinct fire behavior models.",
+      "Fire-prone vegetation fraction per CAL FIRE unit correlates strongly with total area burned \u2014 units with >70% fire-prone cover show 2\u20133\u00d7 more acreage lost. Composite fuel index identifies continuous high-risk corridors in the Sierra Nevada foothills, Southern California mountains, and North Coast ranges.",
+      "Type conversion (conifer \u2192 shrubland) is detectable in repeatedly burned areas \u2014 early-burn zones (1993\u20132005) show higher shrub/herbaceous and lower conifer fractions vs. adjacent unburned pixels at matching elevation and aspect.",
+      "Post-fire canopy recovery takes 15\u201325 years to approach unburned baseline (LANDFIRE CC 2024 space-for-time analysis). Reburn areas (2+ fires) show 15\u201330% lower canopy cover than single-burn pixels. Recovery is faster at lower elevations and in hardwood types, slower at higher elevations in conifers.",
+      "WUI exposure hotspots \u2014 where high fuel index intersects population density >300/km\u00b2 \u2014 cluster in the Sierra foothills (El Dorado, Nevada counties), San Bernardino mountains, and Santa Barbara/Ventura coast. 800m grid aggregation preserves the dominant vegetation signal with 91% agreement at native 30m resolution."
+    ],
+    "notebookUrl": "/wildfire-explorer/notebooks/FVEG22_Comprehensive_Analysis_executed.html",
+    "notebookUrl2": "/wildfire-explorer/notebooks/FVEG22_Vegetation_Fire_Fuel_Analysis_executed.html"
+  },
+  {
+    "id": "prism_conus",
+    "name": "PRISM Climate (CONUS)",
+    "shortName": "PRISM CONUS",
+    "color": "#2563EB",
+    "icon": "cloud",
+    "description": "PRISM climate normals and time series for the contiguous US \u2014 temperature, precipitation, VPD, and humidity at 4km resolution from 1895 to present.",
+    "yearRange": [
+      1895,
+      2024
+    ],
+    "figureCount": 22,
+    "metadata": {
+      "source": "Oregon State PRISM Climate Group",
+      "format": "NetCDF / BIL raster",
+      "resolution": "4km (0.04\u00b0 grid)",
+      "crs": "EPSG:4326 \u2192 reprojected to EPSG:3310",
+      "coverage": "Contiguous United States",
+      "records": "Monthly grids \u00d7 130 years \u00d7 7 variables",
+      "quality": "High \u2014 station-based interpolation with topographic correction"
+    },
+    "timeSeries": {
+      "label": "Annual Mean Temperature Anomaly (CONUS)",
+      "xLabel": "Year",
+      "yLabel": "Temperature Anomaly (\u00b0F)",
+      "data": [
+        {
+          "year": 1895,
+          "value": -0.8
+        },
+        {
+          "year": 1900,
+          "value": -0.5
+        },
+        {
+          "year": 1910,
+          "value": -0.3
+        },
+        {
+          "year": 1920,
+          "value": -0.1
+        },
+        {
+          "year": 1930,
+          "value": 0.4
+        },
+        {
+          "year": 1934,
+          "value": 1.1
+        },
+        {
+          "year": 1940,
+          "value": 0.2
+        },
+        {
+          "year": 1950,
+          "value": -0.1
+        },
+        {
+          "year": 1960,
+          "value": -0.2
+        },
+        {
+          "year": 1970,
+          "value": -0.1
+        },
+        {
+          "year": 1980,
+          "value": 0.3
+        },
+        {
+          "year": 1990,
+          "value": 0.6
+        },
+        {
+          "year": 1998,
+          "value": 1.2
+        },
+        {
+          "year": 2000,
+          "value": 0.8
+        },
+        {
+          "year": 2005,
+          "value": 0.9
+        },
+        {
+          "year": 2010,
+          "value": 0.7
+        },
+        {
+          "year": 2012,
+          "value": 1.5
+        },
+        {
+          "year": 2015,
+          "value": 1.3
+        },
+        {
+          "year": 2016,
+          "value": 1.6
+        },
+        {
+          "year": 2017,
+          "value": 1.2
+        },
+        {
+          "year": 2018,
+          "value": 1.0
+        },
+        {
+          "year": 2019,
+          "value": 0.9
+        },
+        {
+          "year": 2020,
+          "value": 1.4
+        },
+        {
+          "year": 2021,
+          "value": 1.3
+        },
+        {
+          "year": 2022,
+          "value": 1.1
+        },
+        {
+          "year": 2023,
+          "value": 1.8
+        },
+        {
+          "year": 2024,
+          "value": 1.7
+        }
+      ]
+    },
+    "findings": [
+      "US mean temperature has risen ~2\u00b0F since 1895, with acceleration after 1980.",
+      "California ranks in the top 5 states for temperature increase rate.",
+      "Vapor Pressure Deficit (VPD) \u2014 a key fire-weather variable \u2014 shows the strongest upward trend of all climate metrics.",
+      "Western states show amplified warming compared to the national average."
+    ],
+    "notebookUrl": "/wildfire-explorer/notebooks/PRISM_Comprehensive_Analysis_Part1_CONUS_executed.html"
+  },
+  {
+    "id": "prism_california",
+    "name": "PRISM Climate (California)",
+    "shortName": "PRISM CA",
+    "color": "#1E40AF",
+    "icon": "thermometer",
+    "description": "California-specific PRISM climate analysis \u2014 temperature, precipitation, VPD, and humidity at 800m resolution, downscaled from 4km PRISM normals.",
+    "yearRange": [
+      1895,
+      2024
+    ],
+    "figureCount": 18,
+    "metadata": {
+      "source": "Oregon State PRISM Climate Group (CA subset)",
+      "format": "GeoTIFF raster (resampled to 800m)",
+      "resolution": "800m grid (downscaled from 4km)",
+      "crs": "EPSG:3310 \u2014 California Albers Equal Area",
+      "coverage": "California statewide",
+      "records": "Monthly grids \u00d7 130 years \u00d7 7 variables",
+      "quality": "High \u2014 dense station network in California"
+    },
+    "timeSeries": {
+      "label": "California Annual Mean Temperature",
+      "xLabel": "Year",
+      "yLabel": "Temperature (\u00b0F)",
+      "data": [
+        {
+          "year": 1895,
+          "value": 56.2
+        },
+        {
+          "year": 1900,
+          "value": 56.5
+        },
+        {
+          "year": 1910,
+          "value": 56.8
+        },
+        {
+          "year": 1920,
+          "value": 57.1
+        },
+        {
+          "year": 1930,
+          "value": 57.5
+        },
+        {
+          "year": 1940,
+          "value": 57.3
+        },
+        {
+          "year": 1950,
+          "value": 57.0
+        },
+        {
+          "year": 1960,
+          "value": 57.2
+        },
+        {
+          "year": 1970,
+          "value": 57.4
+        },
+        {
+          "year": 1980,
+          "value": 57.8
+        },
+        {
+          "year": 1990,
+          "value": 58.3
+        },
+        {
+          "year": 2000,
+          "value": 58.8
+        },
+        {
+          "year": 2005,
+          "value": 59.1
+        },
+        {
+          "year": 2010,
+          "value": 58.6
+        },
+        {
+          "year": 2014,
+          "value": 60.2
+        },
+        {
+          "year": 2015,
+          "value": 60.5
+        },
+        {
+          "year": 2016,
+          "value": 59.8
+        },
+        {
+          "year": 2017,
+          "value": 59.4
+        },
+        {
+          "year": 2018,
+          "value": 59.1
+        },
+        {
+          "year": 2020,
+          "value": 60.1
+        },
+        {
+          "year": 2021,
+          "value": 59.8
+        },
+        {
+          "year": 2022,
+          "value": 59.3
+        },
+        {
+          "year": 2023,
+          "value": 60.4
+        },
+        {
+          "year": 2024,
+          "value": 60.1
+        }
+      ]
+    },
+    "findings": [
+      "California mean temperature has increased ~4\u00b0F since 1895, outpacing national average.",
+      "VPD shows the steepest upward trend \u2014 critical fire weather metric showing atmosphere's drying power.",
+      "Southern California interior valleys show the greatest absolute warming.",
+      "Regional analysis identifies 6 distinct climate zones with different fire-climate relationships."
+    ],
+    "notebookUrl": "/wildfire-explorer/notebooks/PRISM_Comprehensive_Analysis_Part2_California_executed.html"
+  },
+  {
+    "id": "prism_fire",
+    "name": "PRISM Fire-Climate Overlay",
+    "shortName": "Fire-Climate",
+    "color": "#C2410C",
+    "icon": "layers",
+    "description": "Integrated analysis overlaying PRISM climate variables with fire occurrence \u2014 quantifying the climate-fire relationship at the 800m grid level.",
+    "yearRange": [
+      1984,
+      2024
+    ],
+    "figureCount": 16,
+    "metadata": {
+      "source": "PRISM + CAL FIRE + MTBS (integrated)",
+      "format": "GeoTIFF raster (800m grid)",
+      "resolution": "800m grid \u2014 unified climate-fire pixels",
+      "crs": "EPSG:3310 \u2014 California Albers Equal Area",
+      "coverage": "California statewide",
+      "records": "~780K grid cells \u00d7 40 years",
+      "quality": "Derived \u2014 inherits quality from source datasets"
+    },
+    "timeSeries": {
+      "label": "VPD vs Acres Burned Correlation",
+      "xLabel": "Year",
+      "yLabel": "Mean VPD (hPa)",
+      "data": [
+        {
+          "year": 1984,
+          "value": 8.2
+        },
+        {
+          "year": 1988,
+          "value": 9.1
+        },
+        {
+          "year": 1992,
+          "value": 8.5
+        },
+        {
+          "year": 1996,
+          "value": 9.8
+        },
+        {
+          "year": 2000,
+          "value": 9.4
+        },
+        {
+          "year": 2002,
+          "value": 10.2
+        },
+        {
+          "year": 2004,
+          "value": 9.8
+        },
+        {
+          "year": 2006,
+          "value": 11.5
+        },
+        {
+          "year": 2007,
+          "value": 12.1
+        },
+        {
+          "year": 2008,
+          "value": 11.8
+        },
+        {
+          "year": 2010,
+          "value": 9.2
+        },
+        {
+          "year": 2012,
+          "value": 11.9
+        },
+        {
+          "year": 2014,
+          "value": 13.5
+        },
+        {
+          "year": 2015,
+          "value": 13.2
+        },
+        {
+          "year": 2016,
+          "value": 12.4
+        },
+        {
+          "year": 2017,
+          "value": 12.8
+        },
+        {
+          "year": 2018,
+          "value": 13.1
+        },
+        {
+          "year": 2020,
+          "value": 14.2
+        },
+        {
+          "year": 2021,
+          "value": 13.8
+        },
+        {
+          "year": 2022,
+          "value": 11.6
+        },
+        {
+          "year": 2023,
+          "value": 12.5
+        },
+        {
+          "year": 2024,
+          "value": 12.9
+        }
+      ]
+    },
+    "findings": [
+      "VPD explains ~45% of interannual variance in total acres burned \u2014 the single strongest climate predictor.",
+      "Precipitation deficit in the prior 2 years is a stronger predictor than current-year precipitation alone.",
+      "Temperature \u00d7 wind speed interaction shows a nonlinear threshold above which fire risk escalates rapidly.",
+      "Climate-fire coupling is strongest in the Sierra Nevada and weakest in Southern California coastal zones."
+    ],
+    "notebookUrl": "/wildfire-explorer/notebooks/PRISM_Comprehensive_Analysis_Part3_FireOverlay_executed.html"
+  },
+  {
+    "id": "census",
+    "name": "Census Population & Housing",
+    "shortName": "Census",
+    "color": "#7C3AED",
+    "icon": "users",
+    "description": "US Census Bureau population and housing data fused with GlobPOP ~1 km gridded estimates, resampled to 800 m resolution (1993\u20132025) \u2014 essential for WUI mapping and fire impact assessment.",
+    "yearRange": [
+      1993,
+      2025
+    ],
+    "figureCount": 46,
+    "metadata": {
+      "source": "US Census Bureau (Decennial + ACS 5-year + PEP) + GlobPOP gridded population",
+      "format": "Cloud-Optimized GeoTIFF (800 m) + Shapefile / GeoPackage",
+      "resolution": "800 m raster grid + Census tract",
+      "crs": "EPSG:4326 \u2192 reprojected to EPSG:3310",
+      "coverage": "California \u2014 all 58 counties, 9,110 tracts (2025)",
+      "records": "33 annual COGs (1993\u20132025), ~652K valid pixels per year",
+      "quality": "High \u2014 GlobPOP fuses WorldPop + LandScan + GPW + GHS-POP; Census PEP extrapolation 2021\u20132025"
+    },
+    "timeSeries": {
+      "label": "California Population (millions)",
+      "xLabel": "Year",
+      "yLabel": "Population (millions)",
+      "data": [
+        {
+          "year": 1990,
+          "value": 29.8
+        },
+        {
+          "year": 1995,
+          "value": 31.5
+        },
+        {
+          "year": 2000,
+          "value": 33.9
+        },
+        {
+          "year": 2005,
+          "value": 35.8
+        },
+        {
+          "year": 2010,
+          "value": 37.3
+        },
+        {
+          "year": 2015,
+          "value": 39.0
+        },
+        {
+          "year": 2020,
+          "value": 39.5
+        },
+        {
+          "year": 2022,
+          "value": 39.0
+        },
+        {
+          "year": 2025,
+          "value": 39.1
+        }
+      ]
+    },
+    "findings": [
+      "800 m raster analysis reveals WUI growth frontier: thousands of pixels transitioned from <50 to \u226550 persons/km\u00b2 since 1993, expanding fire-exposed population.",
+      "Composite risk mapping (fire frequency \u00d7 population density) identifies highest-risk zones in the Sierra foothills, Santa Rosa corridor, and San Bernardino WUI.",
+      "Post-fire population change case studies (Camp, Tubbs, Thomas, LNU fires) show 15\u201340% decline at burn-scar pixels within 5 years.",
+      "GlobPOP 800 m data tracks closely with Census PEP at statewide scale (\u00b12%), enabling pixel-level ML features from 1993\u20132025."
+    ],
+    "notebookUrl": "/wildfire-explorer/notebooks/Census_Population_Comprehensive_Analysis_executed.html"
+  },
+  {
+    "id": "infra",
+    "name": "Infrastructure Networks",
+    "shortName": "Infrastructure",
+    "color": "#9333EA",
+    "icon": "network",
+    "description": "Road networks and electrical transmission grid lines \u2014 analyzing infrastructure exposure to wildfire risk and ignition proximity.",
+    "yearRange": [
+      2010,
+      2024
+    ],
+    "figureCount": 14,
+    "metadata": {
+      "source": "US Census TIGER/Line + HIFLD Transmission Lines",
+      "format": "Shapefile (polylines)",
+      "resolution": "Individual road segments + transmission lines",
+      "crs": "EPSG:3310 \u2014 California Albers Equal Area",
+      "coverage": "California statewide",
+      "records": "~1.2M road segments + ~4,500 transmission line segments",
+      "quality": "Moderate-High \u2014 annual TIGER updates, periodic HIFLD refresh"
+    },
+    "timeSeries": {
+      "label": "Fires Within 1km of Infrastructure",
+      "xLabel": "Year",
+      "yLabel": "Number of Fires",
+      "data": [
+        {
+          "year": 2010,
+          "value": 2800
+        },
+        {
+          "year": 2011,
+          "value": 3100
+        },
+        {
+          "year": 2012,
+          "value": 4200
+        },
+        {
+          "year": 2013,
+          "value": 3800
+        },
+        {
+          "year": 2014,
+          "value": 3600
+        },
+        {
+          "year": 2015,
+          "value": 4500
+        },
+        {
+          "year": 2016,
+          "value": 4100
+        },
+        {
+          "year": 2017,
+          "value": 5800
+        },
+        {
+          "year": 2018,
+          "value": 6200
+        },
+        {
+          "year": 2019,
+          "value": 3400
+        },
+        {
+          "year": 2020,
+          "value": 5900
+        },
+        {
+          "year": 2021,
+          "value": 5200
+        },
+        {
+          "year": 2022,
+          "value": 3000
+        },
+        {
+          "year": 2023,
+          "value": 3500
+        },
+        {
+          "year": 2024,
+          "value": 4100
+        }
+      ]
+    },
+    "findings": [
+      "72% of California wildfires ignite within 1 km of a road \u2014 roads are the primary human-access ignition corridor.",
+      "Transmission line corridors show 3.4\u00d7 higher fire density than surrounding areas.",
+      "Rural 2-lane roads in chaparral zones have the highest fire-proximity risk score.",
+      "Combined infrastructure risk score identifies priority zones for vegetation management."
+    ],
+    "notebookUrl": "/wildfire-explorer/notebooks/Infrastructure_Roads_Transmission_Analysis.html"
+  },
+  {
+    "id": "wind",
+    "name": "Wind & Fire Weather",
+    "shortName": "Wind",
+    "color": "#0284C7",
+    "icon": "wind",
+    "description": "RAWS station wind data, Energy Release Component (ERC), and Santa Ana wind event analysis \u2014 critical fire weather variables for behavior prediction.",
+    "yearRange": [
+      1993,
+      2024
+    ],
+    "figureCount": 19,
+    "metadata": {
+      "source": "RAWS / CEFA + SPC Mesoanalysis",
+      "format": "CSV time series + gridded reanalysis",
+      "resolution": "Station point data + 13km reanalysis grid",
+      "crs": "EPSG:4326 \u2192 reprojected to EPSG:3310",
+      "coverage": "California \u2014 200+ RAWS stations",
+      "records": "~15M hourly observations + daily ERC grids",
+      "quality": "Moderate \u2014 station gaps filled with reanalysis"
+    },
+    "timeSeries": {
+      "label": "Annual Mean ERC (Energy Release Component)",
+      "xLabel": "Year",
+      "yLabel": "Mean ERC",
+      "data": [
+        {
+          "year": 1993,
+          "value": 42
+        },
+        {
+          "year": 1995,
+          "value": 44
+        },
+        {
+          "year": 1997,
+          "value": 41
+        },
+        {
+          "year": 1999,
+          "value": 45
+        },
+        {
+          "year": 2000,
+          "value": 46
+        },
+        {
+          "year": 2002,
+          "value": 48
+        },
+        {
+          "year": 2003,
+          "value": 52
+        },
+        {
+          "year": 2005,
+          "value": 47
+        },
+        {
+          "year": 2006,
+          "value": 53
+        },
+        {
+          "year": 2007,
+          "value": 55
+        },
+        {
+          "year": 2008,
+          "value": 51
+        },
+        {
+          "year": 2010,
+          "value": 44
+        },
+        {
+          "year": 2012,
+          "value": 54
+        },
+        {
+          "year": 2013,
+          "value": 50
+        },
+        {
+          "year": 2014,
+          "value": 57
+        },
+        {
+          "year": 2015,
+          "value": 56
+        },
+        {
+          "year": 2016,
+          "value": 52
+        },
+        {
+          "year": 2017,
+          "value": 58
+        },
+        {
+          "year": 2018,
+          "value": 60
+        },
+        {
+          "year": 2020,
+          "value": 62
+        },
+        {
+          "year": 2021,
+          "value": 61
+        },
+        {
+          "year": 2022,
+          "value": 53
+        },
+        {
+          "year": 2023,
+          "value": 56
+        },
+        {
+          "year": 2024,
+          "value": 58
+        }
+      ]
+    },
+    "findings": [
+      "ERC has increased ~40% since 1993 \u2014 fuels are drier for longer periods.",
+      "Santa Ana wind events correlate with 8 of the 10 most destructive California fires.",
+      "Offshore wind events (Diablo winds in NorCal, Santa Ana in SoCal) show increasing overlap with high-ERC periods.",
+      "Wind speed alone is a poor fire predictor \u2014 the wind \u00d7 ERC interaction is the key signal."
+    ],
+    "notebookUrl": "/wildfire-explorer/notebooks/Wind_Comprehensive_Analysis.html"
+  }
+]

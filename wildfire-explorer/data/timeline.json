@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "name": "Data Collection & Inventory",
+    "status": "complete",
+    "date": "Oct 2024",
+    "description": "Identified and acquired 12 geospatial datasets spanning fire history, climate, topography, vegetation, population, infrastructure, and wind data.",
+    "deliverables": [
+      "12 raw datasets downloaded and catalogued",
+      "Data dictionary documenting all variables and sources",
+      "Unified directory structure on research server"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Data Preprocessing & Grid Construction",
+    "status": "complete",
+    "date": "Oct \u2013 Nov 2024",
+    "description": "Built a unified 800-meter grid in EPSG:3310 (California Albers Equal Area), reprojecting and resampling all datasets to a common spatial framework.",
+    "deliverables": [
+      "800m unified grid covering California (~780K cells)",
+      "All 12 datasets reprojected to EPSG:3310",
+      "Temporal alignment across heterogeneous time ranges"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Exploratory Data Analysis \u2014 Fire Datasets",
+    "status": "complete",
+    "date": "Nov \u2013 Dec 2024",
+    "description": "Comprehensive EDA of CAL FIRE, MTBS, and FPA-FOD fire datasets \u2014 temporal trends, spatial distributions, cause analysis, and cross-dataset validation.",
+    "deliverables": [
+      "56 publication-quality figures",
+      "3 interactive Folium maps",
+      "3 executed Jupyter notebooks",
+      "Cross-reference validation between CAL FIRE and MTBS"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Exploratory Data Analysis \u2014 Environmental",
+    "status": "complete",
+    "date": "Dec 2024 \u2013 Jan 2025",
+    "description": "EDA of topography (elevation, slope, aspect, TPI), LANDFIRE canopy cover, and FVEG vegetation classification \u2014 terrain and fuel characterization.",
+    "deliverables": [
+      "51 figures across 3 datasets",
+      "Elevation-fire density relationship quantified",
+      "Vegetation type \u00d7 fire severity analysis",
+      "800m grid validation vs. native resolution"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Exploratory Data Analysis \u2014 Climate",
+    "status": "complete",
+    "date": "Jan \u2013 Mar 2025",
+    "description": "Three-part PRISM climate analysis: CONUS comparison, California deep dive, and fire-climate overlay. VPD identified as the single strongest climate predictor.",
+    "deliverables": [
+      "56 figures across 3 climate analyses",
+      "VPD-fire correlation quantified (r\u00b2 \u2248 0.45)",
+      "6 California climate zones identified",
+      "130-year temperature trend analysis"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Exploratory Data Analysis \u2014 Human & Wind",
+    "status": "complete",
+    "date": "Mar \u2013 Jun 2025",
+    "description": "Census population/housing analysis for WUI characterization, infrastructure-fire proximity analysis, and comprehensive wind/ERC fire weather analysis.",
+    "deliverables": [
+      "65 figures across 3 datasets",
+      "WUI population growth quantified (200% faster than non-WUI)",
+      "Infrastructure risk scoring model",
+      "Santa Ana/Diablo wind event characterization"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Statistical Analysis & Feature Engineering",
+    "status": "complete",
+    "date": "Jun \u2013 Oct 2025",
+    "description": "Rigorous statistical analysis \u2014 correlation matrices, spatial autocorrelation (Moran's I), principal component analysis, and feature selection for the ML pipeline.",
+    "deliverables": [
+      "Multivariate correlation analysis across all 12 datasets",
+      "Spatial autocorrelation quantification",
+      "PCA-driven dimensionality reduction",
+      "Feature importance ranking for model input selection"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Deep Learning Model Development",
+    "status": "in-progress",
+    "date": "Oct 2025 \u2013 Feb 2026",
+    "description": "Design and train a spatiotemporal deep learning model (CNN+LSTM hybrid or Vision Transformer) on the 800m grid to predict fire risk, severity, and spread probability.",
+    "deliverables": [
+      "Model architecture selection and benchmarking",
+      "Training on 2x RTX PRO 6000 Blackwell (96GB each)",
+      "Temporal cross-validation with held-out fire seasons",
+      "Comparison against baseline models (logistic regression, random forest)"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Validation & Deployment",
+    "status": "planned",
+    "date": "Mar \u2013 Jun 2026",
+    "description": "Model validation against recent fire seasons, interpretability analysis (SHAP/GradCAM), and deployment as a real-time risk assessment tool.",
+    "deliverables": [
+      "Out-of-sample validation on 2023-2024 fire seasons",
+      "Spatial interpretability maps (which features drive predictions where)",
+      "Real-time prediction API",
+      "Publication-ready results and methodology documentation"
+    ]
+  }
+]
