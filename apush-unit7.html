@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APUSH Unit 7 Study Guide | 27.3 – 30.3</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <style>
+        :root {
+            --bg: #f2f2f5;
+            --surface: #ffffff;
+            --surface-2: #eaeaef;
+            --surface-3: #dddde5;
+            --border: #c5c5d0;
+            --text: #111118;
+            --text-dim: #555566;
+            --accent: #3b4abf;
+            --accent-dim: rgba(59,74,191,0.1);
+            --accent-mid: rgba(59,74,191,0.22);
+            --sidebar-w: 270px;
+            --correct: #15803d;
+            --correct-bg: rgba(21,128,61,0.08);
+            --wrong: #b91c1c;
+            --wrong-bg: rgba(185,28,28,0.08);
+        }
+        body.dark {
+            --bg: #0e0e12;
+            --surface: #181820;
+            --surface-2: #1e1e28;
+            --surface-3: #262632;
+            --border: #2e2e3c;
+            --text: #e4e4ec;
+            --text-dim: #8888a0;
+            --accent: #7b8cff;
+            --accent-dim: rgba(123,140,255,0.12);
+            --accent-mid: rgba(123,140,255,0.25);
+            --correct: #4ade80;
+            --correct-bg: rgba(74,222,128,0.12);
+            --wrong: #f87171;
+            --wrong-bg: rgba(248,113,113,0.12);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',-apple-system,sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+
+        .sidebar { position:fixed; top:0; left:0; width:var(--sidebar-w); height:100vh; background:var(--surface); border-right:1px solid var(--border); overflow-y:auto; z-index:100; display:flex; flex-direction:column; transition:transform .3s; }
+        .sidebar-header { padding:24px 20px 18px; border-bottom:1px solid var(--border); }
+        .sidebar-header h1 { font-size:1.25rem; font-weight:800; color:var(--accent); }
+        .sidebar-header p { font-size:.7rem; color:var(--text-dim); margin-top:4px; text-transform:uppercase; letter-spacing:.08em; }
+        .sidebar nav { flex:1; padding:10px 0; overflow-y:auto; }
+        .nav-chapter { padding:0 12px; margin-bottom:2px; }
+        .nav-chapter-title { display:block; padding:8px 10px; font-size:.78rem; font-weight:700; color:var(--text); border-radius:6px; cursor:pointer; text-decoration:none; transition:background .15s; }
+        .nav-chapter-title:hover { background:var(--accent-dim); }
+        .nav-section { list-style:none; padding:0 0 4px 18px; }
+        .nav-section a { display:block; padding:4px 10px; font-size:.73rem; color:var(--text-dim); text-decoration:none; border-radius:5px; transition:all .15s; }
+        .nav-section a:hover { color:var(--accent); background:var(--accent-dim); }
+        .nav-divider { height:1px; background:var(--border); margin:8px 16px; }
+
+        .main { margin-left:var(--sidebar-w); padding:36px 48px 80px; max-width:900px; }
+
+        .exam-notice { padding:16px 18px; background:var(--accent-dim); border:1px solid var(--accent-mid); border-radius:10px; margin-bottom:28px; font-size:.82rem; }
+        .exam-notice strong { color:var(--accent); }
+
+        .chapter { margin-bottom:48px; }
+        .chapter-title { font-size:1.5rem; font-weight:800; color:var(--accent); margin-bottom:6px; padding-bottom:12px; border-bottom:2px solid var(--accent-mid); }
+        .chapter-era { font-size:.75rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:.06em; margin-bottom:16px; }
+        .chapter-big-idea { padding:12px 16px; background:var(--surface); border:1px dashed var(--border); border-radius:8px; margin-bottom:20px; font-size:.82rem; color:var(--text-dim); }
+        .chapter-big-idea strong { color:var(--accent); display:block; margin-bottom:4px; font-size:.75rem; text-transform:uppercase; letter-spacing:.06em; }
+
+        .section { margin-bottom:16px; border:1px solid var(--border); border-radius:10px; background:var(--surface); overflow:hidden; }
+        .section-toggle { width:100%; padding:16px 20px; display:flex; justify-content:space-between; align-items:center; background:none; border:none; cursor:pointer; font-family:inherit; text-align:left; color:var(--text); }
+        .section-toggle:hover { background:var(--accent-dim); }
+        .section-toggle h3 { font-size:.95rem; font-weight:700; }
+        .section-arrow { font-size:.8rem; color:var(--text-dim); transition:transform .25s; }
+        .section.open .section-arrow { transform:rotate(180deg); }
+        .section-body { display:none; padding:0 20px 20px; }
+        .section.open .section-body { display:block; }
+
+        .qa { margin-bottom:20px; }
+        .qa:last-child { margin-bottom:0; }
+        .qa-q { font-weight:600; font-size:.88rem; color:var(--accent); margin-bottom:6px; }
+        .qa-a { font-size:.85rem; color:var(--text); padding-left:16px; border-left:3px solid var(--accent-mid); }
+        .qa-a p { margin-bottom:8px; }
+        .qa-a p:last-child { margin-bottom:0; }
+
+        .key-terms-section { margin-top:20px; margin-bottom:16px; padding:20px; background:var(--accent-dim); border:1px solid var(--accent-mid); border-radius:10px; }
+        .key-terms-section h3 { font-size:.95rem; font-weight:700; color:var(--accent); margin-bottom:14px; }
+        .key-terms-grid { display:grid; grid-template-columns:1fr; gap:8px; margin-bottom:10px; }
+        .key-term-item { padding:10px 14px; background:var(--surface); border:1px solid var(--border); border-radius:8px; font-size:.8rem; }
+        .key-term-name { font-weight:700; color:var(--accent); margin-bottom:2px; }
+        .key-term-def { color:var(--text-dim); font-size:.77rem; }
+
+        .vocab-section { margin-bottom:48px; }
+        .vocab-section h2 { font-size:1.3rem; font-weight:800; color:var(--accent); margin-bottom:6px; padding-bottom:10px; border-bottom:2px solid var(--accent-mid); }
+        .vocab-chapter-group { margin-bottom:28px; }
+        .vocab-chapter-group h3 { font-size:.95rem; font-weight:700; margin-bottom:10px; color:var(--text); }
+        .vocab-list { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+        .vocab-item { padding:10px 14px; background:var(--surface); border:1px solid var(--border); border-radius:8px; font-size:.8rem; }
+        .vocab-word { font-weight:700; color:var(--accent); margin-bottom:2px; }
+        .vocab-def { color:var(--text-dim); font-size:.77rem; }
+
+        .quiz-section { margin-bottom:48px; }
+        .quiz-section h2 { font-size:1.3rem; font-weight:800; color:var(--accent); margin-bottom:6px; padding-bottom:10px; border-bottom:2px solid var(--accent-mid); }
+        .quiz-controls { display:flex; gap:12px; align-items:center; margin-bottom:20px; flex-wrap:wrap; }
+        .btn { padding:10px 22px; background:var(--accent); color:#fff; border:none; border-radius:8px; font-family:inherit; font-size:.85rem; font-weight:600; cursor:pointer; transition:opacity .15s; }
+        .btn:hover { opacity:.85; }
+        .quiz-progress { font-size:.82rem; color:var(--text-dim); }
+        .quiz-question { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:20px; margin-bottom:16px; }
+        .quiz-q-text { font-weight:600; font-size:.9rem; margin-bottom:12px; }
+        .quiz-q-word { color:var(--accent); }
+        .quiz-options label { display:block; padding:10px 14px; margin-bottom:6px; border:1px solid var(--border); border-radius:8px; cursor:pointer; font-size:.83rem; transition:all .15s; }
+        .quiz-options label:hover { background:var(--accent-dim); }
+        .quiz-options input { display:none; }
+        .quiz-options label.selected { border-color:var(--accent); background:var(--accent-dim); }
+        .quiz-options label.correct-answer { border-color:var(--correct); background:var(--correct-bg); }
+        .quiz-options label.wrong-answer { border-color:var(--wrong); background:var(--wrong-bg); }
+        .quiz-result { text-align:center; padding:28px; background:var(--surface); border:1px solid var(--border); border-radius:12px; margin-top:20px; }
+        .quiz-result .score { font-size:2rem; font-weight:800; color:var(--accent); }
+        .quiz-result .score-label { font-size:.85rem; color:var(--text-dim); margin-top:4px; }
+        .quiz-question.locked label { opacity:.55; pointer-events:none; }
+        .quiz-question.locked label.selected,
+        .quiz-question.locked label.correct-answer,
+        .quiz-question.locked label.wrong-answer { opacity:1; }
+        .quiz-feedback { margin-top:10px; padding:10px 14px; border-radius:8px; font-size:.83rem; font-weight:600; }
+        .quiz-feedback.correct { background:var(--correct-bg); color:var(--correct); border:1px solid var(--correct); }
+        .quiz-feedback.wrong { background:var(--wrong-bg); color:var(--wrong); border:1px solid var(--wrong); }
+        .quiz-feedback .correct-answer-text { font-weight:400; margin-top:4px; display:block; }
+        .quiz-divider { height:2px; background:var(--border); margin:48px 0; }
+        .inline-tracker { display:flex; gap:20px; align-items:center; flex-wrap:wrap; padding:12px 16px; background:var(--surface); border:1px solid var(--border); border-radius:10px; margin-bottom:20px; }
+        .inline-tracker .it-stat { font-size:.82rem; color:var(--text-dim); }
+        .inline-tracker .it-stat strong { color:var(--accent); font-weight:700; }
+        .inline-tracker .it-bar { flex:1; min-width:100px; height:8px; background:var(--surface-2); border-radius:4px; overflow:hidden; }
+        .inline-tracker .it-bar-fill { height:100%; background:var(--accent); border-radius:4px; transition:width .5s; }
+
+        .tracker { margin-bottom:48px; }
+        .tracker h2 { font-size:1.3rem; font-weight:800; color:var(--accent); margin-bottom:6px; padding-bottom:10px; border-bottom:2px solid var(--accent-mid); }
+        .tracker-sub { margin-bottom:28px; }
+        .tracker-sub h3 { font-size:.95rem; font-weight:700; margin-bottom:10px; color:var(--text); }
+        .tracker-stats { display:flex; gap:24px; margin-bottom:16px; flex-wrap:wrap; }
+        .tracker-stat { text-align:center; }
+        .tracker-stat .num { font-size:1.8rem; font-weight:800; color:var(--accent); }
+        .tracker-stat .lbl { font-size:.72rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:.05em; }
+        .tracker-bar { height:12px; background:var(--surface-2); border-radius:6px; overflow:hidden; margin-bottom:16px; }
+        .tracker-bar-fill { height:100%; background:var(--accent); border-radius:6px; transition:width .5s; }
+        .tracker-history { display:flex; flex-wrap:wrap; gap:8px; }
+        .tracker-pill { padding:5px 12px; background:var(--surface); border:1px solid var(--border); border-radius:20px; font-size:.75rem; font-weight:600; }
+
+        .theme-toggle { position:fixed; top:16px; right:20px; z-index:200; width:42px; height:42px; border-radius:50%; background:var(--surface); border:1px solid var(--border); cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:1.1rem; transition:all .15s; }
+        .theme-toggle:hover { background:var(--accent-dim); }
+        .hamburger { display:none; position:fixed; top:16px; left:16px; z-index:200; width:42px; height:42px; border-radius:50%; background:var(--surface); border:1px solid var(--border); cursor:pointer; align-items:center; justify-content:center; font-size:1.2rem; }
+
+        @media(max-width:768px) {
+            .sidebar { transform:translateX(-100%); }
+            .sidebar.open { transform:translateX(0); }
+            .main { margin-left:0; padding:24px 18px 60px; }
+            .hamburger { display:flex; }
+            .theme-toggle { right:16px; }
+            .vocab-list { grid-template-columns:1fr; }
+            .chapter-title { font-size:1.2rem; }
+        }
+
+        /* Access gate */
+        body.locked .sidebar,
+        body.locked .main,
+        body.locked .hamburger,
+        body.locked .theme-toggle { display:none !important; }
+        .access-gate { display:none; position:fixed; inset:0; background:var(--bg); z-index:500; align-items:center; justify-content:center; padding:20px; }
+        body.locked .access-gate { display:flex; }
+        .gate-card { max-width:440px; width:100%; background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:32px 28px; text-align:center; box-shadow:0 12px 40px rgba(0,0,0,0.08); }
+        .gate-logo { font-size:1.5rem; font-weight:800; color:var(--accent); margin-bottom:4px; }
+        .gate-sub { font-size:.72rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:.08em; margin-bottom:24px; }
+        .gate-title { font-size:1.05rem; font-weight:700; margin-bottom:8px; }
+        .gate-desc { font-size:.85rem; color:var(--text-dim); margin-bottom:22px; line-height:1.55; }
+        .gate-input { width:100%; padding:14px 16px; font-family:inherit; font-size:1rem; border:1px solid var(--border); border-radius:8px; background:var(--surface-2); color:var(--text); text-align:center; letter-spacing:.06em; text-transform:uppercase; margin-bottom:12px; }
+        .gate-input:focus { outline:none; border-color:var(--accent); background:var(--surface); }
+        .gate-btn { width:100%; padding:13px 22px; background:var(--accent); color:#fff; border:none; border-radius:8px; font-family:inherit; font-size:.9rem; font-weight:700; cursor:pointer; transition:opacity .15s; }
+        .gate-btn:hover { opacity:.88; }
+        .gate-msg { font-size:.8rem; margin-top:10px; min-height:1.1em; }
+        .gate-msg.error { color:var(--wrong); }
+        .gate-msg.success { color:var(--correct); font-weight:600; }
+        .gate-contact { font-size:.76rem; color:var(--text-dim); margin-top:22px; padding-top:18px; border-top:1px solid var(--border); line-height:1.5; }
+    </style>
+</head>
+<body class="locked">
+    <div class="access-gate">
+        <div class="gate-card">
+            <div class="gate-logo">APUSH Unit 7</div>
+            <div class="gate-sub">Study Guide &middot; Sections 27.3&ndash;30.3</div>
+            <div class="gate-title">Enter Access Code</div>
+            <div class="gate-desc">This study guide is members-only. Enter the access code you were given to unlock the full guide and quizzes.</div>
+            <input class="gate-input" id="gateInput" type="text" placeholder="AP7-XXXX-XXXX" autocomplete="off" spellcheck="false" maxlength="14">
+            <button class="gate-btn" id="gateBtn">Unlock</button>
+            <div class="gate-msg" id="gateMsg"></div>
+            <div class="gate-contact">Need a code? Contact Justin Merlin.</div>
+        </div>
+    </div>
+
+    <button class="hamburger" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#9788;</button>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h1>APUSH Unit 7</h1>
+            <p>Sections 27.3 &ndash; 30.3</p>
+        </div>
+        <nav>
+            <div class="nav-chapter">
+                <a class="nav-chapter-title" href="#ch27">Ch 27: Civil Rights Movement</a>
+                <ul class="nav-section">
+                    <li><a href="#s27-3">27.3 Beyond Civil Rights</a></li>
+                </ul>
+            </div>
+            <div class="nav-chapter">
+                <a class="nav-chapter-title" href="#ch28">Ch 28: Liberal Crisis &amp; Conservative Rebirth</a>
+                <ul class="nav-section">
+                    <li><a href="#s28-1">28.1 The Great Society</a></li>
+                    <li><a href="#s28-2">28.2 War in Vietnam, 1963&ndash;1968</a></li>
+                    <li><a href="#s28-3">28.3 Days of Rage, 1968&ndash;1972</a></li>
+                    <li><a href="#s28-4">28.4 Nixon &amp; the Silent Majority</a></li>
+                </ul>
+            </div>
+            <div class="nav-chapter">
+                <a class="nav-chapter-title" href="#ch29">Ch 29: Search for Order in an Era of Limits</a>
+                <ul class="nav-section">
+                    <li><a href="#s29-1">29.1 An Era of Limits</a></li>
+                    <li><a href="#s29-2">29.2 Reform &amp; Reaction in the 1970s</a></li>
+                    <li><a href="#s29-3">29.3 The American Family on Trial</a></li>
+                </ul>
+            </div>
+            <div class="nav-chapter">
+                <a class="nav-chapter-title" href="#ch30">Ch 30: Conservative America Ascendant</a>
+                <ul class="nav-section">
+                    <li><a href="#s30-1">30.1 Rise of the New Right</a></li>
+                    <li><a href="#s30-2">30.2 Dawning of the Conservative Age</a></li>
+                    <li><a href="#s30-3">30.3 End of the Cold War</a></li>
+                </ul>
+            </div>
+            <div class="nav-divider"></div>
+            <div class="nav-chapter">
+                <a class="nav-chapter-title" href="#vocab">Vocabulary List</a>
+            </div>
+            <div class="nav-chapter">
+                <a class="nav-chapter-title" href="#quiz">Vocabulary Quiz</a>
+            </div>
+            <div class="nav-chapter">
+                <a class="nav-chapter-title" href="#kt-quiz">Key Terms Quiz</a>
+            </div>
+            <div class="nav-chapter">
+                <a class="nav-chapter-title" href="#tracker">Accuracy Tracker</a>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main">
+
+<div class="exam-notice">
+    <strong>Unit 7 Exam &mdash; Thursday/Friday.</strong> Covers textbook sections <strong>27.3 &ndash; 30.3</strong>, vocab for <strong>Ch 28&ndash;30</strong>, plus a couple of questions from Problem of the Present presentations.
+    <br><br>
+    <em>Excluded:</em> credibility gap, New Left (28.2); sexual revolution, Fourth Great Awakening (29.3).
+</div>
+
+<!-- CHAPTER 27 -->
+<div class="chapter" id="ch27">
+    <h2 class="chapter-title">Chapter 27: The Civil Rights Movement</h2>
+    <div class="chapter-era">Section 27.3 only for Unit 7</div>
+
+    <div class="section open" id="s27-3">
+        <button class="section-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3>27.3 &mdash; Beyond Civil Rights, 1966&ndash;1973</h3>
+            <span class="section-arrow">&#9660;</span>
+        </button>
+        <div class="section-body">
+            <div class="qa">
+                <div class="qa-q">1. How would you characterize the different forms that the Black Power movement took? How were these forms related to traditions in African American history?</div>
+                <div class="qa-a">
+                    <p>The Black Power movement took many forms, but it was united by a rejection of the idea that Black Americans had to patiently earn equality through a white-dominated system. It grew out of frustration with the slow pace of civil rights reform, the persistence of poverty and police violence in northern cities, and the refusal of white moderates to push for economic justice. One strand was <strong>cultural nationalism</strong> &mdash; the celebration of African heritage, &ldquo;Black is Beautiful,&rdquo; natural hair, African dress, and the development of Black studies programs at universities. Another strand was <strong>political radicalism</strong>, represented most famously by the Black Panther Party, founded in Oakland in 1966 by Huey Newton and Bobby Seale. The Panthers organized armed community self-defense against police brutality but also ran free breakfast programs, clinics, and schools in Black neighborhoods. A third strand was <strong>religious and separatist</strong>, most visible in the Nation of Islam and the teachings of Malcolm X, who argued that Black Americans should build independent institutions rather than integrate into white society.</p>
+                    <p>These forms connected to deep traditions in African American history. Black nationalism and calls for self-determination echoed Marcus Garvey&rsquo;s UNIA in the 1920s and even earlier pan-African thinkers. The idea of armed self-defense went back to Black communities resisting Reconstruction-era violence. The tradition of building independent Black institutions &mdash; churches, schools, businesses &mdash; had roots stretching back to the antebellum free Black community. Black Power was not a break from earlier Black struggle; it was a continuation of a long-standing debate over whether integration or self-determination was the better path to freedom.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">2. What did the Chicano and American Indian movements have in common with the Black freedom movement?</div>
+                <div class="qa-a">
+                    <p>The Chicano and American Indian movements borrowed directly from the tactics, rhetoric, and pride of the Black freedom struggle. Each movement combined <strong>direct action</strong> with a demand for <strong>cultural pride and political power</strong>. C&eacute;sar Ch&aacute;vez and Dolores Huerta&rsquo;s United Farm Workers (UFW) organized Mexican American farmworkers through strikes, boycotts (most famously the grape boycott), and nonviolent marches modeled on the civil rights movement. Younger Chicano activists formed groups like the Brown Berets and pushed for bilingual education, Chicano studies, and an end to police abuse in the Southwest.</p>
+                    <p>The American Indian Movement (AIM), founded in 1968, used direct action to demand treaty rights, tribal sovereignty, and better conditions on reservations. The occupation of Alcatraz (1969) and the 1973 takeover of Wounded Knee were dramatic protests designed, like the civil rights sit-ins, to force the nation to pay attention. The Young Lords, a Puerto Rican group modeled on the Black Panthers, brought similar activism to urban neighborhoods in New York and Chicago. What all these movements had in common with Black Power was a rejection of assimilation, a demand for ethnic pride and self-determination, an embrace of grassroots protest, and a willingness to challenge both liberal gradualism and conservative backlash.</p>
+                </div>
+            </div>
+            <div class="key-terms-section">
+                <h3>27.3 &mdash; Key Terms</h3>
+                <div class="key-terms-grid">
+                    <div class="key-term-item"><span class="key-term-name">American Indian Movement (AIM)</span><div class="key-term-def">Native American civil rights organization founded in 1968 that used direct action &mdash; including the occupation of Alcatraz and the 1973 takeover of Wounded Knee &mdash; to demand treaty rights and tribal sovereignty.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Black nationalism</span><div class="key-term-def">Belief that Black Americans should build independent political, economic, and cultural institutions rather than assimilate into white society; rooted in traditions going back to Marcus Garvey.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Black Panther Party</span><div class="key-term-def">Founded in Oakland in 1966 by Huey Newton and Bobby Seale; organized armed self-defense against police brutality and ran community programs like free breakfasts and health clinics.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Black Power</span><div class="key-term-def">Slogan popularized by Stokely Carmichael in 1966; emphasized racial pride, self-determination, economic independence, and a rejection of white moderation and gradualism.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Kerner Commission (1968)</span><div class="key-term-def">Johnson-appointed commission that investigated the urban riots and concluded that the nation was moving toward two societies, one black and one white, separate and unequal, blaming white racism for inner-city conditions.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Occupation of Alcatraz (1969)</span><div class="key-term-def">Native American activists calling themselves &ldquo;Indians of All Tribes&rdquo; occupied the former federal prison island for 19 months to demand the return of unused federal land and raise awareness of Native rights.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Riots of 1967</span><div class="key-term-def">&ldquo;Long hot summer&rdquo; uprisings in cities like Newark and Detroit, sparked by police incidents but fueled by poverty, unemployment, housing discrimination, and brutality in Black urban neighborhoods.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">United Farm Workers (UFW)</span><div class="key-term-def">Farm labor union led by C&eacute;sar Ch&aacute;vez and Dolores Huerta that organized primarily Mexican American and Filipino farmworkers through strikes, marches, and the grape boycott.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Young Lords</span><div class="key-term-def">Puerto Rican activist group modeled on the Black Panthers that organized in New York and Chicago to demand better housing, health care, and education in Latino neighborhoods.</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CHAPTER 28 -->
+<div class="chapter" id="ch28">
+    <h2 class="chapter-title">Chapter 28: Liberal Crisis &amp; Conservative Rebirth</h2>
+    <div class="chapter-era">APUSH Era 8 (1945&ndash;1980)</div>
+    <div class="chapter-big-idea"><strong>Identify the Big Idea</strong>What were liberalism&rsquo;s social and political achievements in the 1960s, and how did debates over liberal values contribute to conflict at home and reflect tension abroad?</div>
+
+    <div class="section open" id="s28-1">
+        <button class="section-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3>28.1 &mdash; The Great Society: Liberalism at High Tide</h3>
+            <span class="section-arrow">&#9660;</span>
+        </button>
+        <div class="section-body">
+            <div class="qa">
+                <div class="qa-q">1. What new roles did the federal government assume under Great Society initiatives, and how did they extend the New Deal tradition?</div>
+                <div class="qa-a">
+                    <p>Lyndon Johnson&rsquo;s Great Society massively expanded the federal government&rsquo;s role in American life, taking New Deal liberalism into areas FDR had never reached. The federal government now took direct responsibility for fighting poverty, guaranteeing health care for the elderly and poor, protecting civil rights, funding education, and shaping immigration. The <strong>War on Poverty</strong> created the Office of Economic Opportunity, Job Corps, VISTA, and Head Start, which tried to attack the structural causes of poverty through education, job training, and community action rather than simple cash relief. <strong>Medicare</strong> provided health insurance for Americans over 65, and <strong>Medicaid</strong> covered low-income Americans &mdash; the first major federal health care programs in U.S. history.</p>
+                    <p>Other Great Society programs included the Elementary and Secondary Education Act (federal aid to public schools), the Higher Education Act (federal loans and scholarships), the Department of Housing and Urban Development, and the National Endowment for the Arts and Humanities. The <strong>Immigration Act of 1965</strong> abolished the national-origins quota system that had been in place since the 1920s and opened U.S. immigration to the rest of the world. These programs extended the New Deal tradition by keeping its core idea &mdash; that the federal government is responsible for the welfare of ordinary Americans &mdash; but went much further. Where the New Deal had focused on economic recovery, the Great Society focused on social justice, racial equality, and quality of life.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">2. What factors accounted for the resurgence of feminism in the 1960s?</div>
+                <div class="qa-a">
+                    <p>Several overlapping factors revived feminism in the 1960s. Betty Friedan&rsquo;s <em>The Feminine Mystique</em> (1963) gave voice to what she called &ldquo;the problem that has no name&rdquo; &mdash; the frustration and boredom of educated, middle-class white women confined to suburban housewife roles. The book made millions of women realize their discontent was widespread and structural, not personal. At the same time, the civil rights movement gave women activists both inspiration (the language of equality, nonviolent tactics, grassroots organizing) and personal motivation, since many female activists in SNCC and SDS had experienced sexism inside the movements themselves.</p>
+                    <p>Demographic and economic changes mattered too. More women were going to college, delaying marriage, and entering the paid workforce, which made legal restrictions on their jobs and pay more visible and more resented. The development of the birth control pill in 1960 gave women more control over reproduction and allowed them to plan careers. Finally, Kennedy&rsquo;s Presidential Commission on the Status of Women (chaired by Eleanor Roosevelt) produced a 1963 report documenting pervasive workplace discrimination, setting the stage for the legal and political battles of the decade.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">3. What legal victories did women achieve in the 1960s?</div>
+                <div class="qa-a">
+                    <p>Women won several major legal victories during the 1960s. The <strong>Equal Pay Act of 1963</strong> required that men and women doing the same work be paid equally &mdash; the first federal law against sex-based wage discrimination. <strong>Title VII of the Civil Rights Act of 1964</strong> banned employment discrimination on the basis of sex as well as race, religion, and national origin. (Ironically, &ldquo;sex&rdquo; was added by a segregationist congressman who hoped including it would sink the bill; instead, it became one of the most important tools feminists used for decades.) In 1965, the Supreme Court ruled in <em>Griswold v. Connecticut</em> that married couples had a constitutional right to privacy in their use of contraception &mdash; a precedent that laid the groundwork for <em>Roe v. Wade</em> in 1973.</p>
+                    <p>In 1966, frustrated by weak federal enforcement of Title VII, Betty Friedan and others founded the <strong>National Organization for Women (NOW)</strong>, which pushed for enforcement of existing laws and new legislation, including an Equal Rights Amendment. By the end of the decade, women had a real legal framework to challenge discrimination &mdash; even if enforcement was inconsistent and the battle for full equality would continue for decades.</p>
+                </div>
+            </div>
+            <div class="key-terms-section">
+                <h3>28.1 &mdash; Key Terms</h3>
+                <div class="key-terms-grid">
+                    <div class="key-term-item"><span class="key-term-name">Great Society</span><div class="key-term-def">LBJ&rsquo;s sweeping domestic program that expanded the New Deal through the War on Poverty, Medicare, Medicaid, federal aid to education, civil rights enforcement, and immigration reform.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Immigration Act of 1965</span><div class="key-term-def">Also called the Hart-Celler Act; abolished the national-origins quota system of the 1920s, opening immigration to Asia, Latin America, and Africa and transforming U.S. demographics.</div></div>
+                    <div class="key-term-item"><span class="key-term-name"><em>The Feminine Mystique</em> (1963)</span><div class="key-term-def">Betty Friedan&rsquo;s bestseller describing the unhappiness of suburban housewives &mdash; &ldquo;the problem that has no name&rdquo; &mdash; that helped launch second-wave feminism.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">War on Poverty</span><div class="key-term-def">LBJ&rsquo;s set of Great Society anti-poverty programs &mdash; including the Office of Economic Opportunity, Head Start, Job Corps, VISTA, and community action &mdash; that attacked poverty&rsquo;s structural causes.</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="s28-2">
+        <button class="section-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3>28.2 &mdash; The War in Vietnam, 1963&ndash;1968</h3>
+            <span class="section-arrow">&#9660;</span>
+        </button>
+        <div class="section-body">
+            <div class="qa">
+                <div class="qa-q">1. How did American military engagement in Vietnam evolve under Johnson?</div>
+                <div class="qa-a">
+                    <p>When Johnson took office after Kennedy&rsquo;s assassination in November 1963, there were about 16,000 U.S. military advisors in South Vietnam. Within five years, that number had grown to over 500,000 combat troops, and American involvement had transformed from a limited advisory role into a full-scale ground war. The turning point came in August 1964, when Johnson claimed (falsely or at least misleadingly) that North Vietnamese ships had attacked American destroyers in the Gulf of Tonkin. Congress responded by passing the <strong>Gulf of Tonkin Resolution</strong>, which gave Johnson broad authority to use military force in Southeast Asia without a formal declaration of war. It became the legal basis for the entire escalation that followed.</p>
+                    <p>In 1965, Johnson launched <strong>Operation Rolling Thunder</strong>, a sustained bombing campaign against North Vietnam, and sent the first large deployment of Marines to Da Nang. By 1968, the U.S. was fighting a conventional war against the North Vietnamese Army and a guerrilla war against the Viet Cong in the South, using search-and-destroy missions, napalm, defoliants like Agent Orange, and strategic hamlet programs. The <strong>Tet Offensive</strong> in January 1968 &mdash; a coordinated surprise attack by the Viet Cong on dozens of South Vietnamese cities &mdash; was technically a U.S. military victory but a political catastrophe, because it showed that after three years of escalation, the enemy was still capable of striking everywhere at once. Johnson&rsquo;s approval collapsed, and in March 1968 he announced he would not run for reelection.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">2. How did the war in Vietnam affect the United States domestically in the 1960s?</div>
+                <div class="qa-a">
+                    <p>The war reshaped American society. Domestically, it drained resources Johnson had hoped to pour into the Great Society, forcing him to choose between &ldquo;guns and butter&rdquo; &mdash; and ultimately underfunding both. It drove massive inflation, unbalanced the federal budget, and damaged Americans&rsquo; trust in the government as officials repeatedly lied or minimized what was happening. Television brought the war into living rooms, and graphic footage of combat, civilian casualties, and events like the Tet Offensive eroded public support.</p>
+                    <p>The war also split the country. A large antiwar movement emerged, especially on college campuses, where students protested the draft, burned draft cards, and organized &ldquo;teach-ins.&rdquo; The draft disproportionately fell on working-class and minority men, while middle-class college students could often get deferments, which fueled anger about class inequality. Civil rights leaders including Martin Luther King Jr. came out against the war, linking militarism abroad to poverty and racism at home. By 1968, the combination of war, urban riots, assassinations (King in April, Robert Kennedy in June), and protests at the Democratic National Convention in Chicago produced a sense of national crisis unlike anything since the Civil War.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">3. What were the factors behind the student protest movements of the 1960s?</div>
+                <div class="qa-a">
+                    <p>Several factors produced the student movements of the 1960s. Postwar prosperity and the GI Bill had dramatically expanded higher education; by the mid-1960s, there were more college students than ever before, concentrated on large campuses. Many students were inspired by the civil rights movement, especially the sit-ins and Freedom Rides, and applied the same tactics &mdash; nonviolent direct action, grassroots organizing, moral confrontation &mdash; to their own concerns. The draft and the Vietnam War gave their activism immediate personal stakes.</p>
+                    <p>On the left, the most important group was <strong>Students for a Democratic Society (SDS)</strong>, founded in 1960 and best known for its 1962 <em>Port Huron Statement</em>, which called for &ldquo;participatory democracy&rdquo; and rejected Cold War liberalism. SDS was central to organizing antiwar protests and the free speech movement at Berkeley in 1964. On the right, <strong>Young Americans for Freedom (YAF)</strong>, founded in 1960 at William F. Buckley&rsquo;s estate, articulated a conservative vision of individual freedom, free markets, anti-communism, and traditional values. YAF became a training ground for the conservative movement that would eventually carry Barry Goldwater, Richard Nixon, and Ronald Reagan to national prominence. The 1960s student movement was not just a leftist phenomenon &mdash; it was a generational mobilization on both sides of the political spectrum.</p>
+                </div>
+            </div>
+            <div class="key-terms-section">
+                <h3>28.2 &mdash; Key Terms</h3>
+                <div class="key-terms-grid">
+                    <div class="key-term-item"><span class="key-term-name">Gulf of Tonkin Resolution (1964)</span><div class="key-term-def">Congressional resolution, passed after reports of attacks on U.S. destroyers off North Vietnam, that gave Johnson broad authority to use military force in Southeast Asia without a declaration of war.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Students for a Democratic Society (SDS)</span><div class="key-term-def">Leftist student organization founded in 1960; its 1962 Port Huron Statement called for &ldquo;participatory democracy,&rdquo; and SDS became central to antiwar and free speech protests.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Young Americans for Freedom (YAF)</span><div class="key-term-def">Conservative student organization founded in 1960 at William F. Buckley&rsquo;s estate; articulated a vision of free markets, anti-communism, and traditional values that shaped the modern conservative movement.</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="s28-3">
+        <button class="section-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3>28.3 &mdash; Days of Rage, 1968&ndash;1972</h3>
+            <span class="section-arrow">&#9660;</span>
+        </button>
+        <div class="section-body">
+            <div class="qa">
+                <div class="qa-q">1. Why might a Democratic supporter of FDR in the 1940s have decided to vote for Republican Richard Nixon in 1968?</div>
+                <div class="qa-a">
+                    <p>A white working-class or middle-class voter who had been loyal to FDR&rsquo;s New Deal coalition in the 1940s could have many reasons to vote Republican by 1968. The Democratic Party of FDR&rsquo;s era was built on a fragile alliance of Northern industrial workers, Southern white segregationists, urban ethnic groups, and Black Americans. By the late 1960s, that coalition was breaking apart. The Civil Rights Act (1964) and Voting Rights Act (1965) alienated white Southerners who had been Democrats since Reconstruction. The urban riots of 1965&ndash;68 scared many white city and suburban voters. &ldquo;Law and order&rdquo; became a dominant concern as crime rates rose, and Democrats seemed to many voters to be soft on disorder.</p>
+                    <p>At the same time, the Great Society&rsquo;s expansion of government spending on programs seen as benefiting minorities led some white voters to feel the Democratic Party had abandoned them. The antiwar movement, counterculture, and campus radicalism made many older voters feel their country was being torn apart by people who had none of the patriotism or discipline they valued. Nixon&rsquo;s campaign brilliantly exploited all of this, promising &ldquo;law and order,&rdquo; appealing to what he called the <strong>silent majority</strong>, and using the <strong>Southern Strategy</strong> to win over white Southerners with coded racial messaging about states&rsquo; rights and &ldquo;forced busing.&rdquo; For a 1940s FDR Democrat, voting for Nixon in 1968 could feel like voting to restore order, stability, and the country they remembered.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">2. In what ways did 1968 represent a turning point in postwar history?</div>
+                <div class="qa-a">
+                    <p>1968 was probably the most turbulent year in postwar American history, and it marked the end of the optimistic liberal consensus of the early 1960s. The <strong>Tet Offensive</strong> in January destroyed the credibility of Johnson&rsquo;s Vietnam policy. Johnson shocked the country by withdrawing from the presidential race on March 31. On April 4, <strong>Martin Luther King Jr. was assassinated</strong> in Memphis, setting off riots in more than 100 cities. On June 5, <strong>Robert F. Kennedy was assassinated</strong> in Los Angeles on the night he won the California Democratic primary, closing off what many saw as the last hope of uniting the antiwar left with working-class white and minority voters.</p>
+                    <p>In August, the <strong>Democratic National Convention in Chicago</strong> devolved into violent clashes between antiwar protesters and Mayor Daley&rsquo;s police, broadcast live on television. Nixon won a narrow three-way race in November (with segregationist George Wallace pulling millions of votes). Internationally, the Soviets invaded Czechoslovakia to crush the Prague Spring. Taken together, 1968 shattered confidence that liberalism could solve America&rsquo;s problems, opened the door to the conservative ascendancy, and set the political fault lines &mdash; race, war, culture, &ldquo;law and order&rdquo; &mdash; that would dominate the next several decades.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">3. How did women&rsquo;s liberation after 1968 differ from the women&rsquo;s movement of the early 1960s?</div>
+                <div class="qa-a">
+                    <p>The early-1960s women&rsquo;s movement, led by groups like NOW, focused on <strong>legal and economic equality</strong> &mdash; equal pay, equal employment, enforcement of civil rights protections, and eventually the Equal Rights Amendment. It was largely led by middle-class professional women, worked through legislation and lawsuits, and aimed at integrating women into existing institutions on equal terms with men.</p>
+                    <p>The <strong>women&rsquo;s liberation movement</strong> that emerged after 1968 was younger, more radical, and more grassroots. Many of its leaders had come out of the civil rights and antiwar movements and were furious about the sexism they had experienced there. Rather than just asking to be included, they challenged the <strong>basic structures of patriarchy</strong> &mdash; marriage, the family, sexuality, beauty standards, and male-dominated media. Consciousness-raising groups, in which women gathered in living rooms to share personal experiences, coined the slogan &ldquo;the personal is political.&rdquo; Activists protested the Miss America pageant (1968), published books like Kate Millett&rsquo;s <em>Sexual Politics</em>, opened women&rsquo;s health clinics, and fought for abortion rights. Women&rsquo;s liberation was broader, angrier, and more culturally radical than the earlier reform-oriented feminism.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">4. What gains did women achieve in the late 1960s/early 1970s?</div>
+                <div class="qa-a">
+                    <p>The late 1960s and early 1970s brought huge gains. <strong>Title IX (1972)</strong> banned sex discrimination in any education program receiving federal funds &mdash; this transformed women&rsquo;s access to higher education, professional schools, and especially athletics. <strong>Roe v. Wade (1973)</strong> established a constitutional right to abortion, rooted in the right to privacy developed in <em>Griswold</em>. The <strong>Equal Rights Amendment</strong> passed Congress in 1972 and was initially ratified by most states, though it ultimately fell short by three states and was never added to the Constitution.</p>
+                    <p>Other gains included the opening of military academies to women, expanded access to credit through the Equal Credit Opportunity Act (1974), stronger enforcement of Title VII, state reforms of marriage and divorce law (including no-fault divorce), the recognition of sexual harassment and marital rape as legal issues, and an explosion of women in higher education and the professions. Culturally, it became normal for women to plan careers, delay marriage, and live independently. Not all battles were won &mdash; and a powerful backlash was gathering &mdash; but this was arguably the most transformative period for American women since women&rsquo;s suffrage.</p>
+                </div>
+            </div>
+            <div class="key-terms-section">
+                <h3>28.3 &mdash; Key Terms</h3>
+                <div class="key-terms-grid">
+                    <div class="key-term-item"><span class="key-term-name">Nixon&rsquo;s Southern Strategy</span><div class="key-term-def">Republican electoral strategy of appealing to white Southern voters through coded racial messaging &mdash; &ldquo;law and order,&rdquo; states&rsquo; rights, opposition to busing &mdash; to pull the once-solid Democratic South into the GOP coalition.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Stonewall Riots (1969)</span><div class="key-term-def">Uprising by LGBTQ patrons against a police raid at the Stonewall Inn in Greenwich Village; widely regarded as the birth of the modern gay rights movement.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Title IX (1972)</span><div class="key-term-def">Federal law banning sex discrimination in any education program receiving federal funds; dramatically expanded women&rsquo;s access to schools, professional programs, and athletics.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Women&rsquo;s Liberation Movement</span><div class="key-term-def">Younger, more radical wing of second-wave feminism that emerged after 1968; challenged patriarchy in family, sexuality, and culture through consciousness-raising and grassroots activism.</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="s28-4">
+        <button class="section-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3>28.4 &mdash; Richard Nixon &amp; the Politics of the Silent Majority</h3>
+            <span class="section-arrow">&#9660;</span>
+        </button>
+        <div class="section-body">
+            <div class="qa">
+                <div class="qa-q">1. How did the Vietnam War end? What was its legacy for the United States?</div>
+                <div class="qa-a">
+                    <p>Nixon pursued a policy he called <strong>Vietnamization</strong> &mdash; gradually turning combat operations over to the South Vietnamese while continuing U.S. air support. At the same time, he expanded the war into Cambodia and Laos in 1970, secretly bombing Cambodia to disrupt North Vietnamese supply lines. The invasion of Cambodia triggered massive protests, including at Kent State, where National Guardsmen killed four students in May 1970. After years of negotiations, Nixon&rsquo;s national security advisor Henry Kissinger signed the <strong>Paris Peace Accords</strong> in January 1973, which ended direct U.S. involvement and returned American POWs. The U.S. withdrew its last combat troops, but the war between North and South Vietnam continued. In April 1975, North Vietnamese forces took Saigon, ending the war with a communist victory and images of Americans evacuating the embassy by helicopter.</p>
+                    <p>The legacy of the war was profound. More than 58,000 Americans and an estimated 2&ndash;3 million Vietnamese were killed. The war produced the so-called <strong>&ldquo;Vietnam syndrome&rdquo;</strong> &mdash; a deep reluctance of both policymakers and the public to get involved in foreign wars. It led to the <strong>War Powers Act (1973)</strong>, which limited the president&rsquo;s ability to send troops into combat without congressional approval. It shattered Americans&rsquo; trust in their government, contributed to the end of the draft in 1973, and damaged the military&rsquo;s reputation for a generation. It also left lasting wounds for veterans, who returned to a divided country and often received inadequate care for physical and psychological injuries, including exposure to Agent Orange and PTSD.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">2. What was the legacy of the Watergate scandal?</div>
+                <div class="qa-a">
+                    <p>The <strong>Watergate scandal</strong> began in June 1972 when five burglars linked to Nixon&rsquo;s reelection committee were caught breaking into Democratic National Committee headquarters at the Watergate complex in Washington, D.C. Investigative reporting by the <em>Washington Post</em> (Bob Woodward and Carl Bernstein), Senate hearings, and a special prosecutor gradually revealed that the break-in was part of a much broader pattern of political sabotage, illegal surveillance, and abuses of power by Nixon and his White House. When a secret taping system inside the Oval Office was exposed, the Supreme Court unanimously ruled in <em>United States v. Nixon</em> (1974) that he had to turn over the tapes. The tapes proved Nixon had personally orchestrated the cover-up. Facing certain impeachment, Nixon resigned on August 9, 1974 &mdash; the only U.S. president ever to do so. His successor, Gerald Ford, soon pardoned him, a deeply controversial decision.</p>
+                    <p>Watergate&rsquo;s legacy was lasting. It deepened Americans&rsquo; distrust of government and politicians, which had already been shaken by Vietnam. It led to a wave of reforms: campaign finance laws, strengthening of the Freedom of Information Act, new ethics rules, the Independent Counsel law, and broader congressional reassertion of oversight. It also set a precedent that no president is above the law &mdash; the tapes case established that executive privilege is limited. Politically, Watergate hurt the Republican Party in the short term, helping Democrats win big in 1974 and 1976, but in the longer term it contributed to a cynical, suspicious style of American politics that has never really gone away.</p>
+                </div>
+            </div>
+            <div class="key-terms-section">
+                <h3>28.4 &mdash; Key Terms</h3>
+                <div class="key-terms-grid">
+                    <div class="key-term-item"><span class="key-term-name">Silent Majority</span><div class="key-term-def">Phrase Nixon used to describe ordinary, patriotic, middle-class Americans who he claimed supported the Vietnam War and rejected the counterculture and antiwar protests; central to his 1968 and 1972 coalitions.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Watergate Scandal (1972&ndash;73)</span><div class="key-term-def">Political scandal that began with a break-in at the Democratic National Committee headquarters; widening revelations of abuses of power and a cover-up forced Nixon to resign in August 1974.</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CHAPTER 29 -->
+<div class="chapter" id="ch29">
+    <h2 class="chapter-title">Chapter 29: The Search for Order in an Era of Limits</h2>
+    <div class="chapter-era">APUSH Era 8/9 (1970s)</div>
+    <div class="chapter-big-idea"><strong>Identify the Big Idea</strong>How did the legacy of social changes &mdash; such as shifting gender roles, civil rights, and challenges to the family &mdash; in the 1960s continue to reverberate in the 1970s, leading to both new opportunities and political disagreement?</div>
+
+    <div class="section open" id="s29-1">
+        <button class="section-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3>29.1 &mdash; An Era of Limits</h3>
+            <span class="section-arrow">&#9660;</span>
+        </button>
+        <div class="section-body">
+            <div class="qa">
+                <div class="qa-q">1. What major factors led to the birth of the environmental movement in the 1970s? What was the movement able to achieve?</div>
+                <div class="qa-a">
+                    <p>The modern environmental movement grew out of a combination of scientific warnings, visible disasters, and broader activist energy from the 1960s. The most important single spark was Rachel Carson&rsquo;s <em>Silent Spring</em> (1962), which exposed how pesticides like DDT were poisoning ecosystems, killing birds, and threatening human health. Carson&rsquo;s book shifted how Americans thought about industrial chemistry, corporate responsibility, and the fragility of the natural world. A series of visible environmental disasters deepened public concern &mdash; the 1969 Santa Barbara oil spill, the Cuyahoga River in Cleveland catching fire that same year, smog covering major cities, and fears about nuclear radiation. Activists connected these problems to the consumer culture, industrial growth, and military-industrial complex that environmentalism critiqued.</p>
+                    <p>The movement produced an extraordinary legislative record, mostly during Nixon&rsquo;s presidency. The first <strong>Earth Day</strong> was held in April 1970, drawing an estimated 20 million participants. That same year, Nixon signed the Clean Air Act and created the <strong>Environmental Protection Agency (EPA)</strong>. Congress followed with the Clean Water Act (1972), Endangered Species Act (1973), and laws regulating pesticides, toxic waste, and drinking water. DDT was banned in 1972. The <strong>Three Mile Island</strong> nuclear accident in 1979 derailed the expansion of nuclear power in the U.S. The movement didn&rsquo;t solve every problem, but it permanently embedded environmental protection in federal law and created a durable public constituency for clean air, clean water, and wildlife protection.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">2. Why did the US enter an energy crisis in the 1970s?</div>
+                <div class="qa-a">
+                    <p>The energy crisis had both global and domestic causes. By the 1970s, the U.S. was importing a growing share of its oil from the Middle East, making it dependent on politically unstable producers. The Organization of Petroleum Exporting Countries (<strong>OPEC</strong>), dominated by Arab states, realized it had enormous leverage. In October 1973, during the Yom Kippur War, OPEC&rsquo;s Arab members imposed an <strong>oil embargo</strong> on the United States and other countries that supported Israel. Oil prices quadrupled, gas stations ran out of fuel, long lines formed at pumps, and odd-even rationing was introduced. A second oil shock followed the 1979 Iranian Revolution, when Iran&rsquo;s oil exports collapsed and prices spiked again.</p>
+                    <p>Domestically, U.S. oil production had actually peaked in 1970 and was declining, so the country could no longer meet its own demand. The economy had been built around cheap gasoline, big cars, and sprawling suburbs. When oil prices exploded, the whole economic model shook &mdash; high inflation combined with stagnant growth, a condition economists called <strong>stagflation</strong>, which defied standard Keynesian remedies. Presidents Nixon, Ford, and Carter all tried to respond with price controls, conservation appeals, the creation of the Department of Energy, and research into alternative energy. Carter even called it the &ldquo;moral equivalent of war.&rdquo; But the crisis shattered the postwar sense of unlimited American abundance.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">3. What major developments shaped the American economy in the 1970s and contributed to its transformation?</div>
+                <div class="qa-a">
+                    <p>Several overlapping developments transformed the American economy in the 1970s. The first was <strong>deindustrialization</strong>: the manufacturing base of the Northeast and Midwest &mdash; steel, auto, textiles, rubber &mdash; collapsed in the face of foreign competition (especially from West Germany and Japan), aging factories, rising labor and energy costs, and corporate disinvestment. Whole cities in what came to be called the <strong>Rust Belt</strong> &mdash; Pittsburgh, Cleveland, Detroit, Buffalo, Gary &mdash; lost large shares of their industrial jobs and population. Meanwhile, a new economy grew in the <strong>Sun Belt</strong>, based on defense contracting, oil and gas, tourism, agribusiness, and &mdash; by the late 1970s &mdash; the beginnings of computing and finance.</p>
+                    <p>Second, stagflation defied government policy tools and damaged confidence in the Keynesian economic consensus that had dominated since the New Deal. Third, the tax revolt took off, epitomized by <strong>California&rsquo;s Proposition 13 (1978)</strong>, which capped property taxes and signaled a broader rejection of the idea that growing government was the answer to every problem. Fourth, women continued to enter the workforce in large numbers, reshaping family life and consumer markets. And fifth, globalization began to accelerate, exposing American workers and firms to intense international competition. All of these changes reduced faith in the liberal economic order of the postwar decades and created the political conditions for Reagan&rsquo;s conservative turn.</p>
+                </div>
+            </div>
+            <div class="key-terms-section">
+                <h3>29.1 &mdash; Key Terms</h3>
+                <div class="key-terms-grid">
+                    <div class="key-term-item"><span class="key-term-name">Deindustrialization</span><div class="key-term-def">Decline of manufacturing in the 1970s as factories closed in the Northeast and Midwest due to foreign competition, aging plants, rising costs, and corporate disinvestment.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Environmental Protection Agency (EPA)</span><div class="key-term-def">Federal agency created by Nixon in 1970 to enforce new environmental laws like the Clean Air and Clean Water Acts and regulate pollution.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">OPEC</span><div class="key-term-def">Organization of Petroleum Exporting Countries; dominated by Arab states, its 1973 oil embargo caused a fourfold jump in oil prices and triggered the U.S. energy crisis.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">California&rsquo;s Proposition 13 (1978)</span><div class="key-term-def">Ballot initiative that capped California property taxes; launched the nationwide tax revolt and helped build the political base for the conservative Reagan revolution.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Rachel Carson&rsquo;s <em>Silent Spring</em> (1962)</span><div class="key-term-def">Bestselling book that exposed the ecological damage caused by pesticides like DDT; widely credited with launching the modern environmental movement.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Rust Belt</span><div class="key-term-def">Region of the Northeast and Midwest hit hardest by deindustrialization; cities like Detroit, Pittsburgh, and Cleveland lost huge shares of their manufacturing jobs and population.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Three Mile Island</span><div class="key-term-def">1979 partial nuclear meltdown at a Pennsylvania power plant; sharply turned public opinion against nuclear power and stalled construction of new plants for decades.</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="s29-2">
+        <button class="section-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3>29.2 &mdash; Reform &amp; Reaction in the 1970s</h3>
+            <span class="section-arrow">&#9660;</span>
+        </button>
+        <div class="section-body">
+            <div class="qa">
+                <div class="qa-q">1. How did affirmative action attempt to address the legacy of discrimination, and why did it become so controversial?</div>
+                <div class="qa-a">
+                    <p><strong>Affirmative action</strong> was a set of policies designed to expand opportunities for groups &mdash; especially African Americans and women &mdash; that had historically been excluded from education, employment, and government contracts. Its origins go back to a 1961 executive order by Kennedy requiring federal contractors to &ldquo;take affirmative action&rdquo; to ensure equal employment, and to Lyndon Johnson&rsquo;s 1965 Executive Order 11246, which expanded the concept. In the late 1960s and 1970s, universities, corporations, and government agencies adopted policies that considered race and gender as factors in hiring and admissions, set hiring goals and timetables, and sometimes used quotas. The underlying reasoning was that after centuries of slavery, Jim Crow, and sex discrimination, &ldquo;color-blind&rdquo; equal opportunity alone would not level the playing field &mdash; active steps were needed to break entrenched patterns of exclusion.</p>
+                    <p>Affirmative action became deeply controversial because critics argued it amounted to &ldquo;reverse discrimination,&rdquo; treated individuals as members of groups rather than on their own merits, and unfairly penalized white men (especially working-class ones) who had no personal role in historical racism. Allan Bakke, a white applicant rejected twice by UC Davis Medical School, sued when he learned the school set aside 16 of 100 seats for minority applicants. In <strong><em>Bakke v. University of California</em> (1978)</strong>, the Supreme Court ruled in a split decision that rigid racial quotas were unconstitutional but that race could be considered as one factor among many in admissions. The ruling left the legal status of affirmative action uncertain and made it a permanent battleground in American politics &mdash; with new challenges continuing in every decade since.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">2. Why did the Equal Rights Amendment initially gain momentum, and why did it ultimately fail?</div>
+                <div class="qa-a">
+                    <p>The <strong>Equal Rights Amendment (ERA)</strong> &mdash; a constitutional amendment stating that &ldquo;Equality of rights under the law shall not be denied or abridged by the United States or by any State on account of sex&rdquo; &mdash; had first been proposed by Alice Paul in 1923. In 1972, riding the energy of second-wave feminism, Congress finally passed the amendment by overwhelming bipartisan majorities and sent it to the states. It initially seemed to be sailing to ratification: within a year, 30 of the required 38 states had approved it. Opinion polls showed clear majorities of Americans, including conservative women, in favor.</p>
+                    <p>Momentum stalled because of a powerful grassroots backlash led by <strong>Phyllis Schlafly</strong>, a conservative Catholic activist from Illinois. Through her &ldquo;STOP ERA&rdquo; campaign (the acronym stood for &ldquo;Stop Taking Our Privileges&rdquo;), Schlafly organized traditionalist women to argue that the ERA would end laws protecting women, subject them to the draft, legalize unisex bathrooms, strip mothers of alimony and custody rights, and ultimately threaten the family. She effectively tied the ERA to the cultural anxieties of the 1970s &mdash; feminism, abortion, gay rights, changing family structures. By 1977 ratification stalled three states short of the 38 needed, and even after Congress extended the deadline to 1982, no more states ratified. Five states actually rescinded their approval. The ERA&rsquo;s defeat was the signature victory of the emerging Religious Right and showed that grassroots conservatism was a political force to be reckoned with.</p>
+                </div>
+            </div>
+            <div class="key-terms-section">
+                <h3>29.2 &mdash; Key Terms</h3>
+                <div class="key-terms-grid">
+                    <div class="key-term-item"><span class="key-term-name">Affirmative Action</span><div class="key-term-def">Policies that considered race and gender in hiring, admissions, and contracting to remedy historical discrimination; began with executive orders under Kennedy and Johnson.</div></div>
+                    <div class="key-term-item"><span class="key-term-name"><em>Bakke v. University of California</em> (1978)</span><div class="key-term-def">Supreme Court ruling that struck down rigid racial quotas in university admissions as unconstitutional but allowed race to be considered as one factor among many.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Equal Rights Amendment</span><div class="key-term-def">Proposed constitutional amendment banning sex-based discrimination; passed Congress in 1972 but fell three states short of ratification after a backlash led by Phyllis Schlafly.</div></div>
+                    <div class="key-term-item"><span class="key-term-name"><em>Roe v. Wade</em> (1973)</span><div class="key-term-def">Supreme Court decision establishing a constitutional right to abortion based on the right to privacy; immediately became one of the most divisive rulings in U.S. history.</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="s29-3">
+        <button class="section-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3>29.3 &mdash; The American Family on Trial</h3>
+            <span class="section-arrow">&#9660;</span>
+        </button>
+        <div class="section-body">
+            <div class="qa">
+                <div class="qa-q">1. How did deindustrialization reshape work, income, and daily life for American families after 1970?</div>
+                <div class="qa-a">
+                    <p>Deindustrialization ended the postwar era of rising wages and secure factory jobs that had allowed a single (usually male) breadwinner to support a middle-class family. As steel mills, auto plants, and textile factories closed across the Rust Belt, millions of well-paid unionized jobs disappeared. Many displaced workers ended up in lower-paid service jobs &mdash; retail, food service, hospitality &mdash; without the benefits, job security, or union protections they had had before. Real wages for men stagnated beginning in the mid-1970s and would basically not grow for decades.</p>
+                    <p>To maintain their living standards, families adapted in two major ways. First, married women entered the paid workforce in record numbers &mdash; by the end of the 1970s, a majority of married women with children were working outside the home. Two-income families became the norm rather than the exception, which reshaped household life, child care arrangements, and gender expectations. Second, Americans took on much more consumer debt, including credit cards, which spread widely in the 1970s and 1980s. Daily life felt more precarious, divorce rates rose, young people delayed marriage and childbearing, and many communities &mdash; especially white working-class ones &mdash; experienced declining economic mobility and deepening social strain. This combination of economic anxiety and cultural change formed the backdrop for the political turn to conservatism.</p>
+                </div>
+            </div>
+            <div class="key-terms-section">
+                <h3>29.3 &mdash; Key Terms</h3>
+                <p style="font-size:.8rem; color:var(--text-dim); font-style:italic;">Excluded from this exam: sexual revolution, Fourth Great Awakening.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CHAPTER 30 -->
+<div class="chapter" id="ch30">
+    <h2 class="chapter-title">Chapter 30: Conservative America Ascendant (1973&ndash;1991)</h2>
+    <div class="chapter-era">APUSH Era 9 (1980&ndash;present)</div>
+    <div class="chapter-big-idea"><strong>Identify the Big Idea</strong>What factors made the rise of the New Right possible, and what ideas about freedom and citizenship did conservatives articulate in the 1980s?</div>
+
+    <div class="section open" id="s30-1">
+        <button class="section-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3>30.1 &mdash; The Rise of the New Right</h3>
+            <span class="section-arrow">&#9660;</span>
+        </button>
+        <div class="section-body">
+            <div class="qa">
+                <div class="qa-q">1. Which were the key groups of the new Republican coalition? Were their goals complementary or contradictory?</div>
+                <div class="qa-a">
+                    <p>The New Right that built Ronald Reagan&rsquo;s 1980 coalition brought together several distinct groups. First were <strong>economic conservatives and libertarians</strong>, who wanted lower taxes, deregulation, smaller government, and free-market policies. They drew on thinkers like Milton Friedman and Friedrich Hayek, as well as the tax revolt movement led by Proposition 13. Second were <strong>Cold War anti-communists and defense hawks</strong>, who believed the U.S. had gone soft in the 1970s under d&eacute;tente and wanted a massive military buildup to confront the Soviet Union. Third were <strong>traditionalist social conservatives</strong> &mdash; especially the <strong>Religious Right</strong>, led by Jerry Falwell&rsquo;s Moral Majority (founded 1979), which opposed abortion, the ERA, gay rights, the sexual revolution, secular public schools, and changes in gender roles. Fourth were <strong>neoconservatives</strong>, former liberals disillusioned with the Great Society and the antiwar movement, who brought intellectual heft to anti-communism and cultural traditionalism. Finally, there were white Southern voters and working-class &ldquo;Reagan Democrats&rdquo; alienated from the post-1968 Democratic Party.</p>
+                    <p>These goals were often <strong>complementary in practice but contradictory in principle</strong>. Libertarians wanted government out of both the marketplace and the bedroom, but religious conservatives wanted government to enforce traditional morality. Economic conservatives wanted to cut spending, but defense hawks wanted to massively increase military spending. Neoconservatives wanted an activist foreign policy while paleoconservatives wanted isolation. What held the coalition together was shared opposition to the liberal establishment, to the Soviet Union, and to what they saw as the chaos of the 1960s and 1970s. Reagan was skilled enough to paper over the contradictions with a unifying vision of American renewal, though the tensions would eventually resurface within the GOP.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">2. In what ways was the New Right &ldquo;reactive,&rdquo; responding to liberalism, and in what ways was it &ldquo;proactive,&rdquo; asserting its own agenda?</div>
+                <div class="qa-a">
+                    <p>The New Right was <strong>reactive</strong> in that much of its energy came from opposition to specific liberal policies and cultural changes. Conservatives reacted against the Great Society&rsquo;s welfare programs, high taxes, affirmative action, forced busing, and federal regulation. They reacted against the counterculture, the antiwar movement, changing gender roles, and the Supreme Court&rsquo;s decisions on school prayer, abortion, and criminal rights. They reacted against d&eacute;tente, which they saw as appeasement of the Soviets. Grassroots organizations like STOP ERA, antibusing groups, and antiabortion groups were largely oppositional in their framing.</p>
+                    <p>But the New Right was also <strong>proactive</strong>, with its own distinct vision. Think tanks like the Heritage Foundation (founded 1973) and the American Enterprise Institute built an intellectual infrastructure for conservatism. Activists developed innovative political tools &mdash; direct mail fundraising (pioneered by Richard Viguerie), new talk radio and Christian broadcasting networks, grassroots political action committees (PACs), and get-out-the-vote operations in evangelical churches. Intellectually, conservatives articulated a positive vision built around supply-side economics, individual responsibility, traditional family values, strong national defense, and the claim that American greatness depended on freeing citizens from government interference. Barry Goldwater&rsquo;s <em>The Conscience of a Conservative</em> (1960) had laid out much of this vision years earlier. By the late 1970s, conservatism was no longer just an objection to liberalism; it was a full alternative worldview.</p>
+                </div>
+            </div>
+            <div class="key-terms-section">
+                <h3>30.1 &mdash; Key Terms</h3>
+                <div class="key-terms-grid">
+                    <div class="key-term-item"><span class="key-term-name">Iran Hostage Crisis (1979&ndash;1980)</span><div class="key-term-def">Iranian revolutionaries seized the U.S. embassy in Tehran and held 52 American hostages for 444 days; the crisis crippled Carter&rsquo;s presidency and helped elect Reagan.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Religious Right</span><div class="key-term-def">Politically mobilized evangelical Protestants and conservative Catholics, led by organizations like Jerry Falwell&rsquo;s Moral Majority, who opposed abortion, the ERA, and gay rights and became a pillar of the Reagan coalition.</div></div>
+                    <div class="key-term-item"><span class="key-term-name"><em>The Conscience of a Conservative</em> (1960)</span><div class="key-term-def">Barry Goldwater&rsquo;s book laying out a conservative vision of limited government, free markets, anti-communism, and traditional values; a foundational text for the modern conservative movement.</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="s30-2">
+        <button class="section-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3>30.2 &mdash; The Dawning of the Conservative Age</h3>
+            <span class="section-arrow">&#9660;</span>
+        </button>
+        <div class="section-body">
+            <div class="qa">
+                <div class="qa-q">1. Why are the 1980s seen as the beginning of a conservative age?</div>
+                <div class="qa-a">
+                    <p>The 1980s are seen as the beginning of a conservative age because Ronald Reagan&rsquo;s election in 1980 and reelection in 1984 marked a decisive shift in American political, economic, and cultural life. Reagan won in 1980 by defeating incumbent Jimmy Carter in a landslide, carrying 44 states, and in 1984 he won 49 states against Walter Mondale &mdash; one of the largest electoral victories in U.S. history. Even after Reagan, his vice president George H. W. Bush won a third consecutive Republican presidential term in 1988, and many of Reagan&rsquo;s core ideas &mdash; lower taxes, deregulation, free markets, skepticism of big government &mdash; became the new common sense of American politics for decades, even among Democrats (Bill Clinton in the 1990s would declare that &ldquo;the era of big government is over&rdquo;).</p>
+                    <p>The conservative shift was not just about elections. Reagan reshaped the federal judiciary, appointing Sandra Day O&rsquo;Connor, Antonin Scalia, and Anthony Kennedy to the Supreme Court and more than 350 lower federal judges. Labor unions were weakened after Reagan fired striking air traffic controllers in 1981. Tax rates on the highest incomes were slashed. Business deregulation accelerated. Culturally, patriotism and traditional values surged in popular media, and Americans expressed renewed optimism about the country and capitalism. Combined with the collapse of the Soviet Union by 1991, the 1980s felt like a vindication of conservative ideas.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">2. What were the key elements of Reagan&rsquo;s domestic policy? How did that policy reflect conservative ideology?</div>
+                <div class="qa-a">
+                    <p>Reagan&rsquo;s domestic policy rested on four main pillars: <strong>tax cuts</strong>, <strong>deregulation</strong>, <strong>cuts to domestic spending</strong>, and <strong>increased military spending</strong>. The Economic Recovery Tax Act of 1981 slashed individual income tax rates by 25% across the board, lowered the top marginal rate from 70% to 50% (later to 28% in the 1986 Tax Reform Act), and cut taxes on capital gains and businesses. Federal regulations on banking, airlines, trucking, telecommunications, and the environment were rolled back. Reagan cut or capped spending on food stamps, welfare, public housing, job training, Medicaid, and federal student aid, though he largely protected Social Security and Medicare, which were too politically popular to touch. Meanwhile, defense spending soared, reaching about $300 billion a year by the mid-1980s.</p>
+                    <p>These policies reflected conservative ideology in several ways. They rested on the belief that <strong>the government is not the solution; the government is the problem</strong> (Reagan&rsquo;s famous line). They assumed that economic freedom &mdash; lower taxes, fewer regulations &mdash; would unleash entrepreneurs, investment, and growth. They treated welfare programs as creating dependency rather than solving poverty. They trusted the market over federal bureaucrats to allocate resources. And they redefined patriotism around military strength and a confident anti-communist foreign policy. Altogether, they marked the clearest break from the New Deal/Great Society liberal consensus since the 1930s.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">3. To what extent did Reaganomics achieve its goals?</div>
+                <div class="qa-a">
+                    <p><strong>Reaganomics</strong> had mixed and contested results. By its own measures, it could claim some important successes. Inflation, which had reached double digits under Carter, dropped sharply &mdash; largely because of tight monetary policy by the Federal Reserve under Paul Volcker, but Reagan&rsquo;s policies supported the effort. After a sharp recession in 1981&ndash;82, the economy entered a long expansion from late 1982 through 1990, with strong GDP growth and millions of new jobs. Income tax rates were dramatically lowered. Americans&rsquo; confidence in the economy and the country rebounded. Stock markets soared.</p>
+                    <p>But Reaganomics also fell well short of its goals in important ways. Despite promises that tax cuts would pay for themselves through growth, they did not &mdash; federal <strong>deficits exploded</strong>, and the national debt nearly tripled from about $900 billion in 1980 to $2.7 trillion in 1989. The U.S. went from the world&rsquo;s largest creditor nation to its largest debtor. Income inequality widened substantially; the rich got much richer while working-class and poor Americans saw stagnant or declining real wages. Poverty rates rose during the recession and never fully recovered. Deregulation contributed to the savings-and-loan crisis, which cost taxpayers hundreds of billions of dollars in the late 1980s and early 1990s. Supply-side economics became a lasting article of faith for the Republican Party, but the evidence for its central claim &mdash; that tax cuts generate enough growth to pay for themselves &mdash; remained thin.</p>
+                </div>
+            </div>
+            <div class="key-terms-section">
+                <h3>30.2 &mdash; Key Terms</h3>
+                <div class="key-terms-grid">
+                    <div class="key-term-item"><span class="key-term-name">AIDS Crisis (1980s)</span><div class="key-term-def">Emergence of the HIV/AIDS epidemic, which disproportionately killed gay men, hemophiliacs, and drug users; the Reagan administration was criticized for its slow response, and activist groups like ACT UP demanded research and treatment.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">&ldquo;Reagan Democrats&rdquo;</span><div class="key-term-def">White, often working-class, traditionally Democratic voters (many from the Rust Belt and South) who crossed over to vote for Reagan in 1980 and 1984 because of concerns about taxes, culture, and national strength.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Supply-Side Economics (&ldquo;Reaganomics&rdquo;)</span><div class="key-term-def">Economic theory that deep cuts in income and business taxes would stimulate investment, growth, and tax revenue; became the framework of Reagan&rsquo;s domestic economic policy.</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="s30-3">
+        <button class="section-toggle" onclick="this.parentElement.classList.toggle('open')">
+            <h3>30.3 &mdash; The End of the Cold War</h3>
+            <span class="section-arrow">&#9660;</span>
+        </button>
+        <div class="section-body">
+            <div class="qa">
+                <div class="qa-q">1. How did Reagan&rsquo;s approach to the Soviet Union change between 1981 and 1989?</div>
+                <div class="qa-a">
+                    <p>Reagan&rsquo;s Soviet policy changed dramatically over his two terms. In his first term (1981&ndash;1985), Reagan pursued an aggressively confrontational approach. He called the Soviet Union the <strong>&ldquo;evil empire&rdquo;</strong> in 1983, launched a massive military buildup, and proposed the <strong>Strategic Defense Initiative (SDI)</strong>, nicknamed &ldquo;Star Wars,&rdquo; to build a space-based missile defense system. He supported anti-communist rebels worldwide &mdash; including the Contras in Nicaragua, the mujahideen in Afghanistan, and UNITA in Angola &mdash; under what was called the <strong>Reagan Doctrine</strong>. Tensions reached their highest levels since the Cuban Missile Crisis, and some Soviet officials genuinely feared a U.S. first strike.</p>
+                    <p>In his second term (1985&ndash;1989), Reagan dramatically shifted toward diplomacy and negotiation. The key catalyst was the rise of <strong>Mikhail Gorbachev</strong> to Soviet leadership in 1985. Gorbachev launched reforms &mdash; <em>perestroika</em> (economic restructuring) and <em>glasnost</em> (political openness) &mdash; and was willing to engage Reagan seriously. The two leaders met at four summits &mdash; Geneva (1985), Reykjav&iacute;k (1986), Washington (1987), and Moscow (1988). In 1987, they signed the <strong>INF Treaty</strong>, eliminating an entire class of intermediate-range nuclear missiles from Europe &mdash; the first real disarmament treaty of the Cold War. Reagan famously stood at the Brandenburg Gate in 1987 and challenged, &ldquo;Mr. Gorbachev, tear down this wall!&rdquo; By the time Reagan left office in January 1989, U.S.-Soviet relations had transformed from near-war to genuine partnership, and the Berlin Wall would fall later that year.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">2. What factors led to the end of the Cold War?</div>
+                <div class="qa-a">
+                    <p>The end of the Cold War had multiple overlapping causes. The most important was the <strong>internal weakness of the Soviet system</strong>. The centrally planned Soviet economy had essentially stopped growing by the 1970s and fell further behind the West in technology, consumer goods, and living standards. A costly war in Afghanistan (1979&ndash;89) drained Soviet resources and morale. Corruption, cynicism, and ethnic tensions undermined the legitimacy of communist rule. Gorbachev&rsquo;s reforms &mdash; which were meant to save communism &mdash; instead loosened the regime&rsquo;s grip and unleashed forces that toppled it.</p>
+                    <p>American policy also mattered. Reagan&rsquo;s military buildup and SDI put enormous pressure on a Soviet economy already stretched to the limit; Soviet leaders concluded they could not keep up. The Reagan Doctrine raised the costs of Soviet interventions abroad. Reagan&rsquo;s willingness, in his second term, to meet Gorbachev as a genuine partner helped Gorbachev make bold moves. In Eastern Europe, the peoples of Poland (with the Solidarity movement), Hungary, Czechoslovakia, and East Germany pushed back against communist rule once it became clear the Soviets would not intervene to prop up local regimes &mdash; the crucial turning point being Gorbachev&rsquo;s renunciation of the Brezhnev Doctrine. In 1989, the Berlin Wall fell; in 1990, Germany reunified; in December 1991, the Soviet Union itself dissolved. It was not any one cause but a combination of Soviet decay, American pressure, and popular uprising.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">3. What was Reagan&rsquo;s legacy?</div>
+                <div class="qa-a">
+                    <p>Reagan&rsquo;s legacy is large and contested. On the positive side, admirers credit him with restoring American national confidence after the malaise of the 1970s, winning the Cold War without firing a shot, rebuilding the military, sparking a long economic expansion, permanently lowering top tax rates, and transforming political conservatism from a minority movement into a dominant force. He reshaped the Republican Party, the federal judiciary, and the terms of debate in American politics for a generation. His communication skills and unshakable optimism made him one of the most personally popular presidents of the 20th century.</p>
+                    <p>Critics point to serious failures and costs. The national debt tripled under Reagan, and the country became a debtor nation. Income inequality widened dramatically. Poverty and homelessness grew. The administration was slow and dismissive in responding to the AIDS crisis, costing thousands of lives. Deregulation contributed to the savings-and-loan collapse. The <strong>Iran-Contra affair</strong> &mdash; in which administration officials secretly sold arms to Iran and funneled the profits to the Nicaraguan Contras, in violation of U.S. law and congressional prohibitions &mdash; damaged Reagan&rsquo;s credibility and nearly led to impeachment. Critics also argue his rhetoric about &ldquo;welfare queens&rdquo; and &ldquo;states&rsquo; rights&rdquo; carried racial undertones that polarized American politics. Reagan&rsquo;s legacy is thus both a conservative realignment of American politics and a set of economic, social, and political fault lines that the country is still navigating today.</p>
+                </div>
+            </div>
+            <div class="qa">
+                <div class="qa-q">4. Why did the US intervene in conflicts between Iraq and Iran, and between Iraq and Kuwait? What were the American goals in each case?</div>
+                <div class="qa-a">
+                    <p>The U.S. intervened in both conflicts to protect what it saw as vital strategic interests in the Persian Gulf &mdash; especially access to oil and regional stability. In the <strong>Iran-Iraq War (1980&ndash;88)</strong>, the U.S. sided mostly with Saddam Hussein&rsquo;s Iraq against the revolutionary Islamic Republic of Iran, which had seized American hostages in 1979 and denounced the U.S. as the &ldquo;Great Satan.&rdquo; The U.S. provided Iraq with intelligence, loans, and dual-use technology, and by the end of the war was escorting Kuwaiti oil tankers through the Gulf after Iranian attacks. The goal was not to see Iraq &ldquo;win&rdquo; but to prevent Iran&rsquo;s revolutionary regime from dominating the region and threatening oil supplies. At the same time, the secret <strong>Iran-Contra affair</strong> revealed that the administration had also been selling arms to Iran &mdash; a deeply contradictory policy.</p>
+                    <p>In August 1990, Saddam Hussein invaded <strong>Kuwait</strong>, a small, oil-rich U.S. ally. President George H. W. Bush responded by assembling a broad international coalition under U.N. authority. The <strong>Persian Gulf War</strong> in early 1991 began with a massive air campaign, followed by a 100-hour ground war (Operation Desert Storm) that drove Iraqi forces out of Kuwait. The American goals were to restore Kuwaiti sovereignty, deter aggression against other Gulf states (especially Saudi Arabia), protect the flow of oil, and demonstrate that in a post-Cold War world, international norms against territorial conquest would be enforced. Bush deliberately stopped short of overthrowing Saddam, fearing Iraq&rsquo;s collapse would destabilize the region. The war was a dramatic U.S. military success, briefly ended the &ldquo;Vietnam syndrome,&rdquo; and signaled the emergence of America as the world&rsquo;s lone superpower.</p>
+                </div>
+            </div>
+            <div class="key-terms-section">
+                <h3>30.3 &mdash; Key Terms</h3>
+                <div class="key-terms-grid">
+                    <div class="key-term-item"><span class="key-term-name">Iran-Contra Affair</span><div class="key-term-def">Scandal in which Reagan administration officials secretly sold arms to Iran and funneled the profits to Nicaragua&rsquo;s anti-communist Contra rebels, in violation of a congressional ban; undermined Reagan&rsquo;s credibility.</div></div>
+                    <div class="key-term-item"><span class="key-term-name">Persian Gulf War</span><div class="key-term-def">1991 war in which a U.S.-led international coalition drove Iraqi forces out of Kuwait after Saddam Hussein&rsquo;s 1990 invasion; a rapid U.S. victory that briefly ended the &ldquo;Vietnam syndrome.&rdquo;</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- VOCAB LIST -->
+<div class="vocab-section" id="vocab">
+    <h2>Vocabulary List &mdash; 35 Words</h2>
+
+    <div class="vocab-chapter-group">
+        <h3>Chapter 28 &mdash; Liberal Crisis &amp; Conservative Rebirth (16 words)</h3>
+        <div class="vocab-list">
+            <div class="vocab-item"><div class="vocab-word">audacious</div><div class="vocab-def">Showing a willingness to take risks or offend people</div></div>
+            <div class="vocab-item"><div class="vocab-word">canonization</div><div class="vocab-def">Officially, the announcement that someone who has died has become a saint in the Catholic church; also praising someone very much, especially in a way that is too much or that they do not deserve</div></div>
+            <div class="vocab-item"><div class="vocab-word">eminence</div><div class="vocab-def">The state of being famous, respected, or important</div></div>
+            <div class="vocab-item"><div class="vocab-word">impoverished</div><div class="vocab-def">Very poor</div></div>
+            <div class="vocab-item"><div class="vocab-word">liberalize</div><div class="vocab-def">To make laws, systems, or opinions less severe</div></div>
+            <div class="vocab-item"><div class="vocab-word">tenant</div><div class="vocab-def">One of the principles on which a belief or theory is based</div></div>
+            <div class="vocab-item"><div class="vocab-word">inextricably</div><div class="vocab-def">In a way that is unable to be separated, released, or escaped from</div></div>
+            <div class="vocab-item"><div class="vocab-word">conceal</div><div class="vocab-def">To prevent something from being seen or known about</div></div>
+            <div class="vocab-item"><div class="vocab-word">antithetical</div><div class="vocab-def">Exactly the opposite of someone or something</div></div>
+            <div class="vocab-item"><div class="vocab-word">palpable</div><div class="vocab-def">So obvious that it can easily be seen or known, or (of a feeling) so strong that it seems as if it can be touched or physically felt</div></div>
+            <div class="vocab-item"><div class="vocab-word">calamity</div><div class="vocab-def">A serious accident or bad event causing damage or suffering</div></div>
+            <div class="vocab-item"><div class="vocab-word">credibility</div><div class="vocab-def">The fact that someone can be believed or trusted</div></div>
+            <div class="vocab-item"><div class="vocab-word">discredit</div><div class="vocab-def">To cause people to stop respecting someone or believing in an idea or person</div></div>
+            <div class="vocab-item"><div class="vocab-word">impasse</div><div class="vocab-def">A situation in which progress is impossible, especially because the people involved cannot agree</div></div>
+            <div class="vocab-item"><div class="vocab-word">firebrand</div><div class="vocab-def">A person who causes political or social trouble by opposing authority and encouraging others to do so</div></div>
+            <div class="vocab-item"><div class="vocab-word">clandestine</div><div class="vocab-def">Planned or done in secret, especially something that is not officially allowed</div></div>
+        </div>
+    </div>
+
+    <div class="vocab-chapter-group">
+        <h3>Chapters 29 &amp; 30 &mdash; Era of Limits &amp; Conservative Ascendance (19 words)</h3>
+        <div class="vocab-list">
+            <div class="vocab-item"><div class="vocab-word">polarized</div><div class="vocab-def">Divided into two completely opposing groups</div></div>
+            <div class="vocab-item"><div class="vocab-word">unscathed</div><div class="vocab-def">Without injuries or damage being caused</div></div>
+            <div class="vocab-item"><div class="vocab-word">moratorium</div><div class="vocab-def">A stopping of an activity for an agreed amount of time</div></div>
+            <div class="vocab-item"><div class="vocab-word">boon</div><div class="vocab-def">Something that is very helpful and improves the quality of life</div></div>
+            <div class="vocab-item"><div class="vocab-word">strident</div><div class="vocab-def">Expressing or expressed in forceful language that does not try to avoid upsetting other people</div></div>
+            <div class="vocab-item"><div class="vocab-word">burgeoning</div><div class="vocab-def">Developing quickly</div></div>
+            <div class="vocab-item"><div class="vocab-word">televangelist</div><div class="vocab-def">Someone who preaches (gives religious speeches) on television in order to persuade people to become Christians and give money to religious organizations</div></div>
+            <div class="vocab-item"><div class="vocab-word">disdain</div><div class="vocab-def">The feeling of not liking someone or something and thinking that he, she, or it does not deserve your interest or respect</div></div>
+            <div class="vocab-item"><div class="vocab-word">inordinate</div><div class="vocab-def">Much more than usual or expected</div></div>
+            <div class="vocab-item"><div class="vocab-word">metamorphose</div><div class="vocab-def">To change into a completely different form or type</div></div>
+            <div class="vocab-item"><div class="vocab-word">exile</div><div class="vocab-def">The condition of someone being sent or kept away from their own country, especially for political reasons</div></div>
+            <div class="vocab-item"><div class="vocab-word">d&eacute;tente</div><div class="vocab-def">An improvement in the relationship between two countries that in the past were not friendly and did not trust each other</div></div>
+            <div class="vocab-item"><div class="vocab-word">consternation</div><div class="vocab-def">A feeling of worry, shock, or confusion</div></div>
+            <div class="vocab-item"><div class="vocab-word">elicit</div><div class="vocab-def">To get or produce something, especially information or a reaction</div></div>
+            <div class="vocab-item"><div class="vocab-word">indelible</div><div class="vocab-def">Describing memories or actions that are impossible to forget, or have a permanent influence or effect</div></div>
+            <div class="vocab-item"><div class="vocab-word">ostentatious</div><div class="vocab-def">Too obviously showing your money, possessions, or power, in an attempt to make other people notice and admire you</div></div>
+            <div class="vocab-item"><div class="vocab-word">ascent</div><div class="vocab-def">The act of climbing or moving upward</div></div>
+            <div class="vocab-item"><div class="vocab-word">duplicitous</div><div class="vocab-def">Deceitful or dishonest</div></div>
+            <div class="vocab-item"><div class="vocab-word">protracted</div><div class="vocab-def">Lasting for a long time or made to last longer than necessary</div></div>
+        </div>
+    </div>
+</div>
+
+<!-- VOCAB QUIZ -->
+<div class="quiz-section" id="quiz">
+    <h2>Vocabulary Quiz &mdash; 10 Questions</h2>
+    <div class="inline-tracker">
+        <span class="it-stat">Rounds: <strong id="itVRounds">0</strong></span>
+        <span class="it-stat">Correct: <strong id="itVCorrect">0</strong>/<strong id="itVTotal">0</strong></span>
+        <span class="it-stat">Accuracy: <strong id="itVPct">0%</strong></span>
+        <div class="it-bar"><div class="it-bar-fill" id="itVBar" style="width:0%"></div></div>
+    </div>
+    <div class="quiz-controls">
+        <button class="btn" onclick="startQuiz()">Start New Round</button>
+        <span class="quiz-progress" id="quizProgress"></span>
+    </div>
+    <div id="quizArea"></div>
+    <div id="quizResult" style="display:none"></div>
+</div>
+
+<div class="quiz-divider"></div>
+
+<!-- KEY TERMS QUIZ -->
+<div class="quiz-section" id="kt-quiz">
+    <h2>Key Terms Quiz &mdash; 10 Questions</h2>
+    <div class="inline-tracker">
+        <span class="it-stat">Rounds: <strong id="itKRounds">0</strong></span>
+        <span class="it-stat">Correct: <strong id="itKCorrect">0</strong>/<strong id="itKTotal">0</strong></span>
+        <span class="it-stat">Accuracy: <strong id="itKPct">0%</strong></span>
+        <div class="it-bar"><div class="it-bar-fill" id="itKBar" style="width:0%"></div></div>
+    </div>
+    <div class="quiz-controls">
+        <button class="btn" onclick="startKTQuiz()">Start New Round</button>
+        <span class="quiz-progress" id="ktQuizProgress"></span>
+    </div>
+    <div id="ktQuizArea"></div>
+    <div id="ktQuizResult" style="display:none"></div>
+</div>
+
+<!-- TRACKER -->
+<div class="tracker" id="tracker">
+    <h2>Accuracy Tracker</h2>
+    <div class="tracker-sub">
+        <h3>Vocabulary Quiz</h3>
+        <div class="tracker-stats">
+            <div class="tracker-stat"><div class="num" id="tRounds">0</div><div class="lbl">Rounds</div></div>
+            <div class="tracker-stat"><div class="num" id="tCorrect">0</div><div class="lbl">Correct</div></div>
+            <div class="tracker-stat"><div class="num" id="tTotal">0</div><div class="lbl">Total</div></div>
+            <div class="tracker-stat"><div class="num" id="tPct">0%</div><div class="lbl">Accuracy</div></div>
+        </div>
+        <div class="tracker-bar"><div class="tracker-bar-fill" id="tBar" style="width:0%"></div></div>
+        <div class="tracker-history" id="tHistory"></div>
+    </div>
+    <div class="tracker-sub">
+        <h3>Key Terms Quiz</h3>
+        <div class="tracker-stats">
+            <div class="tracker-stat"><div class="num" id="ktRounds">0</div><div class="lbl">Rounds</div></div>
+            <div class="tracker-stat"><div class="num" id="ktCorrect">0</div><div class="lbl">Correct</div></div>
+            <div class="tracker-stat"><div class="num" id="ktTotal">0</div><div class="lbl">Total</div></div>
+            <div class="tracker-stat"><div class="num" id="ktPct">0%</div><div class="lbl">Accuracy</div></div>
+        </div>
+        <div class="tracker-bar"><div class="tracker-bar-fill" id="ktBar" style="width:0%"></div></div>
+        <div class="tracker-history" id="ktHistory"></div>
+    </div>
+</div>
+
+    </main>
+
+<script>
+// ═══════════════════ ACCESS GATE ═══════════════════
+// Map of access code -> buyer name. Add an entry when you sell a code.
+// To revoke access: delete the entry and redeploy (next page load locks them out).
+const ACCESS_CODES = {
+    "AP7-JUST-0001": "Justin (owner)"
+    // When you sell: pick next code from the pool in ACCESS_CODES.md,
+    // then add it here as: "AP7-XXXX-XXXX": "Buyer Name",
+};
+const GATE_STORAGE_KEY = 'apush_u7_access_code';
+
+function gateUnlock() {
+    document.body.classList.remove('locked');
+}
+function gateShowError(msg) {
+    const m = document.getElementById('gateMsg');
+    m.className = 'gate-msg error';
+    m.textContent = msg;
+}
+function gateShowSuccess(name) {
+    const m = document.getElementById('gateMsg');
+    m.className = 'gate-msg success';
+    m.textContent = 'Access granted \u2014 welcome, ' + name + '!';
+}
+function gateTry() {
+    const input = document.getElementById('gateInput');
+    const code = input.value.trim().toUpperCase();
+    if (ACCESS_CODES[code]) {
+        localStorage.setItem(GATE_STORAGE_KEY, code);
+        gateShowSuccess(ACCESS_CODES[code]);
+        setTimeout(gateUnlock, 700);
+    } else {
+        gateShowError('Invalid code. Double-check or contact Justin.');
+        input.value = '';
+        input.focus();
+    }
+}
+function gateCheckStored() {
+    const saved = localStorage.getItem(GATE_STORAGE_KEY);
+    if (saved && ACCESS_CODES[saved]) {
+        gateUnlock();
+    } else if (saved) {
+        // had a code but it's been revoked
+        localStorage.removeItem(GATE_STORAGE_KEY);
+        gateShowError('Your previous access code is no longer valid.');
+    }
+}
+document.getElementById('gateBtn').addEventListener('click', gateTry);
+document.getElementById('gateInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') gateTry(); });
+gateCheckStored();
+if (document.body.classList.contains('locked')) document.getElementById('gateInput').focus();
+
+// ═══════════════════ STUDY GUIDE CONTENT ═══════════════════
+const allVocab = [
+    {word:"audacious",def:"Showing a willingness to take risks or offend people"},
+    {word:"canonization",def:"Officially, the announcement that someone who has died has become a saint in the Catholic church; also praising someone very much, especially in a way that is too much or that they do not deserve"},
+    {word:"eminence",def:"The state of being famous, respected, or important"},
+    {word:"impoverished",def:"Very poor"},
+    {word:"liberalize",def:"To make laws, systems, or opinions less severe"},
+    {word:"tenant",def:"One of the principles on which a belief or theory is based"},
+    {word:"inextricably",def:"In a way that is unable to be separated, released, or escaped from"},
+    {word:"conceal",def:"To prevent something from being seen or known about"},
+    {word:"antithetical",def:"Exactly the opposite of someone or something"},
+    {word:"palpable",def:"So obvious that it can easily be seen or known, or (of a feeling) so strong that it seems as if it can be touched or physically felt"},
+    {word:"calamity",def:"A serious accident or bad event causing damage or suffering"},
+    {word:"credibility",def:"The fact that someone can be believed or trusted"},
+    {word:"discredit",def:"To cause people to stop respecting someone or believing in an idea or person"},
+    {word:"impasse",def:"A situation in which progress is impossible, especially because the people involved cannot agree"},
+    {word:"firebrand",def:"A person who causes political or social trouble by opposing authority and encouraging others to do so"},
+    {word:"clandestine",def:"Planned or done in secret, especially something that is not officially allowed"},
+    {word:"polarized",def:"Divided into two completely opposing groups"},
+    {word:"unscathed",def:"Without injuries or damage being caused"},
+    {word:"moratorium",def:"A stopping of an activity for an agreed amount of time"},
+    {word:"boon",def:"Something that is very helpful and improves the quality of life"},
+    {word:"strident",def:"Expressing or expressed in forceful language that does not try to avoid upsetting other people"},
+    {word:"burgeoning",def:"Developing quickly"},
+    {word:"televangelist",def:"Someone who preaches (gives religious speeches) on television in order to persuade people to become Christians and give money to religious organizations"},
+    {word:"disdain",def:"The feeling of not liking someone or something and thinking that he, she, or it does not deserve your interest or respect"},
+    {word:"inordinate",def:"Much more than usual or expected"},
+    {word:"metamorphose",def:"To change into a completely different form or type"},
+    {word:"exile",def:"The condition of someone being sent or kept away from their own country, especially for political reasons"},
+    {word:"d\u00e9tente",def:"An improvement in the relationship between two countries that in the past were not friendly and did not trust each other"},
+    {word:"consternation",def:"A feeling of worry, shock, or confusion"},
+    {word:"elicit",def:"To get or produce something, especially information or a reaction"},
+    {word:"indelible",def:"Describing memories or actions that are impossible to forget, or have a permanent influence or effect"},
+    {word:"ostentatious",def:"Too obviously showing your money, possessions, or power, in an attempt to make other people notice and admire you"},
+    {word:"ascent",def:"The act of climbing or moving upward"},
+    {word:"duplicitous",def:"Deceitful or dishonest"},
+    {word:"protracted",def:"Lasting for a long time or made to last longer than necessary"}
+];
+
+const allKeyTerms = [
+    {term:"American Indian Movement (AIM)",def:"Native American civil rights organization founded in 1968 that used direct action \u2014 including the occupation of Alcatraz and the 1973 takeover of Wounded Knee \u2014 to demand treaty rights and tribal sovereignty."},
+    {term:"Black nationalism",def:"Belief that Black Americans should build independent political, economic, and cultural institutions rather than assimilate into white society; rooted in traditions going back to Marcus Garvey."},
+    {term:"Black Panther Party",def:"Founded in Oakland in 1966 by Huey Newton and Bobby Seale; organized armed self-defense against police brutality and ran community programs like free breakfasts and health clinics."},
+    {term:"Black Power",def:"Slogan popularized by Stokely Carmichael in 1966; emphasized racial pride, self-determination, economic independence, and a rejection of white moderation and gradualism."},
+    {term:"Kerner Commission (1968)",def:"Johnson-appointed commission that investigated the urban riots and concluded the nation was moving toward two societies, one black and one white, separate and unequal, blaming white racism for inner-city conditions."},
+    {term:"Occupation of Alcatraz (1969)",def:"Native American activists, calling themselves Indians of All Tribes, occupied the former federal prison island for 19 months to demand the return of unused federal land and raise awareness of Native rights."},
+    {term:"Riots of 1967",def:"Long hot summer uprisings in cities like Newark and Detroit, sparked by police incidents but fueled by poverty, unemployment, housing discrimination, and brutality in Black urban neighborhoods."},
+    {term:"United Farm Workers (UFW)",def:"Farm labor union led by C\u00e9sar Ch\u00e1vez and Dolores Huerta that organized primarily Mexican American and Filipino farmworkers through strikes, marches, and the grape boycott."},
+    {term:"Young Lords",def:"Puerto Rican activist group modeled on the Black Panthers that organized in New York and Chicago to demand better housing, health care, and education in Latino neighborhoods."},
+    {term:"Great Society",def:"LBJ\u2019s sweeping domestic program that expanded the New Deal through the War on Poverty, Medicare, Medicaid, federal aid to education, civil rights enforcement, and immigration reform."},
+    {term:"Immigration Act of 1965",def:"Also called the Hart-Celler Act; abolished the national-origins quota system of the 1920s, opening immigration to Asia, Latin America, and Africa and transforming U.S. demographics."},
+    {term:"The Feminine Mystique (1963)",def:"Betty Friedan\u2019s bestseller describing the unhappiness of suburban housewives \u2014 the problem that has no name \u2014 that helped launch second-wave feminism."},
+    {term:"War on Poverty",def:"LBJ\u2019s set of Great Society anti-poverty programs \u2014 including the Office of Economic Opportunity, Head Start, Job Corps, VISTA, and community action \u2014 that attacked poverty\u2019s structural causes."},
+    {term:"Gulf of Tonkin Resolution (1964)",def:"Congressional resolution, passed after reports of attacks on U.S. destroyers off North Vietnam, that gave Johnson broad authority to use military force in Southeast Asia without a declaration of war."},
+    {term:"Students for a Democratic Society (SDS)",def:"Leftist student organization founded in 1960; its 1962 Port Huron Statement called for participatory democracy, and SDS became central to antiwar and free speech protests."},
+    {term:"Young Americans for Freedom (YAF)",def:"Conservative student organization founded in 1960 at William F. Buckley\u2019s estate; articulated a vision of free markets, anti-communism, and traditional values that shaped the modern conservative movement."},
+    {term:"Nixon\u2019s Southern Strategy",def:"Republican electoral strategy of appealing to white Southern voters through coded racial messaging \u2014 law and order, states\u2019 rights, opposition to busing \u2014 to pull the once-solid Democratic South into the GOP coalition."},
+    {term:"Stonewall Riots (1969)",def:"Uprising by LGBTQ patrons against a police raid at the Stonewall Inn in Greenwich Village; widely regarded as the birth of the modern gay rights movement."},
+    {term:"Title IX (1972)",def:"Federal law banning sex discrimination in any education program receiving federal funds; dramatically expanded women\u2019s access to schools, professional programs, and athletics."},
+    {term:"Women\u2019s Liberation Movement",def:"Younger, more radical wing of second-wave feminism that emerged after 1968; challenged patriarchy in family, sexuality, and culture through consciousness-raising and grassroots activism."},
+    {term:"Silent Majority",def:"Phrase Nixon used to describe ordinary, patriotic, middle-class Americans who he claimed supported the Vietnam War and rejected the counterculture and antiwar protests; central to his 1968 and 1972 coalitions."},
+    {term:"Watergate Scandal (1972\u201373)",def:"Political scandal that began with a break-in at the Democratic National Committee headquarters; widening revelations of abuses of power and a cover-up forced Nixon to resign in August 1974."},
+    {term:"Deindustrialization",def:"Decline of manufacturing in the 1970s as factories closed in the Northeast and Midwest due to foreign competition, aging plants, rising costs, and corporate disinvestment."},
+    {term:"Environmental Protection Agency (EPA)",def:"Federal agency created by Nixon in 1970 to enforce new environmental laws like the Clean Air and Clean Water Acts and regulate pollution."},
+    {term:"OPEC",def:"Organization of Petroleum Exporting Countries; dominated by Arab states, its 1973 oil embargo caused a fourfold jump in oil prices and triggered the U.S. energy crisis."},
+    {term:"California\u2019s Proposition 13 (1978)",def:"Ballot initiative that capped California property taxes; launched the nationwide tax revolt and helped build the political base for the conservative Reagan revolution."},
+    {term:"Rachel Carson\u2019s Silent Spring (1962)",def:"Bestselling book that exposed the ecological damage caused by pesticides like DDT; widely credited with launching the modern environmental movement."},
+    {term:"Rust Belt",def:"Region of the Northeast and Midwest hit hardest by deindustrialization; cities like Detroit, Pittsburgh, and Cleveland lost huge shares of their manufacturing jobs and population."},
+    {term:"Three Mile Island",def:"1979 partial nuclear meltdown at a Pennsylvania power plant; sharply turned public opinion against nuclear power and stalled construction of new plants for decades."},
+    {term:"Affirmative Action",def:"Policies that considered race and gender in hiring, admissions, and contracting to remedy historical discrimination; began with executive orders under Kennedy and Johnson."},
+    {term:"Bakke v. University of California (1978)",def:"Supreme Court ruling that struck down rigid racial quotas in university admissions as unconstitutional but allowed race to be considered as one factor among many."},
+    {term:"Equal Rights Amendment",def:"Proposed constitutional amendment banning sex-based discrimination; passed Congress in 1972 but fell three states short of ratification after a backlash led by Phyllis Schlafly."},
+    {term:"Roe v. Wade (1973)",def:"Supreme Court decision establishing a constitutional right to abortion based on the right to privacy; immediately became one of the most divisive rulings in U.S. history."},
+    {term:"Iran Hostage Crisis (1979\u20131980)",def:"Iranian revolutionaries seized the U.S. embassy in Tehran and held 52 American hostages for 444 days; the crisis crippled Carter\u2019s presidency and helped elect Reagan."},
+    {term:"Religious Right",def:"Politically mobilized evangelical Protestants and conservative Catholics, led by organizations like Jerry Falwell\u2019s Moral Majority, who opposed abortion, the ERA, and gay rights and became a pillar of the Reagan coalition."},
+    {term:"The Conscience of a Conservative (1960)",def:"Barry Goldwater\u2019s book laying out a conservative vision of limited government, free markets, anti-communism, and traditional values; a foundational text for the modern conservative movement."},
+    {term:"AIDS Crisis (1980s)",def:"Emergence of the HIV/AIDS epidemic, which disproportionately killed gay men, hemophiliacs, and drug users; the Reagan administration was criticized for its slow response, and activist groups like ACT UP demanded research and treatment."},
+    {term:"Reagan Democrats",def:"White, often working-class, traditionally Democratic voters (many from the Rust Belt and South) who crossed over to vote for Reagan in 1980 and 1984 because of concerns about taxes, culture, and national strength."},
+    {term:"Supply-Side Economics (Reaganomics)",def:"Economic theory that deep cuts in income and business taxes would stimulate investment, growth, and tax revenue; became the framework of Reagan\u2019s domestic economic policy."},
+    {term:"Iran-Contra Affair",def:"Scandal in which Reagan administration officials secretly sold arms to Iran and funneled the profits to Nicaragua\u2019s anti-communist Contra rebels, in violation of a congressional ban; undermined Reagan\u2019s credibility."},
+    {term:"Persian Gulf War",def:"1991 war in which a U.S.-led international coalition drove Iraqi forces out of Kuwait after Saddam Hussein\u2019s 1990 invasion; a rapid U.S. victory that briefly ended the Vietnam syndrome."}
+];
+
+const QUIZ_SIZE = 10;
+
+function shuffle(arr) {
+    let a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) { let j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a;
+}
+
+let trackerData = JSON.parse(localStorage.getItem('apush_u7_tracker') || '{"rounds":0,"correct":0,"total":0,"history":[]}');
+let ktTrackerData = JSON.parse(localStorage.getItem('apush_u7_kt_tracker') || '{"rounds":0,"correct":0,"total":0,"history":[]}');
+
+let vqQuestions=[], vqLocked=new Set(), vqCorrectCount=0, vqTotalCount=QUIZ_SIZE, vqCorrectIndices={};
+
+function startQuiz() {
+    vqLocked = new Set(); vqCorrectCount = 0; vqCorrectIndices = {};
+    document.getElementById('quizResult').style.display = 'none';
+    let pool = shuffle(allVocab).slice(0, QUIZ_SIZE);
+    vqQuestions = pool; vqTotalCount = pool.length;
+    let html = '';
+    pool.forEach((q, i) => {
+        let distractors = shuffle(allVocab.filter(v => v.word !== q.word)).slice(0, 3);
+        let options = shuffle([{def: q.def, correct: true}, ...distractors.map(d => ({def: d.def, correct: false}))]);
+        vqCorrectIndices[i] = options.findIndex(o => o.correct);
+        html += `<div class="quiz-question" id="vq_${i}"><div class="quiz-q-text">${i+1}. What is the definition of <span class="quiz-q-word">${q.word}</span>?</div><div class="quiz-options">`;
+        options.forEach((o, j) => {
+            html += `<label id="vq_lbl_${i}_${j}" onclick="selectVocabAnswer(${i},${j})"><input type="radio" name="vq${i}" value="${j}"> ${o.def}</label>`;
+        });
+        html += `</div></div>`;
+    });
+    document.getElementById('quizArea').innerHTML = html;
+    document.getElementById('quizProgress').textContent = `0 / ${vqTotalCount} answered`;
+}
+
+function selectVocabAnswer(qi, oi) {
+    if (vqLocked.has(qi)) return;
+    vqLocked.add(qi);
+    let qDiv = document.getElementById('vq_' + qi);
+    qDiv.classList.add('locked');
+    let selectedLbl = document.getElementById('vq_lbl_' + qi + '_' + oi);
+    selectedLbl.classList.add('selected');
+    let correctIdx = vqCorrectIndices[qi];
+    let isCorrect = (oi === correctIdx);
+    let feedbackDiv = document.createElement('div');
+    feedbackDiv.className = 'quiz-feedback';
+    if (isCorrect) {
+        selectedLbl.classList.add('correct-answer');
+        vqCorrectCount++;
+        feedbackDiv.classList.add('correct');
+        feedbackDiv.textContent = 'Correct!';
+    } else {
+        selectedLbl.classList.add('wrong-answer');
+        document.getElementById('vq_lbl_' + qi + '_' + correctIdx).classList.add('correct-answer');
+        feedbackDiv.classList.add('wrong');
+        feedbackDiv.innerHTML = `Wrong! <span class="correct-answer-text">The answer is: ${vqQuestions[qi].def}</span>`;
+    }
+    qDiv.appendChild(feedbackDiv);
+    document.getElementById('quizProgress').textContent = `${vqLocked.size} / ${vqTotalCount} answered`;
+    if (vqLocked.size === vqTotalCount) setTimeout(submitVocabQuiz, 500);
+}
+
+function submitVocabQuiz() {
+    trackerData.rounds++;
+    trackerData.correct += vqCorrectCount;
+    trackerData.total += vqTotalCount;
+    trackerData.history.push({round: trackerData.rounds, correct: vqCorrectCount, total: vqTotalCount});
+    localStorage.setItem('apush_u7_tracker', JSON.stringify(trackerData));
+    updateTracker();
+    let pct = Math.round((vqCorrectCount / vqTotalCount) * 100);
+    let r = document.getElementById('quizResult');
+    r.style.display = 'block';
+    r.innerHTML = `<div class="quiz-result"><div class="score">${vqCorrectCount}/${vqTotalCount}</div><div class="score-label">${pct}% correct</div></div>`;
+    r.scrollIntoView({behavior: 'smooth'});
+}
+
+let ktqQuestions=[], ktqLocked=new Set(), ktqCorrectCount=0, ktqTotalCount=QUIZ_SIZE, ktqCorrectIndices={};
+
+function startKTQuiz() {
+    ktqLocked = new Set(); ktqCorrectCount = 0; ktqCorrectIndices = {};
+    document.getElementById('ktQuizResult').style.display = 'none';
+    let pool = shuffle(allKeyTerms).slice(0, QUIZ_SIZE);
+    ktqQuestions = pool; ktqTotalCount = pool.length;
+    let html = '';
+    pool.forEach((q, i) => {
+        let distractors = shuffle(allKeyTerms.filter(k => k.term !== q.term)).slice(0, 3);
+        let options = shuffle([{def: q.def, correct: true}, ...distractors.map(d => ({def: d.def, correct: false}))]);
+        ktqCorrectIndices[i] = options.findIndex(o => o.correct);
+        html += `<div class="quiz-question" id="ktq_${i}"><div class="quiz-q-text">${i+1}. What is <span class="quiz-q-word">${q.term}</span>?</div><div class="quiz-options">`;
+        options.forEach((o, j) => {
+            html += `<label id="ktq_lbl_${i}_${j}" onclick="selectKTAnswer(${i},${j})"><input type="radio" name="ktq${i}" value="${j}"> ${o.def}</label>`;
+        });
+        html += `</div></div>`;
+    });
+    document.getElementById('ktQuizArea').innerHTML = html;
+    document.getElementById('ktQuizProgress').textContent = `0 / ${ktqTotalCount} answered`;
+}
+
+function selectKTAnswer(qi, oi) {
+    if (ktqLocked.has(qi)) return;
+    ktqLocked.add(qi);
+    let qDiv = document.getElementById('ktq_' + qi);
+    qDiv.classList.add('locked');
+    let selectedLbl = document.getElementById('ktq_lbl_' + qi + '_' + oi);
+    selectedLbl.classList.add('selected');
+    let correctIdx = ktqCorrectIndices[qi];
+    let isCorrect = (oi === correctIdx);
+    let feedbackDiv = document.createElement('div');
+    feedbackDiv.className = 'quiz-feedback';
+    if (isCorrect) {
+        selectedLbl.classList.add('correct-answer');
+        ktqCorrectCount++;
+        feedbackDiv.classList.add('correct');
+        feedbackDiv.textContent = 'Correct!';
+    } else {
+        selectedLbl.classList.add('wrong-answer');
+        document.getElementById('ktq_lbl_' + qi + '_' + correctIdx).classList.add('correct-answer');
+        feedbackDiv.classList.add('wrong');
+        feedbackDiv.innerHTML = `Wrong! <span class="correct-answer-text">The answer is: ${ktqQuestions[qi].def}</span>`;
+    }
+    qDiv.appendChild(feedbackDiv);
+    document.getElementById('ktQuizProgress').textContent = `${ktqLocked.size} / ${ktqTotalCount} answered`;
+    if (ktqLocked.size === ktqTotalCount) setTimeout(submitKTQuiz, 500);
+}
+
+function submitKTQuiz() {
+    ktTrackerData.rounds++;
+    ktTrackerData.correct += ktqCorrectCount;
+    ktTrackerData.total += ktqTotalCount;
+    ktTrackerData.history.push({round: ktTrackerData.rounds, correct: ktqCorrectCount, total: ktqTotalCount});
+    localStorage.setItem('apush_u7_kt_tracker', JSON.stringify(ktTrackerData));
+    updateKTTracker();
+    let pct = Math.round((ktqCorrectCount / ktqTotalCount) * 100);
+    let r = document.getElementById('ktQuizResult');
+    r.style.display = 'block';
+    r.innerHTML = `<div class="quiz-result"><div class="score">${ktqCorrectCount}/${ktqTotalCount}</div><div class="score-label">${pct}% correct</div></div>`;
+    r.scrollIntoView({behavior: 'smooth'});
+}
+
+function updateTracker() {
+    document.getElementById('tRounds').textContent = trackerData.rounds;
+    document.getElementById('tCorrect').textContent = trackerData.correct;
+    document.getElementById('tTotal').textContent = trackerData.total;
+    let pct = trackerData.total > 0 ? Math.round((trackerData.correct / trackerData.total) * 100) : 0;
+    document.getElementById('tPct').textContent = pct + '%';
+    document.getElementById('tBar').style.width = pct + '%';
+    document.getElementById('tHistory').innerHTML = trackerData.history.map(h => `<span class="tracker-pill">R${h.round}: ${h.correct}/${h.total}</span>`).join('');
+    document.getElementById('itVRounds').textContent = trackerData.rounds;
+    document.getElementById('itVCorrect').textContent = trackerData.correct;
+    document.getElementById('itVTotal').textContent = trackerData.total;
+    document.getElementById('itVPct').textContent = pct + '%';
+    document.getElementById('itVBar').style.width = pct + '%';
+}
+
+function updateKTTracker() {
+    document.getElementById('ktRounds').textContent = ktTrackerData.rounds;
+    document.getElementById('ktCorrect').textContent = ktTrackerData.correct;
+    document.getElementById('ktTotal').textContent = ktTrackerData.total;
+    let pct = ktTrackerData.total > 0 ? Math.round((ktTrackerData.correct / ktTrackerData.total) * 100) : 0;
+    document.getElementById('ktPct').textContent = pct + '%';
+    document.getElementById('ktBar').style.width = pct + '%';
+    document.getElementById('ktHistory').innerHTML = ktTrackerData.history.map(h => `<span class="tracker-pill">R${h.round}: ${h.correct}/${h.total}</span>`).join('');
+    document.getElementById('itKRounds').textContent = ktTrackerData.rounds;
+    document.getElementById('itKCorrect').textContent = ktTrackerData.correct;
+    document.getElementById('itKTotal').textContent = ktTrackerData.total;
+    document.getElementById('itKPct').textContent = pct + '%';
+    document.getElementById('itKBar').style.width = pct + '%';
+}
+
+updateTracker();
+updateKTTracker();
+
+const toggle = document.getElementById('themeToggle');
+if (localStorage.getItem('apush_u7_dark') === 'true') {
+    document.body.classList.add('dark');
+    toggle.innerHTML = '&#9790;';
+}
+toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    let isDark = document.body.classList.contains('dark');
+    localStorage.setItem('apush_u7_dark', isDark);
+    toggle.innerHTML = isDark ? '&#9790;' : '&#9788;';
+});
+
+document.querySelectorAll('.nav-section a, .nav-chapter-title').forEach(a => {
+    a.addEventListener('click', () => {
+        if (window.innerWidth <= 768) document.querySelector('.sidebar').classList.remove('open');
+    });
+});
+</script>
+</body>
+</html>
