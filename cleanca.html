@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+  <link rel="stylesheet" href="css/responsive.css?v=2">
 
   <style>
     /* ==================== Clean CA Page Styles ==================== */
@@ -603,6 +603,107 @@
       margin-bottom: 0;
     }
 
+    /* Achievement Banner */
+    .achievement-banner {
+      padding: 2rem 0;
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(34, 197, 94, 0.04));
+      border-bottom: 1px solid var(--border);
+    }
+
+    .achievement-card {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.75rem 2rem;
+      background: var(--card-bg);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      border-left: 4px solid #22c55e;
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .achievement-icon {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      border-radius: 50%;
+      color: white;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .achievement-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #22c55e;
+      margin-bottom: 0.25rem;
+    }
+
+    .achievement-content h2 {
+      font-size: 1.5rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .achievement-content p {
+      margin: 0;
+      color: var(--text-secondary);
+    }
+
+    /* Long-Term Support Box */
+    .support-box {
+      max-width: 900px;
+      margin: 3rem auto 0;
+      padding: 2rem;
+      background: var(--card-bg);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .support-box h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .support-box p {
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .support-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Enforcement Infographic */
+    .infographic-wrap {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .infographic-wrap img {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+    }
+
+    .infographic-caption {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-style: italic;
+    }
+
     /* Responsive */
     @media (max-width: 768px) {
       .overview-grid {
@@ -616,6 +717,14 @@
       }
       .benefits-grid {
         grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .achievement-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
       }
     }
 
@@ -685,12 +794,12 @@
           <div class="label">Required to Qualify</div>
         </div>
         <div class="hero-stat">
-          <div class="number" id="met-count">6</div>
+          <div class="number" id="met-count">10</div>
           <div class="label">Already Met</div>
         </div>
         <div class="hero-stat">
-          <div class="number">June '26</div>
-          <div class="label">Target Date</div>
+          <div class="number">May '26</div>
+          <div class="label">Achieved</div>
         </div>
       </div>
     </div>
@@ -705,6 +814,20 @@
       <img src="images/partners/keep-ca-beautiful-logo.png" alt="Keep California Beautiful" class="partner-logo">
     </div>
   </div>
+
+  <!-- Achievement Banner -->
+  <section class="achievement-banner">
+    <div class="container">
+      <div class="achievement-card">
+        <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+        <div class="achievement-content">
+          <div class="achievement-label">Designation Achieved</div>
+          <h2>All Required Tasks Completed</h2>
+          <p>TAM AIR met all required Clean California criteria on <strong>May 14, 2026</strong>, with over <strong>30 hours</strong> committed to this goal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- What is Clean California + Key Contacts -->
   <section class="section">
@@ -782,8 +905,8 @@
   <section class="section" style="background: var(--background-alt);">
     <div class="container">
       <div class="checklist-header">
-        <div class="progress-ring" style="--progress: 40;">
-          <span class="progress-text">6/15</span>
+        <div class="progress-ring" style="--progress: 67;">
+          <span class="progress-text">10/15</span>
         </div>
         <h2>Designation Checklist</h2>
         <p class="checklist-subtitle">
@@ -793,12 +916,12 @@
 
       <div class="checklist-grid">
         <!-- 1. Sign the Pledge -->
-        <div class="checklist-item in-progress">
-          <div class="check-icon"><i class="fas fa-clock"></i></div>
+        <div class="checklist-item completed">
+          <div class="check-icon"><i class="fas fa-check"></i></div>
           <div class="checklist-content">
             <h4>Sign the Pledge</h4>
             <p>Principal Mr. Pasarow to e-sign the official Clean CA pledge on behalf of Tamalpais High School.</p>
-            <div class="checklist-status"><i class="fas fa-circle"></i> In Progress &mdash; March 2026</div>
+            <div class="checklist-status"><i class="fas fa-circle"></i> Complete</div>
           </div>
         </div>
 
@@ -813,42 +936,42 @@
         </div>
 
         <!-- 3. Community Input -->
-        <div class="checklist-item in-progress">
-          <div class="check-icon"><i class="fas fa-clock"></i></div>
-          <div class="checklist-content">
-            <h4>Community Input</h4>
-            <p>Student and staff survey on campus cleanliness and beautification priorities.</p>
-            <div class="checklist-status"><i class="fas fa-circle"></i> In Progress &mdash; March 2026</div>
-          </div>
-        </div>
-
-        <!-- 4. Litter Assessment -->
-        <div class="checklist-item in-progress">
-          <div class="check-icon"><i class="fas fa-clock"></i></div>
-          <div class="checklist-content">
-            <h4>Litter Assessment</h4>
-            <p>Campus litter baseline assessment using drone imagery, with potential involvement from AP Environmental Science class.</p>
-            <div class="checklist-status"><i class="fas fa-circle"></i> In Progress &mdash; March&ndash;April 2026</div>
-          </div>
-        </div>
-
-        <!-- 5. Cleanups -->
         <div class="checklist-item completed">
           <div class="check-icon"><i class="fas fa-check"></i></div>
           <div class="checklist-content">
-            <h4>Community Cleanups</h4>
-            <p>TAM AIR conducts regular beach cleanups and campus cleanup events. 4+ per year documented.</p>
+            <h4>Community Input</h4>
+            <p>Student and staff survey on campus cleanliness and beautification priorities.</p>
             <div class="checklist-status"><i class="fas fa-circle"></i> Complete</div>
           </div>
         </div>
 
+        <!-- 4. Litter Assessment -->
+        <div class="checklist-item completed">
+          <div class="check-icon"><i class="fas fa-check"></i></div>
+          <div class="checklist-content">
+            <h4>Litter Assessment</h4>
+            <p>Campus litter baseline assessment using drone imagery, with potential involvement from AP Environmental Science class.</p>
+            <div class="checklist-status"><i class="fas fa-circle"></i> Complete</div>
+          </div>
+        </div>
+
+        <!-- 5. Cleanups -->
+        <div class="checklist-item planned">
+          <div class="check-icon"><i class="fas fa-calendar"></i></div>
+          <div class="checklist-content">
+            <h4>Community Cleanups</h4>
+            <p>TAM AIR conducts regular beach cleanups and campus cleanup events. 4+ per year documented.</p>
+            <div class="checklist-status"><i class="fas fa-circle"></i> Not Planned</div>
+          </div>
+        </div>
+
         <!-- 6. Measure Progress -->
-        <div class="checklist-item in-progress">
-          <div class="check-icon"><i class="fas fa-clock"></i></div>
+        <div class="checklist-item planned">
+          <div class="check-icon"><i class="fas fa-calendar"></i></div>
           <div class="checklist-content">
             <h4>Measure Progress</h4>
             <p>Tracking volunteer count, cleanup events, and pounds of litter removed per event.</p>
-            <div class="checklist-status"><i class="fas fa-circle"></i> In Progress &mdash; April 2026</div>
+            <div class="checklist-status"><i class="fas fa-circle"></i> Not Planned</div>
           </div>
         </div>
 
@@ -873,42 +996,42 @@
         </div>
 
         <!-- 9. Infrastructure -->
-        <div class="checklist-item completed">
-          <div class="check-icon"><i class="fas fa-check"></i></div>
+        <div class="checklist-item planned">
+          <div class="check-icon"><i class="fas fa-calendar"></i></div>
           <div class="checklist-content">
             <h4>Anti-Litter Infrastructure</h4>
             <p>Tam High campus has trash and recycling bins at key locations, emptied regularly by facilities staff.</p>
-            <div class="checklist-status"><i class="fas fa-circle"></i> Complete</div>
+            <div class="checklist-status"><i class="fas fa-circle"></i> Not Planned</div>
           </div>
         </div>
 
         <!-- 10. Enforcement -->
-        <div class="checklist-item planned">
-          <div class="check-icon"><i class="fas fa-calendar"></i></div>
+        <div class="checklist-item completed">
+          <div class="check-icon"><i class="fas fa-check"></i></div>
           <div class="checklist-content">
             <h4>Enforcement / Deterrence</h4>
             <p>Anti-litter signage campaign on campus and student-led accountability program.</p>
-            <div class="checklist-status"><i class="fas fa-circle"></i> Not Planned</div>
+            <div class="checklist-status"><i class="fas fa-circle"></i> Complete</div>
           </div>
         </div>
 
         <!-- 11. Long-term Planning -->
-        <div class="checklist-item planned">
-          <div class="check-icon"><i class="fas fa-calendar"></i></div>
+        <div class="checklist-item completed">
+          <div class="check-icon"><i class="fas fa-check"></i></div>
           <div class="checklist-content">
             <h4>Long-term Plan</h4>
             <p>Sustainability strategy to maintain cleanliness year-over-year, including passing the initiative to future TAM AIR leadership.</p>
-            <div class="checklist-status"><i class="fas fa-circle"></i> Not Planned</div>
+            <div class="checklist-status"><i class="fas fa-circle"></i> Complete</div>
           </div>
         </div>
 
         <!-- 12. Greening & Beautification -->
-        <div class="checklist-item in-progress">
-          <div class="check-icon"><i class="fas fa-clock"></i></div>
+        <div class="checklist-item completed">
+          <div class="check-icon"><i class="fas fa-check"></i></div>
           <div class="checklist-content">
             <h4>Greening &amp; Beautification</h4>
             <p>Campus beautification project: planting a garden or flower beds in coordination with school administration.</p>
-            <div class="checklist-status"><i class="fas fa-circle"></i> In Progress &mdash; April&ndash;May 2026</div>
+            <div class="checklist-status"><i class="fas fa-circle"></i> Complete</div>
           </div>
         </div>
 
@@ -945,118 +1068,74 @@
     </div>
   </section>
 
-  <!-- Timeline Section -->
+  <!-- Long-Term Planning Section -->
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <h2>Roadmap to Designation</h2>
-        <p>Our plan to achieve Clean California Community status by June 2026</p>
+        <h2>Long-Term Planning (2026&ndash;2027)</h2>
+        <p>How TAM AIR will sustain Clean California status and strengthen enforcement through the next school year</p>
       </div>
 
       <div class="cleanca-timeline">
-        <!-- Completed: Advisory Body & Partnerships -->
-        <div class="tl-item done">
-          <div class="tl-dot"><i class="fas fa-check"></i></div>
-          <div class="tl-date">Established &mdash; Advisory Body &amp; Partnerships</div>
-          <div class="tl-title">TAM AIR as Clean CA Advisory Committee</div>
-          <p class="tl-desc">TAM AIR Club serves as the designated advisory body, with faculty support and state-level partnerships already in place.</p>
-          <ul class="tl-tasks">
-            <li>TAM AIR Club established as advisory committee with faculty support from Mr. Brow (AP Environmental Science)</li>
-            <li>Partnerships with <a href="links.html" style="color: #22c55e;">Caltrans, Clean California, and Keep California Beautiful</a></li>
-            <li>Connected with Mae Nisbet at Clean California / Caltrans as state point of contact</li>
-          </ul>
-        </div>
-
-        <!-- Completed: Education & Outreach -->
-        <div class="tl-item done">
-          <div class="tl-dot"><i class="fas fa-check"></i></div>
-          <div class="tl-date">Established &mdash; Education &amp; Outreach</div>
-          <div class="tl-title">STEM Education &amp; K&ndash;12 School Programs</div>
-          <p class="tl-desc">TAM AIR's existing education programs satisfy both the community education and youth education criteria.</p>
-          <ul class="tl-tasks">
-            <li>STEM education and environmental awareness programs across Mill Valley schools</li>
-            <li>School visits to <a href="events.html" style="color: #22c55e;">Mill Valley Middle, Park Elementary, and Strawberry Elementary</a> with environmental curricula</li>
-            <li>Community outreach through <a href="services.html" style="color: #22c55e;">aerial photography and video services</a> for local events</li>
-          </ul>
-        </div>
-
-        <!-- Completed: Cleanups & Infrastructure -->
-        <div class="tl-item done">
-          <div class="tl-dot"><i class="fas fa-check"></i></div>
-          <div class="tl-date">Established &mdash; Cleanups &amp; Infrastructure</div>
-          <div class="tl-title">Community Cleanups &amp; Campus Facilities</div>
-          <p class="tl-desc">Regular cleanup events and existing campus infrastructure meet two more criteria.</p>
-          <ul class="tl-tasks">
-            <li><a href="projects.html" style="color: #22c55e;">Beach cleanup initiative</a> and campus cleanup events &mdash; 4+ per year documented</li>
-            <li>Trash and recycling bins at key campus locations, maintained by facilities staff</li>
-          </ul>
-        </div>
-
-        <!-- Active: Foundation (March 2026) -->
-        <div class="tl-item active">
-          <div class="tl-dot"><i class="fas fa-play"></i></div>
-          <div class="tl-date">March 2026 &mdash; Foundation</div>
-          <div class="tl-title">Sign the Pledge &amp; Community Input</div>
-          <p class="tl-desc">Formalize the initiative with school leadership and gather student and staff input.</p>
-          <ul class="tl-tasks">
-            <li>Principal Mr. Pasarow to e-sign the official Clean California pledge</li>
-            <li>Launch student and staff survey on campus cleanliness and beautification priorities</li>
-            <li>Announce initiative on <a href="https://instagram.com/tamairclub" target="_blank" rel="noopener" style="color: #f7931e;">TAM AIR social media</a> and website</li>
-          </ul>
-        </div>
-
-        <!-- Upcoming: Assessment (Late March - April 2026) -->
+        <!-- Goal 1: Fall 2026 -->
         <div class="tl-item upcoming">
-          <div class="tl-dot"><i class="fas fa-search"></i></div>
-          <div class="tl-date">Late March &ndash; April 2026 &mdash; Assessment</div>
-          <div class="tl-title">Campus Litter Assessment &amp; Metrics Baseline</div>
-          <p class="tl-desc">Establish data baselines using TAM AIR's drone capabilities and the AP Environmental Science class.</p>
-          <ul class="tl-tasks">
-            <li>Conduct campus litter assessment, potentially with APES class involvement</li>
-            <li>Use <a href="projects.html" style="color: var(--text-secondary);">TAM AIR drone imagery</a> to map litter hotspots from above</li>
-            <li>Establish tracking metrics: volunteers, cleanups, pounds of litter removed</li>
-            <li>Document existing infrastructure (bins, recycling stations)</li>
-          </ul>
+          <div class="tl-dot"><i class="fas fa-sign-hanging"></i></div>
+          <div class="tl-date">Fall 2026 &mdash; Goal 1</div>
+          <div class="tl-title">Put Up Anti-Litter Signs on Campus</div>
+          <p class="tl-desc">Place clear, friendly reminder signs near the quad, lunch areas, and main entrances to keep cleanliness top-of-mind.</p>
         </div>
 
-        <!-- Upcoming: Beautification (April - May 2026) -->
+        <!-- Goal 2: 2026-2027 School Year -->
         <div class="tl-item upcoming">
-          <div class="tl-dot"><i class="fas fa-seedling"></i></div>
-          <div class="tl-date">April &ndash; May 2026 &mdash; Beautification</div>
-          <div class="tl-title">Campus Greening &amp; Progress Tracking</div>
-          <p class="tl-desc">Complete the final in-progress criteria to reach 11 of 15.</p>
-          <ul class="tl-tasks">
-            <li>Campus beautification project: planting a garden or flower beds in coordination with school administration</li>
-            <li>Track and record progress metrics from cleanup events</li>
-            <li>Compile photo and data evidence for all 11 completed criteria</li>
-          </ul>
+          <div class="tl-dot"><i class="fas fa-calendar-check"></i></div>
+          <div class="tl-date">2026&ndash;2027 School Year &mdash; Goal 2</div>
+          <div class="tl-title">Host Four Campus Cleanups</div>
+          <p class="tl-desc">Run one documented cleanup each quarter (September, December, March, June) and track volunteers, hours, and litter collected.</p>
         </div>
 
-        <!-- Upcoming: Submission (May 2026) -->
+        <!-- Goal 3: Ongoing -->
         <div class="tl-item upcoming">
-          <div class="tl-dot"><i class="fas fa-clipboard-check"></i></div>
-          <div class="tl-date">May 2026 &mdash; Submission</div>
-          <div class="tl-title">Documentation &amp; Application</div>
-          <p class="tl-desc">Package all evidence and submit the designation application to Caltrans.</p>
-          <ul class="tl-tasks">
-            <li>Compile documentation of all 11 completed criteria with supporting evidence</li>
-            <li>Submit designation application to Clean California</li>
-          </ul>
+          <div class="tl-dot"><i class="fas fa-users"></i></div>
+          <div class="tl-date">Ongoing &mdash; Goal 3</div>
+          <div class="tl-title">Partner With ASB on Peer Reminders</div>
+          <p class="tl-desc">Work with ASB to encourage students to pick up after themselves and gently remind peers when they see litter.</p>
         </div>
 
-        <!-- Upcoming: Celebration (June 2026) -->
+        <!-- Goal 4: Summer 2027 -->
         <div class="tl-item upcoming">
-          <div class="tl-dot"><i class="fas fa-star"></i></div>
-          <div class="tl-date">June 2026 &mdash; Celebration</div>
-          <div class="tl-title">Designation &amp; Sign Unveiling</div>
-          <p class="tl-desc">Celebrate Tam High's achievement with the school community.</p>
-          <ul class="tl-tasks">
-            <li>Receive official Clean California Community designation</li>
-            <li>Unveil "You Are Entering a Clean California Community" signage at school</li>
-            <li>Celebration event with students, staff, and community partners</li>
-            <li>Media coverage and state recognition</li>
-          </ul>
+          <div class="tl-dot"><i class="fas fa-chart-line"></i></div>
+          <div class="tl-date">Summer 2027 &mdash; Goal 4</div>
+          <div class="tl-title">Submit Annual Report &amp; Renew Designation</div>
+          <p class="tl-desc">Compile cleanup data and submit a yearly report to Caltrans to keep Tam High's Clean California Community status active.</p>
         </div>
+      </div>
+
+      <!-- Support Box -->
+      <div class="support-box">
+        <h3>Help Us Keep It Going</h3>
+        <p>Sustaining a Clean California Community takes ongoing support. Donate to help fund signage and cleanup supplies, or volunteer with TAM AIR at our next event.</p>
+        <div class="support-buttons">
+          <a href="https://www.gofundme.com/f/support-tam-air-protect-marin-from-wildfires" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            <i class="fas fa-hand-holding-heart"></i> Donate on GoFundMe
+          </a>
+          <a href="about.html#contact" class="btn btn-outline btn-lg">
+            <i class="fas fa-hands-helping"></i> Volunteer With Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enforcement Infographic -->
+  <section class="section" style="background: var(--background-alt); padding-top: 2.5rem; padding-bottom: 3rem;">
+    <div class="container">
+      <div class="section-header">
+        <h2>How You Can Help Enforce It</h2>
+        <p>Simple actions every student, family, and community member can take to keep Tam High clean</p>
+      </div>
+      <div class="infographic-wrap">
+        <img src="images/cleanca/4-ways-to-keep-clean.png" alt="4 Ways to Keep Your Community Clean: Sort Properly, Pick Up After Yourself, Join Cleanups, Reduce Waste">
+        <p class="infographic-caption">Share this infographic to help spread the Clean California message at Tam High.</p>
       </div>
     </div>
   </section>
