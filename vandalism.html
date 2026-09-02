@@ -1,14 +1,19 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Vandalism — Street Law</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;background:#101216;overflow:hidden;
- font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif}
+ font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;
+ -webkit-text-size-adjust:100%;overscroll-behavior:none}
+@supports (height:100dvh){html,body{height:100dvh}}
 #stage{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
-#frame{position:relative;width:1280px;height:720px;transform-origin:center center;
+/* flex:none matters -- #frame holds only position:absolute slides, so its
+   min-content width is 0 and a flex container narrower than 1280px would
+   shrink it, applying the scale a second time and shrinking every slide. */
+#frame{position:relative;flex:none;width:1280px;height:720px;transform-origin:center center;
  background:#f7f6f3;box-shadow:0 20px 70px rgba(0,0,0,.55);overflow:hidden}
 .slide{position:absolute;inset:0;display:none;background:#f7f6f3;color:#16181d}
 .slide.on{display:block}
@@ -20,6 +25,24 @@ html,body{margin:0;height:100%;background:#101216;overflow:hidden;
 #fill{height:100%;width:0;background:#d94f0a;transition:width .2s}
 #hud{position:fixed;right:14px;bottom:12px;color:#8b929b;font-size:12px;font-weight:700;z-index:5}
 #help{position:fixed;left:14px;bottom:12px;color:#6d747d;font-size:11.5px;font-weight:600;z-index:5}
+#hud,#help,#ctl{transition:opacity .3s}
+/* ---- on-screen presentation controls ---- */
+#ctl{position:fixed;right:14px;z-index:8;display:flex;gap:7px;
+ bottom:calc(32px + env(safe-area-inset-bottom,0px))}
+#ctl button{height:34px;min-width:34px;padding:0;border-radius:9px;cursor:pointer;
+ border:1px solid rgba(255,255,255,.17);background:rgba(28,31,37,.86);color:#c8ced6;
+ font:inherit;font-size:17px;font-weight:800;line-height:1;
+ display:flex;align-items:center;justify-content:center;
+ -webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px)}
+#ctl button:hover{border-color:#d94f0a;color:#ff9a5f}
+#ctl button:active{transform:translateY(1px)}
+/* extra left padding balances the trailing space letter-spacing adds on the right */
+#fsb{min-width:0;padding:0 12px 0 14px;font-size:11.5px;font-weight:900;letter-spacing:.09em}
+body.presenting #fsb{border-color:#d94f0a;color:#ff9a5f}
+body.idle #ctl,body.idle #hud,body.idle #help{opacity:0;pointer-events:none}
+body.idle{cursor:none}
+body.faux #help{display:none}
+@media (max-width:760px){#help{display:none}}
 #notes{position:fixed;left:0;right:0;bottom:0;max-height:44%;overflow:auto;display:none;
  background:#1c1f25;color:#c8ced6;padding:18px 26px 26px;z-index:6;
  border-top:2px solid #d94f0a;font-size:16px;line-height:1.55}
@@ -102,6 +125,11 @@ html,body{margin:0;height:100%;background:#101216;overflow:hidden;
 <div id="bar"><div id="fill"></div></div>
 <div id="hud"><span id="pos"></span></div>
 <div id="help">→ next · ← back · F fullscreen · N notes · Q quiz</div>
+<div id="ctl">
+  <button id="pv" title="Back (←)" aria-label="Previous slide">‹</button>
+  <button id="nx" title="Next (→)" aria-label="Next slide">›</button>
+  <button id="fsb" title="Fullscreen presentation (F)">PRESENT</button>
+</div>
 <div id="notes"></div>
 <script>
 var NOTES = ["<p>SPEAKER 1   ·   ~12 sec   ·   Vandalism</p><p>[Wait two seconds. Let them watch the GIF.] Hey everyone, today we&#x27;re teaching you about vandalism. Almost everybody in here hears that word and pictures exactly what&#x27;s on the screen, somebody spray painting a wall. That&#x27;s part of it, but it&#x27;s way bigger, and by the end you&#x27;ll know where the actual line is.</p><p>• Wait 2 seconds first</p><p>• Who we are, what the topic is</p><p>• Everyone pictures spray paint</p><p>• It&#x27;s bigger than that</p><p>BACKGROUND: Don&#x27;t open with a fact, open with the word. Everyone already has a picture in their head of what vandalism is and most of it is wrong. Your whole job for the next five minutes is to widen that picture.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 1   ·   ~14 sec   ·   What we&#x27;re covering</p><p>Here&#x27;s how we&#x27;re doing this. Five parts. What vandalism actually is, how it happens, what it costs you, three real cases, and then the one big idea we want you to leave with. And there&#x27;s a quiz at the end, so you might want to pay attention.</p><p>• Five parts</p><p>• What it is / how it happens / what it costs / cases / big idea</p><p>• Warn them about the quiz</p><p>BACKGROUND: Teachers grade partly on whether the class could follow you. This slide is what makes that happen, so don&#x27;t skip it to save time.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 1   ·   ~30 sec   ·   Why should we care?   [PART 1 — WHAT IT IS]</p><p>So first, why should you actually care? Three reasons. One, it doesn&#x27;t take much. We&#x27;re not talking about smashing a car. A sticker counts. A scribble on a desk counts. Two, somebody always pays, and it&#x27;s usually us. Most of what gets hit is public property, so the repair comes out of public money. This school. The buses. The parks. And three, it spreads. Damage nobody fixes tells everyone nobody&#x27;s watching. It&#x27;s the one crime our age group commits without knowing it&#x27;s a crime.</p><p>• Three reasons</p><p>• 1. It doesn&#x27;t take much — sticker, scribble, chalk</p><p>• 2. We pay for it — public property = public money</p><p>• 3. It spreads — nobody fixes it, nobody&#x27;s watching</p><p>• The crime nobody knows they&#x27;re committing</p><p>BACKGROUND: This is the direct answer to the &#x27;why should we care&#x27; question on the assignment sheet, so do not cut it. Reason three is Broken Windows theory, from Wilson and Kelling in 1982: small visible damage nobody repairs signals a place is unwatched and invites bigger crime. New York acted on it in the 1990s and crime dropped, though people still argue how much of that was the theory. You don&#x27;t have to name the theory out loud, but if the teacher asks where reason three comes from, that&#x27;s your answer.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 1   ·   ~12 sec   ·   What vandalism is   [PART 1 — WHAT IT IS]</p><p>So let&#x27;s start with what it actually is, in normal words. Vandalism is messing something up on purpose when it isn&#x27;t yours. That&#x27;s the whole thing. In California the law is Penal Code 594, and everything else we say is just unpacking that one sentence.</p><p>• Plain version first</p><p>• On purpose + not yours</p><p>• Penal Code 594</p><p>BACKGROUND: The exact wording is in the orange box at the top of this sheet. § 594(a): &#x27;Every person who maliciously commits any of the following acts with respect to any real or personal property not his or her own... is guilty of vandalism: (1) Defaces with graffiti or other inscribed material. (2) Damages. (3) Destroys.&#x27;</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 1   ·   ~18 sec   ·   The three parts of the crime   [PART 1 — WHAT IT IS]</p><p>There are three parts, and this matters, because they have to prove all three. [Point at each picture.] One, you did something to it. Two, it wasn&#x27;t yours. Three, you meant to do it. If they can&#x27;t prove even one of those, there&#x27;s no crime at all. So let&#x27;s take them one at a time.</p><p>• Three parts, all three required</p><p>• Did something / not yours / meant to</p><p>• Miss one = no crime</p><p>• Point at each picture</p><p>BACKGROUND: These are the elements of the crime. Each must be proven beyond a reasonable doubt, which is why defense lawyers attack the weakest one instead of arguing the whole case. For vandalism the weak one is almost always the third.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 1   ·   ~22 sec   ·   Deface, damage, or destroy   [PART 2 — HOW IT HAPPENS]</p><p>Part one is what you did, and the law gives three words. Deface, damage, or destroy. Destroy is obvious. Damage is in the middle. But here&#x27;s what gets people. You only need to hit one of the three, and deface is the easy one. Nothing has to break. A sticker counts, and people have been charged over washable chalk.</p><p>• Three words: deface / damage / destroy</p><p>• Only need ONE</p><p>• Deface = nothing has to break</p><p>• Sticker counts, chalk has been charged</p><p>BACKGROUND: Deface means you changed how it looks. Damage means you hurt its value or how it works, but it can be fixed. Destroy means it&#x27;s gone. It doesn&#x27;t matter that the change is temporary, because somebody still has to pay to clean it off.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 1   ·   ~24 sec   ·   Whose property is it   [PART 2 — HOW IT HAPPENS]</p><p>Part two, it has to belong to somebody else. If it&#x27;s completely yours the law doesn&#x27;t care, smash your own phone. But two things catch people. First, shared is still not yours. A car in both your names still gets you charged. And second, renting isn&#x27;t owning. This school, a bus stop, a park bench, none of it is yours.</p><p>• Has to be somebody else&#x27;s</p><p>• Totally yours = law doesn&#x27;t care</p><p>• Shared is still not yours</p><p>• Renting isn&#x27;t owning — school, bus stop, bench</p><p>BACKGROUND: The statute says property &#x27;not his or her own.&#x27; Courts read co-owned property as not entirely yours, so smashing something you half own is still vandalism, which comes up constantly in breakup cases. Renters get caught the same way: you have the right to live there, but you don&#x27;t own the wall.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 1   ·   ~28 sec   ·   Did you mean to do it   [PART 2 — HOW IT HAPPENS]</p><p>Part three is where real cases get won and lost. The law says maliciously, and everybody assumes that means you hated somebody. It doesn&#x27;t. It means on purpose, or to annoy someone. So an accident never counts, no matter how expensive. But here&#x27;s the catch. Even if you beat the charge, you still owe the money. It just turns from a crime into a bill. [Hand off by name.]</p><p>• Where cases are won and lost</p><p>• Malice ≠ hatred</p><p>• = on purpose, or to annoy</p><p>• Accident never counts</p><p>• BUT you still owe the money</p><p>• Hand off</p><p>BACKGROUND: In California, malice here means an intent to do a wrongful act, or to annoy or injure someone. Much lower than hatred, but it still rules out pure accidents and carelessness. Losing on this element kills the criminal charge, not the civil bill. You can walk out with no conviction and still get sued for every dollar.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 2   ·   ~24 sec   ·   Misdemeanor or felony   [PART 3 — WHAT IT COSTS]</p><p>Okay, so all three parts are proven. Now one number decides how serious it gets, and that number is four hundred dollars. Under that, misdemeanor. At four hundred or more the DA picks, misdemeanor or felony, and that&#x27;s called a wobbler. And you don&#x27;t pick that number. The repair bill picks it for you.</p><p>• All three proven → one number matters</p><p>• $400</p><p>• Under = misdemeanor</p><p>• $400+ = DA picks = wobbler</p><p>• You don&#x27;t pick the number</p><p>BACKGROUND: A wobbler is any crime a prosecutor can file either way. They look at your record, how bad the damage was, and whether it was a hate crime. The scary part for a teenager is you have no control over the number: it&#x27;s whatever the victim&#x27;s repair estimate says, and paint removal on a storefront passes $400 fast.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 2   ·   ~22 sec   ·   The fines   [PART 3 — WHAT IT COSTS]</p><p>Here&#x27;s what it costs. Under four hundred, the fine caps at a thousand plus up to 364 days. Four hundred and up, ten thousand. Over ten thousand in damage, fifty thousand and up to three years. But that&#x27;s only the fine. On top of it is restitution, paying the victim back, and restitution has no limit.</p><p>• Under $400 → $1,000 + up to 364 days</p><p>• $400+ → $10,000</p><p>• Over $10,000 damage → $50,000 + up to 3 yrs</p><p>• Fine goes to the court</p><p>• Restitution goes to the victim, NO CAP</p><p>BACKGROUND: The fine is punishment paid to the court. Restitution is repayment to the person you hurt, and California courts must order the full amount with no cap. So the $50,000 figure is the ceiling on only one of the two things you owe.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 2   ·   ~24 sec   ·   What it costs a teenager   [PART 3 — WHAT IT COSTS]</p><p>Honestly though, at our age jail isn&#x27;t what gets you. From thirteen, a conviction can take your license for two years. And your parents automatically owe up to fifty six thousand four hundred dollars. It doesn&#x27;t matter that they had no idea. And a juvenile record doesn&#x27;t just disappear.</p><p>• Jail isn&#x27;t the real problem</p><p>• License gone up to 2 years, from age 13</p><p>• Parents owe up to $56,400 automatically</p><p>• Their knowledge is irrelevant</p><p>• Juvenile records aren&#x27;t auto-sealed</p><p>BACKGROUND: License suspension is Vehicle Code 13202.6. Parent liability is Civil Code 1714.1 and it&#x27;s strict liability, so their knowledge is irrelevant. The original cap was $25,000 and it adjusts for inflation, which is why most websites still print the wrong number.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 2   ·   ~22 sec   ·   Hollyweed, 1976   [PART 4 — REAL CASES]</p><p>Three real cases. The first is right here in California. New Year&#x27;s Day, 1976, an art student draped fifty dollars of bedsheets over two letters of the Hollywood sign so it read HOLLYWEED. Front pages worldwide, and his professor gave him an A. Still a crime, because all three parts were there. A good reason isn&#x27;t a defense.</p><p>• Local-ish: Los Angeles</p><p>• New Year&#x27;s Day 1976</p><p>• $50 of bedsheets, two letters</p><p>• Worldwide news, got an A</p><p>• Still a crime — all three parts</p><p>BACKGROUND: Danny Finegood did it as a class project about how small changes shift perception. He turned the two O&#x27;s into E&#x27;s, so nothing was permanently harmed. That&#x27;s exactly why it works here: no permanent damage is not a defense, and neither is having a good reason.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 2   ·   ~22 sec   ·   5Pointz, New York   [PART 4 — REAL CASES]</p><p>The second goes the opposite direction. A warehouse owner in Queens let artists paint his building legally for twenty years. Then he wanted condos, so one night he whitewashed all of it. They sued under a federal law and won six point seven five million. The graffiti was protected, and the owner was the one who paid.</p><p>• Opposite direction</p><p>• Queens warehouse, 20 years of permission</p><p>• Wanted condos, whitewashed overnight</p><p>• Artists won $6.75 million</p><p>• The OWNER paid</p><p>BACKGROUND: The law is the Visual Artists Rights Act, 17 U.S.C. 106A. It protects art of recognized stature from destruction even by the person who owns the wall. Castillo v. G&amp;M Realty, 2020: 21 artists, 45 works, and the Supreme Court refused the appeal. The judge was harsh specifically because he did it overnight with no notice.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 2   ·   ~24 sec   ·   Devious Licks, 2021   [PART 4 — REAL CASES]</p><p>[Ask: who remembers Devious Licks? Wait for hands.] September 2021, kids ripping stuff out of school bathrooms and letters off school signs, posting it on TikTok. TikTok banned it in fourteen days, but the videos were already out there, and each one was a confession with a timestamp. Seventeen plus teens charged. A trend lasts two weeks. A record doesn&#x27;t. [Hand off.]</p><p>• Ask who remembers it first</p><p>• Sept 2021, school bathrooms, TikTok</p><p>• Banned in 14 days</p><p>• Videos = timestamped confessions</p><p>• 17+ charged</p><p>• Trend lasts 2 weeks, record doesn&#x27;t</p><p>BACKGROUND: Once damage crossed $400 those became felony filings. Vandalism used to be hard to prosecute because you needed a witness. Now people upload timestamped video of themselves, which proves the third element for the prosecutor for free.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 3   ·   ~22 sec   ·   It made national news   [PART 4 — REAL CASES]</p><p>[Point at the photo.] That is a real school bathroom, September 2021. Somebody ripped the soap dispenser straight off the wall. And it wasn&#x27;t one school. NBC Bay Area, PBS, Sacramento, Washington DC, Utah, six newsrooms in about two weeks. So this is what happens when a whole generation finds out at once that something is easy to do. Nobody involved thought they were committing a crime. They thought they were doing a TikTok.</p><p>• Point at the photo first</p><p>• Real school bathroom, Sept 2021</p><p>• Dispenser ripped off the wall</p><p>• 6 newsrooms in ~2 weeks</p><p>• Nobody thought it was a crime</p><p>• They thought it was a trend</p><p>BACKGROUND: The photo is the real thing, not a stand-in. It is a soap dispenser torn off the wall of a Texas public school restroom, photographed on 20 September 2021 while the trend was running, released CC BY-SA 4.0 and credited on slide 20. The headline next to it is the real title of a real NBC Bay Area report. Two of the six outlets are California stations, which also covers the assignment&#x27;s &#x27;local&#x27; suggestion. There is still no video clip here, because a clip needed wifi and a manual setup step. If a teacher specifically wants one, the NBC Bay Area report is at youtube.com/watch?v=ECF7swfKCRo and can be added to slide 15 in Google Slides with Insert then Video.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 3   ·   ~16 sec   ·   How fast the number moves   [PART 4 — REAL CASES]</p><p>Look at how fast this moves. Same crime all three times, the only thing that changes is the repair bill. One tag on a wall, about two hundred fifty dollars, that&#x27;s a misdemeanor. A wall covered end to end, twenty four hundred, now the DA can pick. Glass smashed and etched, fourteen thousand. So the charge isn&#x27;t decided by how bad it looks. It&#x27;s decided by what it costs to fix.</p><p>• Same crime, only the bill changes</p><p>• $250 one tag = misdemeanor</p><p>• $2,400 covered = wobbler</p><p>• $14,000 smashed = felony territory</p><p>• Cost decides the charge, not how it looks</p><p>BACKGROUND: Etched glass is the expensive one, because acid or deep scratching means the pane has to be replaced instead of cleaned, and that is how a storefront clears $10,000 in one night. If someone asks why the middle one is more than the first, it is surface area — painting over a whole facade is a contractor job, not a bucket of solvent.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>SPEAKER 3   ·   ~24 sec   ·   The one question   [PART 5 — THE BIG IDEA]</p><p>[Slow all the way down.] We gave you three parts that get you charged. But there&#x27;s really one question that decides everything. Did somebody who owns it say yes. Banksy paints without asking, textbook vandalism, and instead of charging him owners put glass over it and sell the wall for millions. Same paint. Same wall. The only difference is permission.</p><p>• Slow way down</p><p>• Three parts charge you, one question decides</p><p>• Did someone who owns it say yes</p><p>• Banksy = textbook vandalism, owners protect it</p><p>• Permission is the line</p><p>BACKGROUND: Everything collapses into this. The only variable is whether someone with authority said yes first, and if they did the work can even become protected art the owner isn&#x27;t allowed to destroy. Nobody charges Banksy because nobody knows who he is and owners don&#x27;t want it removed.</p><p>(Full script: Vandalism_SCRIPT.html)</p>","<p>QUIZ MENU — 0 of 5 answered.</p><p>Click question 1. Take the class&#x27;s answer out loud FIRST, then click the option they picked.</p><p>If a link ever misbehaves, just press the right arrow — the slides are in the same order as the quiz.</p>","<p>SPEAKER 3   ·   ~12 sec   ·   Sources and questions   [PART 5 — THE BIG IDEA]</p><p>So that&#x27;s vandalism. Three parts to charge you, and one question that decides all of it. Thanks for listening, and we&#x27;re happy to take questions. [All three step forward.]</p><p>• Recap in one line</p><p>• Any questions?</p><p>• All three step forward</p><p>BACKGROUND: Likely questions. Cleaning it up right away doesn&#x27;t undo the crime but helps a lot at sentencing. Tagging your own house isn&#x27;t vandalism unless you rent. Murals with permission are legal and can become VARA-protected. Banksy isn&#x27;t in jail because he&#x27;s anonymous and owners don&#x27;t press charges.</p><p>(Full script: Vandalism_SCRIPT.html)</p>"];
@@ -121,7 +149,78 @@ function show(){
 }
 function go(d){ i = Math.min(N-1, Math.max(0, i+d)); show(); }
 addEventListener('resize', fit);
+// ---- presentation mode --------------------------------------------------
+// Online this has to work three ways: the standard Fullscreen API, Safari's
+// webkit- prefix, and iOS, which has no Fullscreen API at all -- there we fall
+// back to 'faux' mode, which keeps the same chrome-hiding behaviour in-page.
+var ctl = document.getElementById('ctl'), fsb = document.getElementById('fsb');
+var idleT = null, swipeGuard = false;
+function fsEl(){ return document.fullscreenElement || document.webkitFullscreenElement || null; }
+function presenting(){ return !!fsEl() || document.body.classList.contains('faux'); }
+function wake(stop){
+  document.body.classList.remove('idle');
+  clearTimeout(idleT);
+  if (!stop && presenting()) idleT = setTimeout(function(){ document.body.classList.add('idle'); }, 2600);
+}
+function paintFS(){
+  var on = presenting();
+  document.body.classList.toggle('presenting', on);
+  fsb.textContent = on ? 'EXIT' : 'PRESENT';
+  fsb.title = on ? 'Leave presentation mode (Esc)' : 'Fullscreen presentation (F)';
+  wake(!on);
+  fit();
+}
+function enterFS(){
+  var d = document.documentElement;
+  var req = d.requestFullscreen || d.webkitRequestFullscreen;
+  // Go into presentation mode straight away, then ask for real fullscreen.
+  // If the browser grants it, fullscreenchange clears 'faux' below; if it
+  // refuses or has no API at all (iOS), 'faux' just stays and we present
+  // in-page. No timers, so it cannot end up half on and half off.
+  document.body.classList.add('faux');
+  if (req){
+    try { var p = req.call(d); if (p && p['catch']) p['catch'](function(){}); }
+    catch (err) {}
+  }
+  paintFS();
+}
+function leaveFS(){
+  document.body.classList.remove('faux');
+  if (fsEl()){
+    if (document.exitFullscreen) document.exitFullscreen();
+    else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+  }
+  paintFS();
+}
+function toggleFS(){ if (presenting()) leaveFS(); else enterFS(); }
+fsb.addEventListener('click', function(ev){ ev.stopPropagation(); toggleFS(); });
+document.getElementById('pv').addEventListener('click', function(ev){ ev.stopPropagation(); go(-1); });
+document.getElementById('nx').addEventListener('click', function(ev){ ev.stopPropagation(); go(1); });
+['fullscreenchange','webkitfullscreenchange'].forEach(function(t){
+  document.addEventListener(t, function(){
+    document.body.classList.remove('faux');   // real fullscreen took over, or we just left it
+    paintFS();
+  });
+});
+addEventListener('orientationchange', function(){ setTimeout(fit, 220); });
+['mousemove','mousedown','touchstart','keydown'].forEach(function(t){
+  addEventListener(t, function(){ wake(); }, {passive:true});
+});
+// swipe to move between slides on a phone or a trackpad-less tablet
+var tsX = 0, tsY = 0, tsT = 0;
+addEventListener('touchstart', function(ev){
+  var t = ev.changedTouches[0]; tsX = t.clientX; tsY = t.clientY; tsT = Date.now();
+}, {passive:true});
+addEventListener('touchend', function(ev){
+  if (ev.target.closest && (ev.target.closest('.quiz') || ev.target.closest('#ctl'))) return;
+  var t = ev.changedTouches[0], dx = t.clientX - tsX, dy = t.clientY - tsY;
+  if (Date.now() - tsT > 700 || Math.abs(dx) < 45 || Math.abs(dx) < Math.abs(dy) * 1.4) return;
+  swipeGuard = true;                      // stop the trailing click advancing a second slide
+  setTimeout(function(){ swipeGuard = false; }, 500);
+  go(dx < 0 ? 1 : -1);
+}, {passive:true});
 document.getElementById('stage').addEventListener('click', function(ev){
+  if (swipeGuard) return;
   if (ev.target.closest('.quiz') || ev.target.closest('.vid')) return;  // quiz + player own their clicks
   go(1);
 });
@@ -131,10 +230,8 @@ addEventListener('keydown', function(ev){
   else if (k === 'ArrowLeft' || k === 'PageUp'){ ev.preventDefault(); go(-1); }
   else if (k === 'Home'){ i = 0; show(); }
   else if (k === 'End'){ i = N-1; show(); }
-  else if (k === 'f' || k === 'F'){
-    if (document.fullscreenElement) document.exitFullscreen();
-    else document.documentElement.requestFullscreen();
-  }
+  else if (k === 'f' || k === 'F'){ ev.preventDefault(); toggleFS(); }
+  else if (k === 'Escape'){ if (!fsEl()) leaveFS(); }   // real fullscreen: the browser handles Esc
   else if (k === 'n' || k === 'N'){ notes.classList.toggle('on'); fit(); }
   else if (k === 'q' || k === 'Q'){ if (QUIZ_I >= 0){ i = QUIZ_I; show(); } }
 });
@@ -176,4 +273,5 @@ addEventListener('keydown', function(ev){
   paint();
 })();
 show();
+paintFS();
 </script></body></html>
