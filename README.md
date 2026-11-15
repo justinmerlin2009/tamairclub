@@ -1,6 +1,6 @@
 # TAM AIR Club Website
 
-Modern, responsive website for TAM AIR Non-Profit - a student-led organization using 3D printed drone technology to conserve nature and protect Marin County's landscapes.
+Modern, responsive website for TAM AIR Club - a student-led not-for-profit club using 3D printed drone technology to conserve nature and protect Marin County's landscapes.
 
 ## Features
 
