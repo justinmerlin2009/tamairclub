@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TAM AIR Club Wildfire Research Initiative - A collaboration with CAL FIRE, UCSF, and UCI to predict and prevent California wildfires using machine learning.">
+  <meta name="description" content="TAM AIR Club wildfire research with CAL FIRE, UC Irvine and UCSF: machine-learning wildfire risk prediction for California. Explore the maps, figures and analysis in the Wildfire Explorer.">
   <title>Wildfire Research | TAM AIR Club</title>
 
   <link rel="icon" type="image/png" href="images/logo.png">
@@ -13,6 +13,39 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css?v=2">
   <link rel="stylesheet" href="css/responsive.css?v=2">
+  <style>
+    /* Research page only. Uses the site's theme tokens so light and dark modes both work. */
+    .rs-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .rs-cta { box-shadow: 0 8px 24px rgba(34, 197, 94, 0.35); }
+    .rs-hero-figure { position: relative; display: block; border-radius: 1rem; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25); transition: transform 0.2s ease; }
+    .rs-hero-figure:hover { transform: translateY(-4px); }
+    .rs-hero-figure img { display: block; width: 100%; height: auto; }
+    .rs-hero-caption { position: absolute; left: 1rem; bottom: 1rem; display: inline-flex; gap: 0.5rem; align-items: center; background: rgba(15, 23, 42, 0.85); color: #fff; font-size: 0.85rem; font-weight: 500; padding: 0.5rem 0.85rem; border-radius: 0.5rem; }
+    .rs-tile { display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: transform 0.2s ease, border-color 0.2s ease; }
+    .rs-tile:hover { transform: translateY(-4px); border-color: var(--primary); }
+    .rs-tile h3 { margin: 1rem 0 0.5rem; }
+    .rs-tile .card-text { flex: 1; }
+    .rs-tile-link { margin-top: 1rem; color: var(--primary); font-weight: 600; font-size: 0.95rem; }
+    .rs-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; text-align: center; }
+    .rs-predictors { margin-top: 2rem; padding: 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; }
+    .rs-predictors h3 { margin-bottom: 0.75rem; }
+    .rs-list { padding-left: 1.25rem; list-style: disc; margin: 0 0 1rem; }
+    .rs-list li { margin-bottom: 0.4rem; color: var(--text-secondary); }
+    .rs-sources { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.75rem; }
+    .rs-source { display: flex; flex-direction: column; gap: 0.25rem; padding: 1rem 1.25rem; background: var(--surface); border: 1px solid var(--border); border-radius: 0.75rem; text-decoration: none; transition: border-color 0.2s ease, transform 0.2s ease; }
+    .rs-source:hover { border-color: var(--primary); transform: translateY(-2px); }
+    .rs-source strong { color: var(--text-primary, inherit); }
+    .rs-source span { color: var(--text-secondary); font-size: 0.85rem; }
+    .rs-doc { display: flex; flex-direction: column; align-items: flex-start; padding: 1.75rem; }
+    .rs-fig { display: block; width: 100%; height: 300px; object-fit: contain; background: #fff; padding: 0.5rem; border-radius: 1rem 1rem 0 0; }
+    .rs-doc > i { font-size: 2.25rem; margin-bottom: 1rem; }
+    .rs-doc h3 { margin-bottom: 0.5rem; }
+    .rs-doc .card-text { flex: 1; margin-bottom: 1.25rem; }
+    @media (max-width: 768px) {
+      .rs-predictors { grid-template-columns: 1fr; }
+      .rs-hero-figure { max-width: 520px; margin: 0 auto; }
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -63,31 +96,187 @@
     </div>
   </header>
 
-  <!-- Research Hero -->
+  <!-- Research Hero: Wildfire Explorer first -->
   <section class="section">
     <div class="container">
       <div class="mission-content">
         <div class="mission-text">
-          <h2><i class="fas fa-fire text-primary"></i> California Wildfire Prediction</h2>
-          <p style="font-size: 1.1rem; margin-bottom: 1rem;">
-            <strong>TAM AIR Club &times; CAL FIRE &times; UCI &times; UCSF</strong>
+          <span class="rs-eyebrow"><i class="fas fa-fire"></i> California Wildfire Prediction</span>
+          <h2 style="margin-top: 0.75rem;">Explore 30 years of California fire, climate and terrain data</h2>
+          <p style="font-size: 1.05rem; margin-bottom: 1rem;">
+            <strong>TAM AIR Club &times; CAL FIRE &times; UC Irvine &times; UCSF</strong>
           </p>
           <p>
-            Our research initiative aims to build a pixel-wise wildfire risk prediction system for California at 800m &times; 800m resolution using machine learning. By analyzing over 147 years of fire perimeter data, we're developing tools to help predict and prevent catastrophic wildfires.
+            We are building a machine-learning system that predicts where wildfires are likely to start next month, on an 800&nbsp;m &times; 800&nbsp;m grid covering all of California. Twelve datasets &mdash; fire history, climate, terrain, vegetation, population and infrastructure &mdash; are combined on that grid.
           </p>
           <p>
-            This collaboration brings together high school researchers, university academics, and California's fire management professionals to tackle one of the state's most pressing environmental challenges.
+            Everything we have built so far is open to explore in the <strong>Wildfire Explorer</strong>: interactive maps, every figure, the statistical analysis and our literature review.
           </p>
+          <div class="hero-buttons" style="justify-content: flex-start; margin-top: 1.5rem;">
+            <a href="wildfire-explorer/" class="btn btn-primary btn-lg rs-cta">
+              <i class="fas fa-map-location-dot"></i> Open the Wildfire Explorer <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#findings" class="btn btn-outline btn-lg">
+              <i class="fas fa-magnifying-glass-chart"></i> See our findings
+            </a>
+          </div>
         </div>
-        <div style="background: var(--surface); border-radius: 1rem; padding: 2rem; border: 1px solid var(--border);">
-          <h3 style="margin-bottom: 1.5rem;"><i class="fas fa-database text-primary"></i> Dataset Overview</h3>
-          <ul style="padding-left: 1.25rem; list-style: disc;">
-            <li style="margin-bottom: 1rem; color: var(--text-secondary);"><strong>22,000+</strong> fire perimeters analyzed</li>
-            <li style="margin-bottom: 1rem; color: var(--text-secondary);"><strong>147 years</strong> of historical data (1878-2025)</li>
-            <li style="margin-bottom: 1rem; color: var(--text-secondary);"><strong>97%+</strong> data completeness for key fields (post-1993)</li>
-            <li style="color: var(--text-secondary);"><strong>GPS-based</strong> high-quality perimeter data</li>
+        <a href="wildfire-explorer/?p=maps" class="rs-hero-figure" aria-label="Open the interactive maps in the Wildfire Explorer">
+          <img src="images/research/explorer-map.jpg" alt="Wildfire Explorer map of California showing the monthly fire-danger index (Energy Release Component) for August" width="891" height="900">
+          <span class="rs-hero-caption"><i class="fas fa-layer-group"></i> Monthly fire-danger map in the Wildfire Explorer</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inside the Wildfire Explorer -->
+  <section class="section" style="background: var(--background-alt);">
+    <div class="container">
+      <div class="section-header">
+        <h2><i class="fas fa-compass text-primary"></i> Inside the Wildfire Explorer</h2>
+        <p>Jump straight to any part of the project</p>
+      </div>
+
+      <div class="grid grid-4">
+        <a href="wildfire-explorer/?p=maps" class="card rs-tile">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);"><i class="fas fa-map"></i></div>
+          <h3>Interactive Maps</h3>
+          <p class="card-text">18 map layers &mdash; temperature, rainfall, fire danger, wind, population, terrain &mdash; month by month from 1993 to 2025.</p>
+          <span class="rs-tile-link">Open maps <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="wildfire-explorer/?p=gallery" class="card rs-tile">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);"><i class="fas fa-images"></i></div>
+          <h3>289 Figures</h3>
+          <p class="card-text">Every chart and map from our analysis of the 12 datasets, searchable by dataset.</p>
+          <span class="rs-tile-link">Browse figures <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="wildfire-explorer/?p=analysis" class="card rs-tile">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);"><i class="fas fa-chart-column"></i></div>
+          <h3>Statistical Analysis</h3>
+          <p class="card-text">104 possible risk factors ranked by 11 methods, plus our first prediction models and how well they perform.</p>
+          <span class="rs-tile-link">See the analysis <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="wildfire-explorer/?p=literature" class="card rs-tile">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);"><i class="fas fa-book-open"></i></div>
+          <h3>Literature Review</h3>
+          <p class="card-text">52 research papers (2016&ndash;2026) on machine learning for wildfire prediction, summarized.</p>
+          <span class="rs-tile-link">Read the review <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- At a glance -->
+  <section style="padding: 3rem 0;">
+    <div class="container">
+      <div class="rs-stats">
+        <div><div class="stat-number">12</div><div class="stat-label">datasets combined</div></div>
+        <div><div class="stat-number">22,000+</div><div class="stat-label">fire perimeters</div></div>
+        <div><div class="stat-number">146</div><div class="stat-label">years of fire records</div></div>
+        <div><div class="stat-number">800&nbsp;m</div><div class="stat-label">prediction grid</div></div>
+        <div><div class="stat-number">300+</div><div class="stat-label">figures produced</div></div>
+        <div><div class="stat-number">52</div><div class="stat-label">papers reviewed</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Findings -->
+  <section class="section" id="findings" style="background: var(--background-alt);">
+    <div class="container">
+      <div class="section-header">
+        <h2><i class="fas fa-lightbulb text-primary"></i> What We Found</h2>
+        <p>Highlights from California&rsquo;s fire history and our statistical analysis</p>
+      </div>
+
+      <div class="grid grid-4 features-grid">
+        <div class="card feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);"><i class="fas fa-fire-flame-curved"></i></div>
+          <h3>4.2 Million</h3>
+          <p class="card-text">Acres burned in 2020 alone &mdash; California&rsquo;s worst fire year on record</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);"><i class="fas fa-sun"></i></div>
+          <h3>84%</h3>
+          <p class="card-text">Of burned acreage occurs during the June&ndash;September fire season</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);"><i class="fas fa-chart-pie"></i></div>
+          <h3>Top 1%</h3>
+          <p class="card-text">Of fires cause 58% of all damage &mdash; an extreme concentration of risk</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);"><i class="fas fa-mountain"></i></div>
+          <h3>38 Mega-fires</h3>
+          <p class="card-text">Fires larger than 100,000 acres recorded since 1993</p>
+        </div>
+      </div>
+
+      <div class="card rs-predictors">
+        <div>
+          <h3><i class="fas fa-temperature-arrow-up text-primary"></i> What drives next month&rsquo;s fire risk?</h3>
+          <p class="card-text">
+            We ranked 104 possible risk factors with 11 independent statistical methods. The factors that consistently came out on top were:
+          </p>
+          <ul class="rs-list">
+            <li><strong>Last month&rsquo;s heat</strong> &mdash; mean and maximum temperature</li>
+            <li><strong>Fire danger</strong> &mdash; the Energy Release Component used by fire agencies</li>
+            <li><strong>Dry air</strong> &mdash; vapor-pressure deficit, especially at higher elevations</li>
+            <li><strong>Terrain</strong> &mdash; slope and elevation</li>
           </ul>
+          <p class="card-text" style="margin-bottom: 0;">
+            Early machine-learning models built on these factors already separate high- and low-risk areas well. The full results are in the Explorer.
+          </p>
         </div>
+        <a href="wildfire-explorer/?p=analysis" class="btn btn-primary">
+          <i class="fas fa-chart-column"></i> Full statistical analysis
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Visualizations -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2><i class="fas fa-chart-bar text-primary"></i> Featured Figures</h2>
+        <p>Four highlights from our analysis of CAL FIRE&rsquo;s historical fire perimeters</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="research/figures/executive-dashboard.png" alt="Executive Dashboard - 10-panel overview of California wildfire data" loading="lazy" class="rs-fig">
+          <div style="padding: 1.5rem;">
+            <h3 class="card-title"><i class="fas fa-tachometer-alt text-primary"></i> Executive Dashboard</h3>
+            <p class="card-text">A 10-panel overview of fire counts, burned acreage, seasons, fire sizes, causes and responding agencies over the past 30+ years.</p>
+          </div>
+        </div>
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="research/figures/fire-clock.png" alt="Fire Clock - Seasonal fire patterns visualization" loading="lazy" class="rs-fig">
+          <div style="padding: 1.5rem;">
+            <h3 class="card-title"><i class="fas fa-clock text-primary"></i> Fire Clock</h3>
+            <p class="card-text">Acres burned (outer ring) and fire counts (inner ring) by month, showing the June&ndash;September peak.</p>
+          </div>
+        </div>
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="research/figures/risk-map.png" alt="Cumulative Fire Risk Map of California" loading="lazy" class="rs-fig">
+          <div style="padding: 1.5rem;">
+            <h3 class="card-title"><i class="fas fa-map text-primary"></i> Cumulative Fire Risk Map</h3>
+            <p class="card-text">How often each part of California has burned, revealing the areas with repeated fire activity.</p>
+          </div>
+        </div>
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <img src="research/figures/trend-analysis.png" alt="Trend Analysis showing wildfire acceleration" loading="lazy" class="rs-fig">
+          <div style="padding: 1.5rem;">
+            <h3 class="card-title"><i class="fas fa-chart-line text-primary"></i> Trend Analysis</h3>
+            <p class="card-text">Area burned since 1950 with a fitted trend, showing the acceleration of wildfires since 2000.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 2rem;">
+        <a href="wildfire-explorer/?p=gallery" class="btn btn-outline btn-lg">
+          <i class="fas fa-images"></i> See all 289 figures in the Explorer
+        </a>
       </div>
     </div>
   </section>
@@ -97,253 +286,125 @@
     <div class="container">
       <div class="section-header">
         <h2><i class="fas fa-road text-primary"></i> Project Roadmap</h2>
-        <p>Our multi-phase approach to building a wildfire prediction model</p>
+        <p>Seven of nine phases complete</p>
       </div>
 
       <div class="timeline">
         <div class="timeline-item">
-          <div class="timeline-marker completed">
-            <i class="fas fa-check"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>Phase 1: CAL FIRE Historical Perimeters</h3>
-            <span class="badge" style="background: var(--primary); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">COMPLETED</span>
-            <p>Comprehensive analysis of 22,000+ fire perimeters. Created 19 publication-quality visualizations. Identified key patterns and data quality thresholds.</p>
-          </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Phase 1 &middot; Complete &middot; Oct 2024</div>
+          <h4>Data Collection &amp; Inventory</h4>
+          <p style="color: var(--text-secondary);">Gathered 12 geospatial datasets covering fire history, climate, terrain, vegetation, population, infrastructure and wind.</p>
         </div>
-
         <div class="timeline-item">
-          <div class="timeline-marker current">
-            <i class="fas fa-spinner fa-spin"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>Phase 2: Fire Ignition Points</h3>
-            <span class="badge" style="background: var(--text-secondary); color: white; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem;">IN PROGRESS</span>
-            <p>Analyze fire ignition point dataset to understand fire origin patterns, causes, and spatial distribution across California.</p>
-          </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Phase 2 &middot; Complete &middot; Oct&ndash;Nov 2024</div>
+          <h4>Building the 800&nbsp;m Grid</h4>
+          <p style="color: var(--text-secondary);">Put every dataset on one common 800-meter grid covering California, so they can be compared pixel by pixel.</p>
         </div>
-
         <div class="timeline-item">
-          <div class="timeline-marker">
-            <i class="fas fa-tree"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>Phase 3: Vegetation Data</h3>
-            <span class="badge" style="background: transparent; color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--border);">PLANNED</span>
-            <p>Analyze vegetation and fuel load data to understand how different land cover types influence fire behavior and spread.</p>
-          </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Phase 3 &middot; Complete &middot; Nov&ndash;Dec 2024</div>
+          <h4>Fire History Analysis</h4>
+          <p style="color: var(--text-secondary);">Trends, locations and causes across the CAL FIRE, MTBS and FPA-FOD fire datasets.</p>
         </div>
-
         <div class="timeline-item">
-          <div class="timeline-marker">
-            <i class="fas fa-mountain"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>Phase 4: Topography &amp; Lakes</h3>
-            <span class="badge" style="background: transparent; color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--border);">PLANNED</span>
-            <p>Incorporate elevation, slope, aspect, and water body data to understand terrain influences on fire risk and natural fire breaks.</p>
-          </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Phase 4 &middot; Complete &middot; Dec 2024&ndash;Jan 2025</div>
+          <h4>Terrain &amp; Vegetation Analysis</h4>
+          <p style="color: var(--text-secondary);">Elevation, slope, aspect, tree canopy and vegetation types &mdash; the landscape and the fuel it carries.</p>
         </div>
-
         <div class="timeline-item">
-          <div class="timeline-marker">
-            <i class="fas fa-cloud-sun"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>Phase 5: PRISM Weather Data</h3>
-            <span class="badge" style="background: transparent; color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--border);">PLANNED</span>
-            <p>Integrate PRISM climate data including temperature, precipitation, and vapor pressure deficit to model weather-driven fire risk.</p>
-          </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Phase 5 &middot; Complete &middot; Jan&ndash;Mar 2025</div>
+          <h4>Climate Analysis</h4>
+          <p style="color: var(--text-secondary);">A three-part study of PRISM climate data; dry air (vapor-pressure deficit) stood out as the strongest climate signal.</p>
         </div>
-
         <div class="timeline-item">
-          <div class="timeline-marker">
-            <i class="fas fa-road"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>Phase 6: Census, Roads &amp; Power Lines</h3>
-            <span class="badge" style="background: transparent; color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--border);">PLANNED</span>
-            <p>Analyze human infrastructure data including population density, road networks, and electrical lines as ignition risk factors.</p>
-          </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Phase 6 &middot; Complete &middot; Mar&ndash;Jun 2025</div>
+          <h4>People, Infrastructure &amp; Wind</h4>
+          <p style="color: var(--text-secondary);">Population and housing near wildlands, fires near roads and power lines, and fire-weather wind patterns.</p>
         </div>
-
         <div class="timeline-item">
-          <div class="timeline-marker">
-            <i class="fas fa-lightbulb"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>Phase 7: Hypothesis &amp; Methodology</h3>
-            <span class="badge" style="background: transparent; color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--border);">PLANNED</span>
-            <p>Synthesize findings from all datasets to form research hypotheses and develop methodology for statistical analyses.</p>
-          </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Phase 7 &middot; Complete &middot; Jul 2025&ndash;Mar 2026</div>
+          <h4>Statistical Analysis</h4>
+          <p style="color: var(--text-secondary);">Ranked 104 risk factors with 11 methods and built the first baseline prediction models.</p>
         </div>
-
         <div class="timeline-item">
-          <div class="timeline-marker">
-            <i class="fas fa-chart-bar"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>Phase 8: Statistical Analyses</h3>
-            <span class="badge" style="background: transparent; color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--border);">PLANNED</span>
-            <p>Conduct multiple statistical analyses to identify significant predictors and build predictive models for wildfire risk.</p>
-          </div>
+          <div class="timeline-dot" style="background: transparent; border: 3px solid var(--primary);"></div>
+          <div class="timeline-date">Phase 8 &middot; Next</div>
+          <h4>Deep Learning Model</h4>
+          <p style="color: var(--text-secondary);">A spatio-temporal neural network that predicts next month&rsquo;s fire risk across the 800&nbsp;m grid.</p>
         </div>
-
         <div class="timeline-item">
-          <div class="timeline-marker">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>Phase 9: Web Application for CAL FIRE</h3>
-            <span class="badge" style="background: transparent; color: var(--text-secondary); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; border: 1px solid var(--border);">FUTURE</span>
-            <p>Develop backend and frontend web application to deliver research results and predictive tools to CAL FIRE personnel.</p>
-          </div>
+          <div class="timeline-dot" style="background: transparent; border: 3px solid var(--primary);"></div>
+          <div class="timeline-date">Phase 9 &middot; Next</div>
+          <h4>Validation &amp; a Tool for CAL FIRE</h4>
+          <p style="color: var(--text-secondary);">Test the model on recent fire seasons and deliver it as a risk-assessment tool for fire professionals.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Key Findings Statistics -->
+  <!-- Data Sources -->
   <section class="section">
     <div class="container">
       <div class="section-header">
-        <h2>Key Findings</h2>
-        <p>Critical insights from our exploratory data analysis</p>
+        <h2><i class="fas fa-database text-primary"></i> Data Sources</h2>
+        <p>Twelve public datasets &mdash; click any one to explore it in the Wildfire Explorer</p>
       </div>
 
-      <div class="grid grid-4 features-grid">
-        <div class="card feature-card">
-          <div class="feature-icon" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
-            <i class="fas fa-fire-flame-curved"></i>
-          </div>
-          <h3>4.2 Million</h3>
-          <p class="card-text">Acres burned in 2020 alone - California's worst fire year on record</p>
-        </div>
-
-        <div class="card feature-card">
-          <div class="feature-icon" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
-            <i class="fas fa-sun"></i>
-          </div>
-          <h3>84%</h3>
-          <p class="card-text">Of burned acreage occurs during June-September fire season</p>
-        </div>
-
-        <div class="card feature-card">
-          <div class="feature-icon" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
-            <i class="fas fa-chart-pie"></i>
-          </div>
-          <h3>Top 1%</h3>
-          <p class="card-text">Of fires cause 58% of all damage - extreme concentration of risk</p>
-        </div>
-
-        <div class="card feature-card">
-          <div class="feature-icon" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);">
-            <i class="fas fa-mountain"></i>
-          </div>
-          <h3>38 Mega-fires</h3>
-          <p class="card-text">Fires exceeding 100,000 acres recorded since 1993</p>
-        </div>
+      <div class="rs-sources">
+        <a href="wildfire-explorer/?p=datasets/comprehensive" class="rs-source"><strong>CAL FIRE Fire Perimeters</strong><span>CAL FIRE / FRAP &middot; 1878&ndash;2024</span></a>
+        <a href="wildfire-explorer/?p=datasets/mtbs" class="rs-source"><strong>MTBS Burn Severity</strong><span>USGS / USFS &middot; 1984&ndash;2024</span></a>
+        <a href="wildfire-explorer/?p=datasets/fpa" class="rs-source"><strong>FPA Fire Occurrence</strong><span>US Forest Service &middot; 1992&ndash;2020</span></a>
+        <a href="wildfire-explorer/?p=datasets/topography" class="rs-source"><strong>Topography &amp; Terrain</strong><span>USGS 3D Elevation Program</span></a>
+        <a href="wildfire-explorer/?p=datasets/landfire_cc" class="rs-source"><strong>LANDFIRE Canopy Cover</strong><span>USDA / DOI LANDFIRE &middot; 2001&ndash;2023</span></a>
+        <a href="wildfire-explorer/?p=datasets/vegetation" class="rs-source"><strong>FVEG Vegetation Types</strong><span>CAL FIRE / FRAP &middot; 2015&ndash;2022</span></a>
+        <a href="wildfire-explorer/?p=datasets/prism_conus" class="rs-source"><strong>PRISM Climate (U.S.)</strong><span>Oregon State PRISM Group &middot; 1895&ndash;2024</span></a>
+        <a href="wildfire-explorer/?p=datasets/prism_california" class="rs-source"><strong>PRISM Climate (California)</strong><span>Oregon State PRISM Group &middot; 1895&ndash;2024</span></a>
+        <a href="wildfire-explorer/?p=datasets/prism_fire" class="rs-source"><strong>Fire&ndash;Climate Overlay</strong><span>PRISM + CAL FIRE + MTBS &middot; 1984&ndash;2024</span></a>
+        <a href="wildfire-explorer/?p=datasets/census" class="rs-source"><strong>Population &amp; Housing</strong><span>US Census Bureau &middot; 1993&ndash;2025</span></a>
+        <a href="wildfire-explorer/?p=datasets/infra" class="rs-source"><strong>Roads &amp; Power Lines</strong><span>Census TIGER / HIFLD &middot; 2010&ndash;2024</span></a>
+        <a href="wildfire-explorer/?p=datasets/wind" class="rs-source"><strong>Wind &amp; Fire Weather</strong><span>RAWS / CEFA + SPC &middot; 1993&ndash;2024</span></a>
       </div>
     </div>
   </section>
 
-  <!-- Featured Visualizations -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2><i class="fas fa-chart-bar text-primary"></i> Research Visualizations</h2>
-        <p>Key findings from our comprehensive exploratory data analysis</p>
-      </div>
-
-      <div class="grid grid-2">
-        <!-- Executive Dashboard -->
-        <div class="card" style="padding: 0; overflow: hidden;">
-          <img src="research/figures/executive-dashboard.png" alt="Executive Dashboard - 10-panel overview of California wildfire data" style="width: 100%; height: auto; border-radius: 1rem 1rem 0 0;">
-          <div style="padding: 1.5rem;">
-            <h3 class="card-title"><i class="fas fa-tachometer-alt text-primary"></i> Executive Dashboard</h3>
-            <p class="card-text">Comprehensive 10-panel overview showing fire counts, burned acreage trends, seasonal patterns, size distributions, causes, and responding agencies over the past 30+ years.</p>
-          </div>
-        </div>
-
-        <!-- Fire Clock -->
-        <div class="card" style="padding: 0; overflow: hidden;">
-          <img src="research/figures/fire-clock.png" alt="Fire Clock - Seasonal fire patterns visualization" style="width: 100%; height: auto; border-radius: 1rem 1rem 0 0;">
-          <div style="padding: 1.5rem;">
-            <h3 class="card-title"><i class="fas fa-clock text-primary"></i> Fire Clock</h3>
-            <p class="card-text">Polar visualization showing seasonal fire patterns. The outer ring displays acres burned by month, while the inner ring shows fire counts - clearly demonstrating the June-September peak.</p>
-          </div>
-        </div>
-
-        <!-- Cumulative Risk Map -->
-        <div class="card" style="padding: 0; overflow: hidden;">
-          <img src="research/figures/risk-map.png" alt="Cumulative Fire Risk Map of California" style="width: 100%; height: auto; border-radius: 1rem 1rem 0 0;">
-          <div style="padding: 1.5rem;">
-            <h3 class="card-title"><i class="fas fa-map text-primary"></i> Cumulative Fire Risk Map</h3>
-            <p class="card-text">Burn frequency heatmap at 1000m resolution showing high-risk zones across California. This visualization helps identify areas that have experienced repeated fire activity.</p>
-          </div>
-        </div>
-
-        <!-- Trend Analysis -->
-        <div class="card" style="padding: 0; overflow: hidden;">
-          <img src="research/figures/trend-analysis.png" alt="Trend Analysis showing wildfire acceleration" style="width: 100%; height: auto; border-radius: 1rem 1rem 0 0;">
-          <div style="padding: 1.5rem;">
-            <h3 class="card-title"><i class="fas fa-chart-line text-primary"></i> Trend Analysis</h3>
-            <p class="card-text">Statistical visualization from 1950-present with fitted regression line providing clear evidence of wildfire acceleration, particularly pronounced after 2000.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Map Section -->
+  <!-- Documents, Code and Interactive Map -->
   <section class="section" style="background: var(--background-alt);">
     <div class="container">
       <div class="section-header">
-        <h2><i class="fas fa-globe text-primary"></i> Interactive Mega-Fires Map</h2>
-        <p>Explore all 38 mega-fires (>100,000 acres) recorded since 1993</p>
+        <h2><i class="fas fa-file-alt text-primary"></i> Reports, Notebooks &amp; Code</h2>
+        <p>Read the full report, follow the analysis step by step, or explore the mega-fires map</p>
       </div>
 
-      <div class="card" style="text-align: center; padding: 2rem;">
-        <div style="background: var(--surface); border-radius: 1rem; padding: 3rem; margin-bottom: 1.5rem; border: 2px dashed var(--border);">
-          <i class="fas fa-map-marked-alt" style="font-size: 4rem; color: var(--primary); margin-bottom: 1rem; display: block;"></i>
-          <h3 style="margin-bottom: 0.5rem;">Interactive Folium Map</h3>
-          <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Click below to explore the full interactive map with all mega-fire perimeters, details, and filtering options.</p>
-          <a href="research/interactive/mega-fires-map.html" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-            <i class="fas fa-external-link-alt"></i> Open Interactive Map
-          </a>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem;">
-            <i class="fas fa-info-circle"></i> Note: Large file (~35MB). Best viewed on desktop.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Research Documents -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2><i class="fas fa-file-alt text-primary"></i> Research Documents</h2>
-        <p>Download our comprehensive analysis report and explore the methodology</p>
-      </div>
-
-      <div class="grid grid-2">
-        <div class="card" style="text-align: center; padding: 2rem;">
-          <i class="fas fa-file-pdf" style="font-size: 4rem; color: #ef4444; margin-bottom: 1rem;"></i>
+      <div class="grid grid-4">
+        <div class="card rs-doc">
+          <i class="fas fa-file-pdf" style="color: #ef4444;"></i>
           <h3>Full Analysis Report</h3>
-          <p class="card-text" style="margin-bottom: 1.5rem;">Complete exploratory data analysis with 19 high-resolution figures, statistical findings, and methodology documentation.</p>
-          <a href="research/CALFIRE_Analysis_Report.pdf" target="_blank" rel="noopener" class="btn btn-primary">
-            <i class="fas fa-download"></i> Download PDF (3.6 MB)
-          </a>
+          <p class="card-text">Exploratory analysis of CAL FIRE&rsquo;s fire perimeters, with 19 high-resolution figures and methods.</p>
+          <a href="research/CALFIRE_Analysis_Report.pdf" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fas fa-download"></i> PDF (3.6 MB)</a>
         </div>
-
-        <div class="card" style="text-align: center; padding: 2rem;">
-          <i class="fab fa-python" style="font-size: 4rem; color: #3776ab; margin-bottom: 1rem;"></i>
-          <h3>Jupyter Notebooks</h3>
-          <p class="card-text" style="margin-bottom: 1.5rem;">View our analysis notebooks with full code, methodology explanations, and reproducible results using Python and GeoPandas.</p>
-          <a href="https://github.com/justinmerlin2009/wildfire_prediction_model_california/tree/main" target="_blank" rel="noopener" class="btn btn-outline">
-            <i class="fab fa-github"></i> View on GitHub
-          </a>
+        <div class="card rs-doc">
+          <i class="fas fa-book" style="color: #f59e0b;"></i>
+          <h3>13 Analysis Notebooks</h3>
+          <p class="card-text">Every dataset&rsquo;s complete analysis, with code and results, readable in the browser from its dataset page.</p>
+          <a href="wildfire-explorer/" class="btn btn-primary btn-sm"><i class="fas fa-map-location-dot"></i> Open in the Explorer</a>
+        </div>
+        <div class="card rs-doc">
+          <i class="fab fa-github"></i>
+          <h3>Source Code</h3>
+          <p class="card-text">Python and GeoPandas code for the analysis, on GitHub.</p>
+          <a href="https://github.com/justinmerlin2009/wildfire_prediction_model_california/tree/main" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
+        <div class="card rs-doc">
+          <i class="fas fa-map-marked-alt" style="color: var(--primary);"></i>
+          <h3>Mega-Fires Map</h3>
+          <p class="card-text">All 38 fires larger than 100,000 acres since 1993, on one interactive map. Large file (~35&nbsp;MB) &mdash; best on desktop.</p>
+          <a href="research/interactive/mega-fires-map.html" target="_blank" rel="noopener" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Open map</a>
         </div>
       </div>
     </div>
@@ -417,7 +478,10 @@
         Learn more about our other projects and how you can support our mission to protect California from wildfires.
       </p>
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="projects.html" class="btn btn-primary btn-lg">
+        <a href="wildfire-explorer/" class="btn btn-primary btn-lg">
+          <i class="fas fa-map-location-dot"></i> Wildfire Explorer
+        </a>
+        <a href="projects.html" class="btn btn-outline btn-lg">
           <i class="fas fa-plane"></i> Our Projects
         </a>
         <a href="conrad.html" class="btn btn-outline btn-lg">

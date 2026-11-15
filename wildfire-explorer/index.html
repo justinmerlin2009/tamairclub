@@ -11,6 +11,16 @@
     <link rel="stylesheet" crossorigin href="/wildfire-explorer/assets/index-ClUsFrkU.css">
   </head>
   <body class="antialiased">
+    <script>
+      // Deep links that work on any static host: /wildfire-explorer/?p=maps -> /wildfire-explorer/maps
+      // (hosts without SPA rewrites 404 on /wildfire-explorer/maps itself). Runs before the router starts.
+      (function () {
+        var p = new URLSearchParams(location.search).get('p')
+        if (p && /^[a-z0-9_\-\/]+$/i.test(p)) {
+          history.replaceState(null, '', location.pathname.replace(/\/?$/, '/') + p.replace(/^\/+/, ''))
+        }
+      })()
+    </script>
     <div id="root"></div>
   </body>
 </html>
