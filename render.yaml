@@ -30,12 +30,6 @@ services:
       - path: /wildfire-explorer/assets/*
         name: Cache-Control
         value: public, max-age=31536000
-      - path: /wildfire-explorer/figures/*
-        name: Cache-Control
-        value: public, max-age=2592000
-      - path: /wildfire-explorer/notebooks/*
-        name: Cache-Control
-        value: public, max-age=2592000
       - path: /wildfire-explorer/data/*
         name: Cache-Control
         value: public, max-age=86400
