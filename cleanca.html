@@ -603,6 +603,52 @@
       margin-bottom: 0;
     }
 
+    /* Photo Highlights */
+    .photo-highlights {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 4fr 3fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .photo-card {
+      margin: 0;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .photo-card img {
+      display: block;
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+    }
+
+    .photo-card figcaption {
+      padding: 1rem 1.25rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .photo-card figcaption strong {
+      display: block;
+      color: var(--text-primary);
+      margin-bottom: 0.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .photo-grid { grid-template-columns: 1fr; }
+      .photo-card img { height: auto; }
+    }
+
     /* Achievement Banner */
     .achievement-banner {
       padding: 2rem 0;
@@ -814,6 +860,22 @@
       <img src="images/partners/keep-ca-beautiful-logo.png" alt="Keep California Beautiful" class="partner-logo">
     </div>
   </div>
+
+  <!-- Photo Highlights -->
+  <section class="photo-highlights">
+    <div class="container">
+      <div class="photo-grid">
+        <figure class="photo-card">
+          <img src="images/cleanca/clean-california-sign.jpg" alt="Justin with the official Tamalpais High School Clean California Community sign" loading="lazy">
+          <figcaption><strong>Clean California Distinction Sign</strong>Our official Caltrans sign naming Tamalpais High School a Clean California Community.</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="images/cleanca/school-board-presentation.jpg" alt="TAM AIR members with school board members and the Sylva drone" loading="lazy">
+          <figcaption><strong>School Board Presentation</strong>We presented our achievements to the local school board.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 
   <!-- Achievement Banner -->
   <section class="achievement-banner">
